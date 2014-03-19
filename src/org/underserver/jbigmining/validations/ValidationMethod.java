@@ -78,11 +78,11 @@ public abstract class ValidationMethod {
 		return confusionMatrix;
 	}
 
-	protected void evaluate( int calculated, int correct ) {
+	protected synchronized void evaluate( int calculated, int correct ) {
 		confusionMatrix.add( correct, calculated, 1 );
 	}
 
-	protected void evaluate( Pattern recuperated, Pattern correct ) {
+	protected synchronized void evaluate( Pattern recuperated, Pattern correct ) {
 		if( recuperated.equals( correct ) ) {
 			confusionMatrix.add( 0, 0, 1 );
 		} else {

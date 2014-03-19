@@ -53,6 +53,7 @@ public class LeaveOneOutValidation extends ValidationMethod {
 
 		DataSet dataSet = getDataSet();
 
+		long start = System.currentTimeMillis();
 		for( Pattern instance : dataSet ) {
 			Set<Pattern> trainingSet = new DataSet( dataSet );
 			Set<Pattern> testSet = new HashSet<Pattern>();
@@ -73,8 +74,10 @@ public class LeaveOneOutValidation extends ValidationMethod {
 					super.evaluate( recuperated, testInstance );
 				}
 			}
-
 		}
+		long end = System.currentTimeMillis();
+
+		System.out.println( "Time: " + ( end - start ) );
 	}
 
 }
