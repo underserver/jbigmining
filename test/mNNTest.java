@@ -30,12 +30,16 @@
 import org.underserver.jbigmining.Algorithm;
 import org.underserver.jbigmining.DataSet;
 import org.underserver.jbigmining.Parser;
+import org.underserver.jbigmining.classifiers.AlfaBetaSVM;
+import org.underserver.jbigmining.classifiers.Euclidean;
 import org.underserver.jbigmining.classifiers.LinearAssociator;
 import org.underserver.jbigmining.evaluation.BasicsMetric;
 import org.underserver.jbigmining.evaluation.EvaluationManager;
 import org.underserver.jbigmining.evaluation.EvaluationMetric;
 import org.underserver.jbigmining.filters.Filter;
 import org.underserver.jbigmining.parsers.ARFFParser;
+import org.underserver.jbigmining.parsers.CSVParser;
+import org.underserver.jbigmining.validations.KFoldCrossValidation;
 import org.underserver.jbigmining.validations.LeaveOneOutValidationThreaded;
 import org.underserver.jbigmining.validations.ValidationMethod;
 
@@ -48,16 +52,16 @@ import org.underserver.jbigmining.validations.ValidationMethod;
  */
 public class mNNTest {
 
-	private static final String FILE = "./banks/dbworld_bodies.arff";
+	private static final String FILE = "./banks/patrones.csv";
 
-	private static final ValidationMethod validationMethod = new LeaveOneOutValidationThreaded();
-	private static final Algorithm algorithm = new LinearAssociator();
+	private static final ValidationMethod validationMethod = new KFoldCrossValidation();
+	private static final Algorithm algorithm = new Euclidean();
 	private static final Filter[] filters = { /*new NormalizeFilter(), new BinaryFilter()*/ };
 
 	private DataSet dataSet = null;
 
 	public void init() {
-		Parser parser = new ARFFParser( FILE );
+		Parser parser = new CSVParser( FILE );
 		dataSet = parser.parse();
 		for( Filter filter : filters ) {
 			filter.setDataSet( dataSet );
