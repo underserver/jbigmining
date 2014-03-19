@@ -37,6 +37,7 @@ package org.underserver.jbigmining.evaluation;
  * @date 1/12/13 09:16 PM
  */
 public class BasicsMetric extends EvaluationMetric {
+	private double performance;
 	private double[] specificity;
 	private double[] accuracy;
 	private double[] fpr;
@@ -98,6 +99,7 @@ public class BasicsMetric extends EvaluationMetric {
 			fdr[clazz] = 1 - ppv[clazz];
 			mcc[clazz] = ( tp * tn - fp * fn ) / Math.sqrt( ( tp + fp ) * ( tp + fn ) * ( tn + fp ) * ( tn + fn ) );
 			f1s[clazz] = 2 * tp / ( 2 * tp + fp + fn );
+			performance += tp / ( tp + fp + fn + tn );
 		}
 	}
 
@@ -137,4 +139,7 @@ public class BasicsMetric extends EvaluationMetric {
 		return f1s;
 	}
 
+	public double getPerformance() {
+		return performance;
+	}
 }
