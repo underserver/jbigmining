@@ -79,6 +79,12 @@ public abstract class ValidationMethod {
 	}
 
 	protected synchronized void evaluate( int calculated, int correct ) {
+		if( calculated == -1 ) {
+			calculated = correct + 1;
+			if( calculated >= confusionMatrix.getMatrix().length ) {
+				calculated = correct - 1;
+			}
+		}
 		confusionMatrix.add( correct, calculated, 1 );
 	}
 

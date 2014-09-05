@@ -27,58 +27,68 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.underserver.jbigmining.validations;
+package org.underserver.jbigmining.classifiers;
 
-import org.underserver.jbigmining.*;
+import org.underserver.jbigmining.AlgorithmInformation;
+import org.underserver.jbigmining.Classifier;
+import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.recuperators.MAABmax;
 
 /**
  * -
  *
  * @author Sergio Ceron F.
  * @version rev: %I%
- * @date 18/03/14 11:46 AM
+ * @date 15/09/13 01:22 PM
  */
-public class ValidationThread implements Runnable {
-	private DataSet trainSet;
-	private Algorithm algorithm;
-	private ValidationMethod validationMethod;
-	private Pattern instance;
+public class mNNAB extends Classifier {
+	private MAABmax maabmax = new MAABmax();
+	private kNN knn = new kNN();
+	private int m = 3;
 
-	public ValidationThread( ValidationMethod validationMethod ) {
-		this.validationMethod = validationMethod;
+	public mNNAB() {
+		super( "mNNAB" );
 	}
 
-	public void setAlgorithm( Algorithm algorithm ) {
-		this.algorithm = algorithm;
-	}
-
-	public void setInstance( Pattern instance ) {
-		this.instance = instance;
-	}
-
-	public void setTrainSet( DataSet trainSet ) {
-		this.trainSet = trainSet;
+	public mNNAB( int m ) {
+		super( "mNNAB" );
+		this.m = m;
 	}
 
 	@Override
-	public void run() {
-		long start = System.currentTimeMillis();
+	public AlgorithmInformation getInformation() {
+		AlgorithmInformation result;
 
-		synchronized( algorithm ) {
-			algorithm.setTrainSet( trainSet );
-			algorithm.train();
-			if( algorithm instanceof Classifier ) {
-				int calculated = ( (Classifier) algorithm ).classify( instance );
-				int correct = instance.getClassIndex();
-				validationMethod.evaluate( calculated, correct );
-			} else if( algorithm instanceof Recuperator ) {
-				Pattern recuperated = ( (Recuperator) algorithm ).recover( instance );
-				validationMethod.evaluate( recuperated, instance );
-			}
-		}
-		long end = System.currentTimeMillis();
+		result = new AlgorithmInformation();
+		result.setField( AlgorithmInformation.Field.AUTHOR, "Sergio-Ceron, Yañez-Márquez & Itzamá-López" );
+		result.setField( AlgorithmInformation.Field.TITLE, "Morphological kNN-based classifier" );
+		result.setField( AlgorithmInformation.Field.YEAR, "2013" );
+		result.setField( AlgorithmInformation.Field.TYPE, AlgorithmInformation.Type.CLASSIFIER );
+		result.setField( AlgorithmInformation.Field.CATEGORY, "Associative" );
 
-		System.out.println( "Partial Time: " + ( end - start ) );
+		return result;
+	}
 
+	@Override
+	public void train() {
+		knn.setK( m );
+		maabmax.setTrainSet( getTrainSet() );
+		maabmax.train();
+		knn.setTrainSet( getTrainSet() );
+		knn.train();
+	}
+
+	@Override
+	public int classify( Pattern instance ) {
+		Pattern recovered = maabmax.recover( instance );
+		return knn.classify( recovered );
+	}
+
+	public int getM() {
+		return m;
+	}
+
+	public void setM( int m ) {
+		this.m = m;
 	}
 }

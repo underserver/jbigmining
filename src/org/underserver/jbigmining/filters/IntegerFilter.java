@@ -27,58 +27,77 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.underserver.jbigmining.validations;
+package org.underserver.jbigmining.filters;
 
-import org.underserver.jbigmining.*;
+import org.underserver.jbigmining.DataSet;
+import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.exceptions.FilterException;
+
+import java.util.Arrays;
 
 /**
  * -
  *
  * @author Sergio Ceron F.
  * @version rev: %I%
- * @date 18/03/14 11:46 AM
+ * @date 28/05/13 07:06 PM
  */
-public class ValidationThread implements Runnable {
-	private DataSet trainSet;
-	private Algorithm algorithm;
-	private ValidationMethod validationMethod;
-	private Pattern instance;
+public class IntegerFilter extends Filter {
+	private DataSet newDataSet;
+	private int[] mutipliers;
 
-	public ValidationThread( ValidationMethod validationMethod ) {
-		this.validationMethod = validationMethod;
-	}
-
-	public void setAlgorithm( Algorithm algorithm ) {
-		this.algorithm = algorithm;
-	}
-
-	public void setInstance( Pattern instance ) {
-		this.instance = instance;
-	}
-
-	public void setTrainSet( DataSet trainSet ) {
-		this.trainSet = trainSet;
+	public IntegerFilter() {
+		super( "Integer Filter" );
 	}
 
 	@Override
-	public void run() {
-		long start = System.currentTimeMillis();
+	public void build() {
+		DataSet oldDataSet = getDataSet();
 
-		synchronized( algorithm ) {
-			algorithm.setTrainSet( trainSet );
-			algorithm.train();
-			if( algorithm instanceof Classifier ) {
-				int calculated = ( (Classifier) algorithm ).classify( instance );
-				int correct = instance.getClassIndex();
-				validationMethod.evaluate( calculated, correct );
-			} else if( algorithm instanceof Recuperator ) {
-				Pattern recuperated = ( (Recuperator) algorithm ).recover( instance );
-				validationMethod.evaluate( recuperated, instance );
+		mutipliers = new int[oldDataSet.getAttributes().size()];
+		Arrays.fill( mutipliers, 1 );
+
+		for( Pattern instance : oldDataSet ) {
+			Double[] features = instance.toDoubleVector();
+			for( int i = 0; i < features.length; i++ ) {
+				Double feature = features[i];
+				int maxMultiplier = multiplier( feature.doubleValue() );
+				mutipliers[i] = Math.max( mutipliers[i], maxMultiplier );
 			}
 		}
-		long end = System.currentTimeMillis();
 
-		System.out.println( "Partial Time: " + ( end - start ) );
+		newDataSet = new DataSet( oldDataSet );
 
 	}
+
+	private int multiplier( double n ) {
+		if( ( n - (long) n ) == 0 ) return 1;
+
+		for( int i = 10; i < 1000000000; i += 10 ) {
+			if( ( ( n * i ) - (long) ( n * i ) ) == 0 ) {
+				return i;
+			}
+		}
+		return 1;
+	}
+
+	@Override
+	public Pattern process( Pattern instance ) throws FilterException {
+		Pattern filtered = new Pattern();
+		filtered.setDataSet( newDataSet );
+		filtered.setClassIndex( instance.getClassIndex() );
+
+		Double[] features = instance.toDoubleVector();
+		for( int i = 0; i < features.length; i++ ) {
+			Double feature = features[i];
+			filtered.add( feature * mutipliers[i] );
+		}
+		return filtered;
+	}
+
+	@Override
+	public DataSet getNewDataSet() {
+		return newDataSet;
+	}
+
 }

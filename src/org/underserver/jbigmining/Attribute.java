@@ -67,7 +67,11 @@ public class Attribute {
 
 	public void putValue( String value ) {
 		if( !values.contains( value ) ) {
-			values.add( value );
+			try {
+				values.add( value );
+			} catch ( Exception e ) {
+				e.printStackTrace();
+			}
 		}
 	}
 

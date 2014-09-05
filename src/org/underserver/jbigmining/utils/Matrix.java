@@ -150,6 +150,18 @@ public class Matrix {
 		return result;
 	}
 
+	public static Double[] complete( Double a[], int k ) {
+		Double[] result = new Double[k];
+		for( int i = 0; i < k; i++ ) {
+			if( i >= a.length ) {
+				result[i] = 0.0;
+			} else {
+				result[i] = a[i];
+			}
+		}
+		return result;
+	}
+
 	public static boolean compare( Double a[], Double b[] ) {
 		for( int i = 0; i < a.length; i++ ) {
 			if( a[i].doubleValue() != b[i].doubleValue() ) {
@@ -330,5 +342,60 @@ public class Matrix {
 		}
 		return Math.sqrt( sum );
 	}
+
+	public static double varianza( double[] vals ) {
+		double mean = 0.0;
+		for( int i = 0; i < vals.length; i++ ) {
+			mean += vals[i];
+		}
+		mean = mean / (double) vals.length;
+
+		double var = 0.0;
+		for( int i = 0; i < vals.length; i++ ) {
+			var += vals[i] * vals[i];
+		}
+		var = var / (double) vals.length - mean * mean;
+
+		return var;
+	}
+
+	public static double desviacion( double[] vals ) {
+		double mean = 0.0;
+		for( int i = 0; i < vals.length; i++ ) {
+			mean += vals[i];
+		}
+		mean = mean / (double) vals.length;
+
+		double desv = 0.0;
+		for( int i = 0; i < vals.length; i++ ) {
+			desv += Math.abs( vals[i] - mean );
+		}
+		desv = desv / (double) vals.length;
+
+		return desv;
+	}
+
+	public static void print( Double A[][] ) {
+		int n = A.length, m = A[0].length;
+		for( int i = 0; i < n; i++ ) {
+			for( int j = 0; j < m; j++ )
+				System.out.printf( "%.2f\t\t", A[i][j] );
+
+			System.out.println( "" );
+		}
+		System.out.println( "" );
+	}
+
+	public static void print( double A[][] ) {
+		int n = A.length, m = A[0].length;
+		for( int i = 0; i < n; i++ ) {
+			for( int j = 0; j < m; j++ )
+				System.out.printf( "%.2f\t\t", A[i][j] );
+
+			System.out.println( "" );
+		}
+		System.out.println( "" );
+	}
+
 
 }

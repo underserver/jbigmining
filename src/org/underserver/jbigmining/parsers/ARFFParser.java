@@ -100,7 +100,7 @@ public class ARFFParser implements Parser {
 							instance.add( rawValue );
 						}
 					}
-					instance.setClassValue( values[values.length - 1] );
+					instance.setClassValue( values[values.length - 1].trim() );
 
 					dataSet.add( instance );
 
