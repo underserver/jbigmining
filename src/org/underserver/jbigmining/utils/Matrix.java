@@ -142,6 +142,30 @@ public class Matrix {
 		return result;
 	}
 
+	public static Double[] sum( Double a[], Double b[] ) {
+		Double[] result = new Double[a.length];
+		for( int i = 0; i < a.length; i++ ) {
+			result[i] = a[i] + b[i];
+		}
+		return result;
+	}
+
+	public static Double[] res( Double a[], Double b[] ) {
+		Double[] result = new Double[a.length];
+		for( int i = 0; i < a.length; i++ ) {
+			result[i] = a[i] - b[i];
+		}
+		return result;
+	}
+
+	public static Double[] div( Double a[], double escalar ) {
+		Double[] result = new Double[a.length];
+		for( int i = 0; i < a.length; i++ ) {
+			result[i] = a[i] / escalar;
+		}
+		return result;
+	}
+
 	public static double[] wise( Double a[], double b ) {
 		double[] result = new double[a.length];
 		for( int i = 0; i < a.length; i++ ) {
@@ -169,6 +193,14 @@ public class Matrix {
 			}
 		}
 		return true;
+	}
+
+	public static Double[] fill( int cols, Double value ) {
+		Double[] result = new Double[cols];
+		for( int i = 0; i < cols; i++ ) {
+			result[i] = value;
+		}
+		return result;
 	}
 
 	public static Double[][] fill( int rows, int cols, Double value ) {

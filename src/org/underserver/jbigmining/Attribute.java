@@ -66,9 +66,9 @@ public class Attribute {
 	}
 
 	public void putValue( String value ) {
-		if( !values.contains( value ) ) {
+		if( !values.contains( value.trim() ) ) {
 			try {
-				values.add( value );
+				values.add( value.trim() );
 			} catch ( Exception e ) {
 				e.printStackTrace();
 			}
