@@ -29,10 +29,10 @@
 
 package org.underserver.jbigmining.validations;
 
-import org.underserver.jbigmining.*;
+import org.underserver.jbigmining.core.*;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * -
@@ -55,8 +55,8 @@ public class LeaveOneOutValidation extends ValidationMethod {
 
 		long start = System.currentTimeMillis();
 		for( Pattern instance : dataSet ) {
-			Set<Pattern> trainingSet = new DataSet( dataSet );
-			Set<Pattern> testSet = new HashSet<Pattern>();
+			List<Pattern> trainingSet = new DataSet( dataSet );
+			List<Pattern> testSet = new ArrayList<Pattern>();
 
 			trainingSet.addAll( getDataSet() );
 			trainingSet.remove( instance );

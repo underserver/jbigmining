@@ -29,10 +29,10 @@
 
 package org.underserver.jbigmining.parsers;
 
-import org.underserver.jbigmining.Attribute;
-import org.underserver.jbigmining.DataSet;
-import org.underserver.jbigmining.Parser;
-import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.core.Attribute;
+import org.underserver.jbigmining.core.DataSet;
+import org.underserver.jbigmining.core.Parser;
+import org.underserver.jbigmining.core.Pattern;
 
 import java.io.*;
 import java.util.HashMap;

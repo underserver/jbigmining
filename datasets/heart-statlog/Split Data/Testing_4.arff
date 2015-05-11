@@ -1,0 +1,46 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE age NUMERIC
+@ATTRIBUTE sex NUMERIC
+@ATTRIBUTE chest NUMERIC
+@ATTRIBUTE restingbloodpressure NUMERIC
+@ATTRIBUTE serumcholestoral NUMERIC
+@ATTRIBUTE fastingbloodsugar NUMERIC
+@ATTRIBUTE restingelectrocardiographicresults NUMERIC
+@ATTRIBUTE maximumheartrateachieved NUMERIC
+@ATTRIBUTE exerciseinducedangina NUMERIC
+@ATTRIBUTE oldpeak NUMERIC
+@ATTRIBUTE slope NUMERIC
+@ATTRIBUTE numberofmajorvessels NUMERIC
+@ATTRIBUTE thal NUMERIC
+@ATTRIBUTE class {present,absent}
+
+@DATA
+63,1,4,130,330,1,2,132,1,18,1,3,7,present
+43,1,4,150,247,0,0,171,0,15,1,0,3,absent
+51,1,3,94,227,0,0,154,1,0,1,1,7,absent
+58,0,1,150,283,1,2,162,0,1,1,0,3,absent
+45,1,4,104,208,0,2,148,1,3,2,0,3,absent
+46,1,4,140,311,0,0,120,1,18,2,2,7,present
+42,1,4,140,226,0,0,178,0,0,1,0,3,absent
+54,0,3,108,267,0,2,167,0,0,1,0,3,absent
+66,1,2,160,246,0,0,120,1,0,2,3,6,present
+44,1,2,120,220,0,0,170,0,0,1,0,3,absent
+56,1,1,120,193,0,2,162,0,19,2,0,7,absent
+52,1,3,172,199,1,0,162,0,5,1,0,7,absent
+58,1,3,105,240,0,2,154,1,6,2,0,7,absent
+62,1,4,120,267,0,0,99,1,18,2,2,7,present
+44,1,2,130,219,0,2,188,0,0,1,0,3,absent
+64,1,4,120,246,0,2,96,1,22,3,1,3,present
+54,1,3,125,273,0,2,152,0,5,3,1,3,absent
+41,0,2,130,204,0,2,172,0,14,1,0,3,absent
+54,0,3,110,214,0,0,158,0,16,2,0,3,absent
+60,1,4,125,258,0,2,141,1,28,2,1,7,present
+54,1,4,140,239,0,0,160,0,12,1,0,3,absent
+45,0,4,138,236,0,2,152,1,2,2,0,3,absent
+52,1,4,108,233,1,0,147,0,1,1,3,7,absent
+55,1,4,132,353,0,0,132,1,12,2,1,7,present
+44,1,3,130,233,0,0,179,1,4,1,0,3,absent
+48,1,2,130,245,0,2,180,0,2,2,0,3,absent
+52,1,1,152,298,1,0,178,0,12,2,0,7,absent

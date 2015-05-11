@@ -1,0 +1,44 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE age {50-59,40-49,30-39,60-69}
+@ATTRIBUTE menopause {ge40,premeno,lt40}
+@ATTRIBUTE tumorsize {0-4,30-34,20-24,25-29,10-14,50-54,15-19,5-9,35-39,40-44}
+@ATTRIBUTE invnodes {0-2,3-5,6-8,9-11,12-14}
+@ATTRIBUTE nodecaps {no,yes}
+@ATTRIBUTE degmalig {1,2,3}
+@ATTRIBUTE breast {right,left}
+@ATTRIBUTE breastquad {central,right_low,left_up,left_low}
+@ATTRIBUTE irradiat {no,yes}
+@ATTRIBUTE class {no-recurrence-events,recurrence-events}
+
+@DATA
+50-59,ge40,0-4,0-2,no,1,right,central,no,no-recurrence-events
+40-49,premeno,30-34,0-2,no,2,right,right_low,no,no-recurrence-events
+50-59,ge40,20-24,3-5,yes,2,right,left_up,no,no-recurrence-events
+40-49,premeno,25-29,0-2,no,1,left,right_low,no,no-recurrence-events
+30-39,premeno,10-14,0-2,no,1,right,left_low,no,no-recurrence-events
+50-59,ge40,25-29,6-8,no,3,left,left_low,yes,recurrence-events
+40-49,premeno,25-29,0-2,no,2,right,left_low,no,recurrence-events
+40-49,premeno,50-54,0-2,no,2,left,left_low,no,no-recurrence-events
+30-39,premeno,15-19,0-2,no,1,left,left_low,no,no-recurrence-events
+40-49,premeno,10-14,0-2,no,2,right,left_low,no,no-recurrence-events
+60-69,ge40,15-19,0-2,no,2,right,left_low,no,no-recurrence-events
+50-59,premeno,15-19,0-2,no,2,right,left_low,no,no-recurrence-events
+30-39,premeno,10-14,0-2,no,2,left,right_low,no,no-recurrence-events
+50-59,premeno,50-54,9-11,yes,2,right,left_up,no,recurrence-events
+40-49,premeno,15-19,12-14,no,3,right,right_low,yes,no-recurrence-events
+50-59,lt40,15-19,0-2,no,2,left,left_low,no,no-recurrence-events
+50-59,premeno,30-34,0-2,no,3,left,left_low,no,no-recurrence-events
+60-69,ge40,15-19,0-2,no,1,right,left_up,no,no-recurrence-events
+40-49,ge40,20-24,0-2,no,3,left,left_up,no,no-recurrence-events
+60-69,ge40,50-54,0-2,no,2,left,left_low,no,no-recurrence-events
+40-49,premeno,5-9,0-2,no,1,left,left_low,yes,no-recurrence-events
+40-49,premeno,20-24,6-8,no,2,right,left_low,yes,no-recurrence-events
+40-49,premeno,35-39,0-2,no,1,right,left_up,no,recurrence-events
+60-69,ge40,40-44,3-5,no,2,right,left_up,yes,no-recurrence-events
+50-59,premeno,10-14,0-2,no,2,right,left_up,no,no-recurrence-events
+50-59,ge40,25-29,0-2,no,2,left,left_low,no,no-recurrence-events
+50-59,ge40,15-19,0-2,no,2,right,left_low,no,no-recurrence-events
+60-69,ge40,15-19,0-2,no,3,right,left_up,yes,no-recurrence-events
+30-39,premeno,30-34,0-2,no,2,left,left_up,no,recurrence-events

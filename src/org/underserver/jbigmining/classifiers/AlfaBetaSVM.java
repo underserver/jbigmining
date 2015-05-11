@@ -29,7 +29,10 @@
 
 package org.underserver.jbigmining.classifiers;
 
-import org.underserver.jbigmining.*;
+import org.underserver.jbigmining.core.AlgorithmInformation;
+import org.underserver.jbigmining.core.Classifier;
+import org.underserver.jbigmining.core.DataSet;
+import org.underserver.jbigmining.core.Pattern;
 
 import java.util.ArrayList;
 import java.util.Arrays;

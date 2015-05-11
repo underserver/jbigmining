@@ -29,11 +29,9 @@
 
 package org.underserver.jbigmining.validations;
 
-import org.underserver.jbigmining.*;
+import org.underserver.jbigmining.core.*;
 
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 /**
  * -
@@ -98,8 +96,8 @@ public class KFoldCrossValidation extends ValidationMethod {
 
 		for( int foldIndex = 0; foldIndex < k; foldIndex++ ) {
 
-			Set<Pattern> testSet = new HashSet<Pattern>( folds[foldIndex] );
-			Set<Pattern> trainingSet = new DataSet( getDataSet() );
+			List<Pattern> testSet = new ArrayList<Pattern>( folds[foldIndex] );
+			List<Pattern> trainingSet = new DataSet( getDataSet() );
 			for( int fold = 0; fold < k; fold++ ) {
 				if( fold != foldIndex ) {
 					trainingSet.addAll( folds[fold] );   // TODO: revisar si addAll llama al metodo heredado de AbastractCollection o al implementado por DataSet

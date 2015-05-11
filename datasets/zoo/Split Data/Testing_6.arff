@@ -1,0 +1,33 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE animal {mole,vole,skimmer,squirrel,sealion,ostrich,buffalo,skua,antelope,mongoose}
+@ATTRIBUTE hair {true,false}
+@ATTRIBUTE feathers {false,true}
+@ATTRIBUTE eggs {false,true}
+@ATTRIBUTE milk {true,false}
+@ATTRIBUTE airborne {false,true}
+@ATTRIBUTE aquatic {false,true}
+@ATTRIBUTE predator {true,false}
+@ATTRIBUTE toothed {true,false}
+@ATTRIBUTE backbone {true}
+@ATTRIBUTE breathes {true}
+@ATTRIBUTE venomous {false}
+@ATTRIBUTE fins {false,true}
+@ATTRIBUTE legs NUMERIC
+@ATTRIBUTE tail {true}
+@ATTRIBUTE domestic {false}
+@ATTRIBUTE catsize {false,true}
+@ATTRIBUTE class {mammal,bird}
+
+@DATA
+mole,true,false,false,true,false,false,true,true,true,true,false,false,4,true,false,false,mammal
+vole,true,false,false,true,false,false,false,true,true,true,false,false,4,true,false,false,mammal
+skimmer,false,true,true,false,true,true,true,false,true,true,false,false,2,true,false,false,bird
+squirrel,true,false,false,true,false,false,false,true,true,true,false,false,2,true,false,false,mammal
+sealion,true,false,false,true,false,true,true,true,true,true,false,true,2,true,false,true,mammal
+ostrich,false,true,true,false,false,false,false,false,true,true,false,false,2,true,false,true,bird
+buffalo,true,false,false,true,false,false,false,true,true,true,false,false,4,true,false,true,mammal
+skua,false,true,true,false,true,true,true,false,true,true,false,false,2,true,false,false,bird
+antelope,true,false,false,true,false,false,false,true,true,true,false,false,4,true,false,true,mammal
+mongoose,true,false,false,true,false,false,true,true,true,true,false,false,4,true,false,true,mammal

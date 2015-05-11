@@ -29,7 +29,7 @@
 
 package org.underserver.jbigmining.validations;
 
-import org.underserver.jbigmining.*;
+import org.underserver.jbigmining.core.*;
 
 /**
  * -

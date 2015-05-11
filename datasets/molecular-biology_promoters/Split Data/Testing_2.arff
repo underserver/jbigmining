@@ -1,0 +1,75 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE instance {1384,HIS,1226,STR,660,1442,SPOT42,507,217,751,1169}
+@ATTRIBUTE p50 {c,a,t}
+@ATTRIBUTE p49 {t,g,c,a}
+@ATTRIBUTE p48 {a,c,g,t}
+@ATTRIBUTE p47 {c,t,g,a}
+@ATTRIBUTE p46 {g,a,t,c}
+@ATTRIBUTE p45 {g,a,c,t}
+@ATTRIBUTE p44 {t,a,g}
+@ATTRIBUTE p43 {g,a,c}
+@ATTRIBUTE p42 {g,a,c,t}
+@ATTRIBUTE p41 {g,a,t,c}
+@ATTRIBUTE p40 {t,g,a}
+@ATTRIBUTE p39 {a,t,g}
+@ATTRIBUTE p38 {c,t,g,a}
+@ATTRIBUTE p37 {a,c,t}
+@ATTRIBUTE p36 {a,t,g}
+@ATTRIBUTE p35 {t,a,g,c}
+@ATTRIBUTE p34 {a,g,t,c}
+@ATTRIBUTE p33 {t,c,g,a}
+@ATTRIBUTE p32 {g,t,c,a}
+@ATTRIBUTE p31 {c,t,a,g}
+@ATTRIBUTE p30 {t,c,g,a}
+@ATTRIBUTE p29 {g,c,a,t}
+@ATTRIBUTE p28 {g,t,a,c}
+@ATTRIBUTE p27 {a,g,t,c}
+@ATTRIBUTE p26 {t,a,g}
+@ATTRIBUTE p25 {g,c,t,a}
+@ATTRIBUTE p24 {g,c,t,a}
+@ATTRIBUTE p23 {a,t,g,c}
+@ATTRIBUTE p22 {g,t,a,c}
+@ATTRIBUTE p21 {a,c,g,t}
+@ATTRIBUTE p20 {t,a,c,g}
+@ATTRIBUTE p19 {g,a,t,c}
+@ATTRIBUTE p18 {c,g,t,a}
+@ATTRIBUTE p17 {g,t,a,c}
+@ATTRIBUTE p16 {t,g,a,c}
+@ATTRIBUTE p15 {t,g,c,a}
+@ATTRIBUTE p14 {c,t,g,a}
+@ATTRIBUTE p13 {a,t,g,c}
+@ATTRIBUTE p12 {c,t,g,a}
+@ATTRIBUTE p11 {t,a,g,c}
+@ATTRIBUTE p10 {t,g,a,c}
+@ATTRIBUTE p9 {c,g,t,a}
+@ATTRIBUTE p8 {t,g,a,c}
+@ATTRIBUTE p7 {g,t,a,c}
+@ATTRIBUTE p6 {g,a,c,t}
+@ATTRIBUTE p5 {t,a,g,c}
+@ATTRIBUTE p4 {c,a,g,t}
+@ATTRIBUTE p3 {t,a,c,g}
+@ATTRIBUTE p2 {a,g,t,c}
+@ATTRIBUTE p1 {c,a,t}
+@ATTRIBUTE p1 {t,c,g,a}
+@ATTRIBUTE p2 {g,a,c,t}
+@ATTRIBUTE p3 {a,t,c,g}
+@ATTRIBUTE p4 {c,t,a,g}
+@ATTRIBUTE p5 {t,a,c,g}
+@ATTRIBUTE p6 {c,g,t,a}
+@ATTRIBUTE p7 {g,t,c,a}
+@ATTRIBUTE class {-,+}
+
+@DATA
+1384,c,t,a,c,g,g,t,g,g,g,t,a,c,a,a,t,a,t,g,c,t,g,g,a,t,g,g,a,g,a,t,g,c,g,t,t,c,a,c,t,t,c,t,g,g,t,c,t,a,c,t,g,a,c,t,c,g,-
+HIS,a,t,a,t,a,a,a,a,a,a,g,t,t,c,t,t,g,c,t,t,t,c,t,a,a,c,g,t,g,a,a,a,g,t,g,g,t,t,t,a,g,g,t,t,a,a,a,a,g,a,c,a,t,c,a,g,t,+
+1226,c,g,c,g,a,c,t,a,c,g,a,t,g,a,g,a,t,g,c,c,t,g,a,g,t,g,c,t,t,c,c,g,t,t,a,c,t,g,g,a,t,t,g,t,c,a,c,c,a,a,g,g,c,t,t,c,c,-
+STR,t,c,g,t,t,g,t,a,t,a,t,t,t,c,t,t,g,a,c,a,c,c,t,t,t,t,c,g,g,c,a,t,c,g,c,c,c,t,a,a,a,a,t,t,c,g,g,c,g,t,c,c,t,c,a,t,a,+
+660,t,t,a,g,a,g,a,g,c,a,t,g,t,c,a,g,c,c,t,c,g,a,c,a,a,c,t,t,g,c,a,t,a,a,a,t,g,c,t,t,t,c,t,t,g,t,a,g,a,c,g,t,g,c,c,c,t,-
+1442,t,a,a,c,a,t,t,a,a,t,a,a,a,t,a,a,g,g,a,g,g,c,t,c,t,a,a,t,g,g,c,a,c,t,c,a,t,t,a,g,c,c,a,a,t,c,a,a,t,c,a,a,g,a,a,c,t,-
+SPOT42,a,t,t,a,c,a,a,a,a,a,g,t,g,c,t,t,t,c,t,g,a,a,c,t,g,a,a,c,a,a,a,a,a,a,g,a,g,t,a,a,a,g,t,t,a,g,t,c,g,c,g,t,a,g,g,g,t,+
+507,a,t,a,g,t,c,t,c,a,g,a,g,t,c,t,t,g,a,c,c,t,a,c,t,a,c,g,c,c,a,g,c,a,t,t,t,t,g,g,c,g,g,t,g,t,a,a,g,c,t,a,a,c,c,a,t,t,-
+217,t,t,a,c,g,t,t,g,g,c,g,a,c,c,g,c,t,a,g,g,a,c,t,t,t,c,t,t,g,t,t,g,a,t,t,t,t,c,c,a,t,g,c,g,g,t,g,t,t,t,t,g,c,g,c,a,a,-
+751,t,g,a,a,g,t,g,c,t,t,a,g,c,t,t,c,a,a,g,g,t,c,a,c,g,g,a,t,a,c,g,a,c,c,g,a,a,g,c,g,a,g,c,c,t,c,g,t,c,c,t,c,a,a,t,g,g,-
+1169,c,g,a,a,c,g,a,g,t,c,a,a,t,c,a,g,a,c,c,g,c,t,t,t,g,a,c,t,c,t,g,g,t,a,t,t,a,c,t,g,t,g,a,a,c,a,t,t,a,t,t,c,g,t,c,t,c,-

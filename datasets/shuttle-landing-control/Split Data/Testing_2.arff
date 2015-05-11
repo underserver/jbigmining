@@ -1,0 +1,14 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE stability {1}
+@ATTRIBUTE error {2,4}
+@ATTRIBUTE sign {?}
+@ATTRIBUTE wind {?}
+@ATTRIBUTE magnitude {?,3}
+@ATTRIBUTE visibility {1}
+@ATTRIBUTE class {1,2}
+
+@DATA
+1,2,?,?,?,1,1
+1,4,?,?,3,1,2

@@ -1,0 +1,74 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE instance {988,LEU1_TRNA,663,780,35,RRNAB_P2,TRPP2,LACI,835,LEXA}
+@ATTRIBUTE p50 {t,g,c,a}
+@ATTRIBUTE p49 {a,c,g}
+@ATTRIBUTE p48 {t,g,a,c}
+@ATTRIBUTE p47 {t,a,c,g}
+@ATTRIBUTE p46 {c,t,g,a}
+@ATTRIBUTE p45 {t,a,c,g}
+@ATTRIBUTE p44 {c,a,g}
+@ATTRIBUTE p43 {a,t,g}
+@ATTRIBUTE p42 {a,t,g,c}
+@ATTRIBUTE p41 {c,a,t,g}
+@ATTRIBUTE p40 {a,c,g}
+@ATTRIBUTE p39 {a,c,g,t}
+@ATTRIBUTE p38 {g,t,c}
+@ATTRIBUTE p37 {a,c,g}
+@ATTRIBUTE p36 {t,c,g,a}
+@ATTRIBUTE p35 {t,g,c}
+@ATTRIBUTE p34 {a,g,c,t}
+@ATTRIBUTE p33 {a,g,t,c}
+@ATTRIBUTE p32 {c,a,t}
+@ATTRIBUTE p31 {c,g,t,a}
+@ATTRIBUTE p30 {g,a,c,t}
+@ATTRIBUTE p29 {a,t,g}
+@ATTRIBUTE p28 {c,a,g,t}
+@ATTRIBUTE p27 {a,t,g,c}
+@ATTRIBUTE p26 {g,t,a,c}
+@ATTRIBUTE p25 {a,c,g,t}
+@ATTRIBUTE p24 {t,c,g,a}
+@ATTRIBUTE p23 {t,g,a,c}
+@ATTRIBUTE p22 {c,a,t,g}
+@ATTRIBUTE p21 {a,c,t,g}
+@ATTRIBUTE p20 {a,t,g,c}
+@ATTRIBUTE p19 {t,a,c,g}
+@ATTRIBUTE p18 {c,t,g,a}
+@ATTRIBUTE p17 {t,c,g,a}
+@ATTRIBUTE p16 {c,a,g,t}
+@ATTRIBUTE p15 {g,c,t,a}
+@ATTRIBUTE p14 {t,c,a,g}
+@ATTRIBUTE p13 {g,a,t,c}
+@ATTRIBUTE p12 {g,c,t,a}
+@ATTRIBUTE p11 {a,t,g,c}
+@ATTRIBUTE p10 {t,a,g}
+@ATTRIBUTE p9 {g,t,c,a}
+@ATTRIBUTE p8 {g,t,c}
+@ATTRIBUTE p7 {a,c,t,g}
+@ATTRIBUTE p6 {c,g,t,a}
+@ATTRIBUTE p5 {g,c,a}
+@ATTRIBUTE p4 {t,c,g,a}
+@ATTRIBUTE p3 {t,g,c}
+@ATTRIBUTE p2 {c,t,g}
+@ATTRIBUTE p1 {a,c,g,t}
+@ATTRIBUTE p1 {a,g,c,t}
+@ATTRIBUTE p2 {c,t,g,a}
+@ATTRIBUTE p3 {a,g,c,t}
+@ATTRIBUTE p4 {t,g,c,a}
+@ATTRIBUTE p5 {t,a,c,g}
+@ATTRIBUTE p6 {g,a,c,t}
+@ATTRIBUTE p7 {a,g,c,t}
+@ATTRIBUTE class {-,+}
+
+@DATA
+988,t,a,t,t,c,t,c,a,a,c,a,a,g,a,t,t,a,a,c,c,g,a,c,a,g,a,t,t,c,a,a,t,c,t,c,g,t,g,g,a,t,g,g,a,c,g,t,t,c,a,a,c,a,t,t,g,a,-
+LEU1_TRNA,t,c,g,a,t,a,a,t,t,a,a,c,t,a,t,t,g,a,c,g,a,a,a,a,g,c,t,g,a,a,a,a,c,c,a,c,t,a,g,a,a,t,g,c,g,c,c,t,c,c,g,t,g,g,t,a,g,+
+663,g,a,g,a,g,c,a,t,g,t,c,a,g,c,c,t,c,g,a,c,a,a,c,t,t,g,c,a,t,a,a,a,t,g,c,t,t,t,c,t,t,g,t,a,g,a,c,g,t,g,c,c,c,t,a,c,g,-
+780,c,g,a,c,c,g,a,a,g,c,g,a,g,c,c,t,c,g,t,c,c,t,c,a,a,t,g,g,c,c,t,c,t,a,a,a,c,g,g,g,t,c,t,t,g,a,g,g,g,g,t,t,t,t,t,t,g,-
+35,c,a,t,g,a,a,c,t,c,a,a,g,g,c,t,g,a,t,a,c,g,g,c,g,a,g,a,c,t,t,g,c,g,a,g,c,c,t,t,g,t,c,c,t,t,g,c,g,g,t,a,c,a,c,a,g,c,-
+RRNAB_P2,g,c,a,a,a,a,a,t,a,a,a,t,g,c,t,t,g,a,c,t,c,t,g,t,a,g,c,g,g,g,a,a,g,g,c,g,t,a,t,t,a,t,g,c,a,c,a,c,c,c,c,g,c,g,c,c,g,+
+TRPP2,a,c,c,g,g,a,a,g,a,a,a,a,c,c,g,t,g,a,c,a,t,t,t,t,a,a,c,a,c,g,t,t,t,g,t,t,a,c,a,a,g,g,t,a,a,a,g,g,c,g,a,c,g,c,c,g,c,+
+LACI,g,a,c,a,c,c,a,t,c,g,a,a,t,g,g,c,g,c,a,a,a,a,c,c,t,t,t,c,g,c,g,g,t,a,t,g,g,c,a,t,g,a,t,a,g,c,g,c,c,c,g,g,a,a,g,a,g,+
+835,t,g,c,t,g,a,a,a,g,g,a,g,g,a,a,c,t,a,t,a,t,g,c,g,c,t,c,a,t,a,c,g,a,t,a,t,g,a,a,c,g,t,t,g,a,g,a,c,t,g,c,c,g,c,t,g,a,-
+LEXA,t,g,t,g,c,a,g,t,t,t,a,t,g,g,t,t,c,c,a,a,a,a,t,c,g,c,c,t,t,t,t,g,c,t,g,t,a,t,a,t,a,c,t,c,a,c,a,g,c,a,t,a,a,c,t,g,t,+

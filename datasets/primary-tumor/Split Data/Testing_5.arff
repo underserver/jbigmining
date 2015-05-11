@@ -1,0 +1,57 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE age {30-59,>=60,<30}
+@ATTRIBUTE sex {female,male}
+@ATTRIBUTE histologictype {adeno,?,epidermoid,anaplastic}
+@ATTRIBUTE degreeofdiffe {well,?,poorly,fairly}
+@ATTRIBUTE bone {no,yes}
+@ATTRIBUTE bonemarrow {no,yes}
+@ATTRIBUTE lung {no,yes}
+@ATTRIBUTE pleura {no,yes}
+@ATTRIBUTE peritoneum {yes,no}
+@ATTRIBUTE liver {yes,no}
+@ATTRIBUTE brain {no,yes}
+@ATTRIBUTE skin {no,yes}
+@ATTRIBUTE neck {no,yes}
+@ATTRIBUTE supraclavicular {no,yes}
+@ATTRIBUTE axillar {no,yes}
+@ATTRIBUTE mediastinum {no,yes}
+@ATTRIBUTE abdominal {no,yes}
+@ATTRIBUTE class {ovary,breast,gallbladder,lung,pancreas,esophagus,salivary glands,head and neck,kidney,stomach,colon,corpus uteri}
+
+@DATA
+30-59,female,adeno,well,no,no,no,no,yes,yes,no,no,no,no,no,no,no,ovary
+30-59,female,adeno,?,yes,no,no,no,no,no,no,no,no,no,no,no,no,breast
+>=60,female,adeno,poorly,no,no,yes,yes,yes,yes,no,no,no,no,no,yes,yes,gallbladder
+30-59,male,adeno,poorly,no,no,no,no,no,no,no,no,no,yes,no,yes,no,lung
+>=60,female,adeno,?,yes,no,yes,yes,no,yes,no,no,no,no,no,yes,yes,pancreas
+30-59,female,?,poorly,no,no,no,no,no,no,no,no,yes,yes,no,no,no,esophagus
+30-59,male,epidermoid,well,yes,no,no,no,no,no,no,no,yes,yes,no,no,no,salivary glands
+30-59,male,epidermoid,?,no,no,no,yes,no,no,no,no,yes,no,no,no,no,head and neck
+30-59,male,?,poorly,no,no,no,yes,no,yes,no,yes,no,no,no,no,no,lung
+<30,female,?,poorly,yes,no,yes,yes,no,no,no,no,no,no,no,yes,no,lung
+30-59,male,adeno,?,yes,no,yes,yes,no,no,no,no,no,no,no,yes,no,kidney
+>=60,female,adeno,?,no,yes,no,no,yes,no,no,no,no,no,no,no,yes,pancreas
+>=60,female,adeno,?,no,no,no,no,yes,yes,no,no,no,no,no,no,no,gallbladder
+30-59,female,adeno,?,no,no,no,yes,no,no,no,no,no,no,no,no,no,ovary
+30-59,female,adeno,well,no,no,no,yes,yes,no,no,no,no,yes,no,no,no,stomach
+>=60,female,adeno,?,no,no,no,no,no,yes,no,no,no,no,no,no,yes,gallbladder
+30-59,male,anaplastic,poorly,no,no,yes,no,yes,no,no,no,no,no,no,no,yes,lung
+>=60,female,adeno,?,no,no,no,no,no,yes,no,no,no,no,no,no,yes,colon
+30-59,male,?,poorly,no,no,no,no,no,no,no,no,no,yes,no,yes,no,lung
+>=60,male,adeno,?,no,no,yes,no,no,no,no,no,no,yes,no,no,no,stomach
+30-59,male,adeno,poorly,yes,no,no,no,no,yes,no,no,no,no,no,no,no,stomach
+30-59,male,adeno,?,yes,no,no,no,no,no,no,no,no,no,no,no,no,kidney
+30-59,male,?,poorly,no,no,yes,no,yes,yes,no,no,no,no,no,yes,yes,pancreas
+30-59,male,epidermoid,poorly,yes,no,no,no,no,no,no,no,no,no,no,no,no,lung
+30-59,male,?,poorly,no,no,no,no,no,no,no,no,yes,yes,no,yes,yes,lung
+<30,male,adeno,poorly,yes,yes,yes,no,no,yes,yes,no,no,no,yes,yes,yes,stomach
+30-59,female,?,poorly,yes,no,no,no,no,no,no,yes,yes,no,no,no,no,esophagus
+>=60,male,adeno,?,no,no,yes,no,yes,yes,no,no,no,no,no,no,yes,stomach
+>=60,female,?,?,no,no,no,no,no,yes,no,no,no,no,no,no,yes,stomach
+>=60,male,?,poorly,no,no,no,no,no,yes,no,no,no,no,no,yes,yes,lung
+>=60,male,epidermoid,poorly,no,no,no,no,no,no,no,no,yes,no,no,no,no,head and neck
+>=60,female,adeno,well,no,no,no,no,yes,no,no,no,no,no,no,no,no,pancreas
+30-59,male,?,poorly,yes,no,yes,yes,no,yes,no,no,no,no,no,yes,yes,lung
+30-59,female,adeno,fairly,no,no,no,no,no,no,no,no,no,no,no,no,yes,corpus uteri

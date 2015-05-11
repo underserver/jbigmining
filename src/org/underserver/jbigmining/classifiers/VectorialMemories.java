@@ -29,9 +29,9 @@
 
 package org.underserver.jbigmining.classifiers;
 
-import org.underserver.jbigmining.AlgorithmInformation;
-import org.underserver.jbigmining.Classifier;
-import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.core.AlgorithmInformation;
+import org.underserver.jbigmining.core.Classifier;
+import org.underserver.jbigmining.core.Pattern;
 import org.underserver.jbigmining.distances.Distance;
 import org.underserver.jbigmining.distances.EuclideanDistance;
 import org.underserver.jbigmining.utils.GaussJordan;
@@ -42,8 +42,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
-import static org.underserver.jbigmining.AlgorithmInformation.Field.*;
-import static org.underserver.jbigmining.AlgorithmInformation.Type.CLASSIFIER;
+import static org.underserver.jbigmining.core.AlgorithmInformation.Field.*;
+import static org.underserver.jbigmining.core.AlgorithmInformation.Type.CLASSIFIER;
 
 /**
  * -
@@ -213,38 +213,6 @@ public class VectorialMemories extends Classifier {
 		return Double.MAX_VALUE;
 	}
 
-	public Pattern[] nearestNeighbors( Set<Pattern> instances, Pattern other, int kNearest ) {
-		Map<Double, Pattern> neighbors = new TreeMap<Double, Pattern>();
-		for( Pattern pattern : instances ) {
-			double dist = getDistance().distance( pattern.toDoubleVector(), other.toDoubleVector() );
-			neighbors.put( dist, pattern );
-		}
-
-		int index = 0;
-		Pattern[] nearest = new Pattern[kNearest];
-		for( Pattern neighbor : neighbors.values() ) {
-			if( index >= kNearest ) break;
-			nearest[index++] = neighbor;
-		}
-		return nearest;
-	}
-
-	public Pattern[] farthestNeighbors( Set<Pattern> instances, Pattern other, int kNearest ) {
-		TreeMap<Double, Pattern> neighbors = new TreeMap<Double, Pattern>();
-		for( Pattern pattern : instances ) {
-			double dist = getDistance().distance( pattern.toDoubleVector(), other.toDoubleVector() );
-			neighbors.put( dist, pattern );
-		}
-
-		int index = 0;
-		Pattern[] nearest = new Pattern[kNearest];
-		for( Pattern neighbor : neighbors.descendingMap().values() ) {
-			if( index >= kNearest ) break;
-			nearest[index++] = neighbor;
-		}
-		return nearest;
-	}
-
 	public Double[] mean( Set<Pattern> instances, int features ) {
 		Double[] mean = new Double[features];
 		Arrays.fill( mean, 0d );
@@ -268,9 +236,6 @@ public class VectorialMemories extends Classifier {
 	class Memory {
 		private int clazz;
 		private Double[][] M;
-
-		Memory() {
-		}
 
 		Memory( int clazz, Double[][] m ) {
 			this.clazz = clazz;

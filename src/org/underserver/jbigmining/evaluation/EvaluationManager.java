@@ -29,8 +29,8 @@
 
 package org.underserver.jbigmining.evaluation;
 
-import org.underserver.jbigmining.Algorithm;
-import org.underserver.jbigmining.DataSet;
+import org.underserver.jbigmining.core.Algorithm;
+import org.underserver.jbigmining.core.DataSet;
 import org.underserver.jbigmining.validations.KFoldCrossValidation;
 import org.underserver.jbigmining.validations.ValidationMethod;
 

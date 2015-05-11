@@ -1,0 +1,57 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE age {>=60,30-59,<30}
+@ATTRIBUTE sex {female,male}
+@ATTRIBUTE histologictype {adeno,?,epidermoid,anaplastic}
+@ATTRIBUTE degreeofdiffe {?,well,fairly,poorly}
+@ATTRIBUTE bone {no,yes}
+@ATTRIBUTE bonemarrow {no,yes}
+@ATTRIBUTE lung {no,yes}
+@ATTRIBUTE pleura {no,yes}
+@ATTRIBUTE peritoneum {no,yes}
+@ATTRIBUTE liver {yes,no}
+@ATTRIBUTE brain {no,yes}
+@ATTRIBUTE skin {no,yes}
+@ATTRIBUTE neck {no,yes}
+@ATTRIBUTE supraclavicular {no,yes}
+@ATTRIBUTE axillar {no,yes}
+@ATTRIBUTE mediastinum {no,yes}
+@ATTRIBUTE abdominal {no,yes}
+@ATTRIBUTE class {colon,lung,stomach,breast,ovary,gallbladder,thyroid,prostate,kidney}
+
+@DATA
+>=60,female,adeno,?,no,no,no,no,no,yes,no,no,no,no,no,no,no,colon
+30-59,male,adeno,?,no,no,no,yes,yes,no,no,no,no,no,no,yes,yes,lung
+30-59,female,adeno,?,no,no,no,no,yes,no,no,no,no,no,no,no,no,stomach
+30-59,female,adeno,?,no,no,no,no,no,no,no,no,no,no,yes,no,no,breast
+30-59,female,adeno,well,yes,no,no,no,no,no,no,no,no,no,no,no,no,lung
+<30,female,adeno,?,yes,no,no,no,yes,no,no,no,yes,yes,yes,no,yes,stomach
+30-59,female,adeno,fairly,no,no,no,yes,yes,no,no,no,no,no,no,no,no,ovary
+30-59,female,adeno,?,no,no,yes,no,no,no,no,no,yes,yes,yes,yes,yes,stomach
+>=60,female,adeno,?,no,no,no,no,no,yes,no,no,no,no,no,no,no,gallbladder
+30-59,male,adeno,?,yes,no,no,no,no,no,no,no,yes,no,no,no,no,thyroid
+>=60,female,?,?,yes,no,yes,no,no,no,no,no,no,no,no,no,no,thyroid
+30-59,male,adeno,?,yes,no,no,no,no,no,no,no,no,no,no,no,no,prostate
+30-59,female,adeno,?,no,no,no,no,no,no,no,no,no,no,yes,no,no,breast
+>=60,male,epidermoid,fairly,yes,no,no,no,no,no,no,no,no,no,no,yes,no,lung
+30-59,female,adeno,?,no,no,no,no,yes,no,no,no,no,no,no,no,no,ovary
+<30,male,adeno,?,no,no,no,no,no,no,no,no,no,yes,no,no,no,kidney
+30-59,female,adeno,?,yes,yes,no,no,yes,yes,no,no,no,no,yes,no,no,breast
+>=60,female,adeno,well,no,no,no,no,yes,no,no,no,no,no,no,no,no,ovary
+30-59,female,adeno,?,no,no,no,yes,no,no,no,no,no,no,no,no,yes,ovary
+30-59,male,?,poorly,no,no,no,no,yes,no,yes,yes,no,no,no,yes,yes,lung
+30-59,male,adeno,?,no,no,no,no,no,yes,no,no,no,no,no,no,yes,stomach
+>=60,female,adeno,?,no,no,yes,no,no,yes,no,no,no,no,no,yes,yes,colon
+>=60,female,?,poorly,yes,no,no,yes,no,yes,no,no,no,no,no,no,no,lung
+>=60,female,adeno,?,no,no,no,no,no,yes,no,no,no,no,no,no,yes,gallbladder
+30-59,male,epidermoid,well,yes,no,no,no,no,no,no,yes,yes,yes,no,no,no,lung
+30-59,male,adeno,?,no,no,no,yes,yes,yes,no,no,no,yes,no,no,yes,colon
+30-59,male,adeno,?,no,no,yes,no,no,yes,no,no,no,yes,yes,yes,no,lung
+30-59,female,adeno,?,no,no,no,no,no,no,yes,no,no,no,no,yes,no,lung
+30-59,male,adeno,fairly,no,no,yes,no,no,no,no,no,yes,yes,no,yes,no,lung
+>=60,female,?,poorly,no,no,no,no,no,yes,no,no,no,no,no,yes,yes,lung
+30-59,male,adeno,fairly,no,no,yes,no,no,no,no,no,yes,yes,yes,yes,no,thyroid
+30-59,female,anaplastic,poorly,no,no,no,yes,yes,no,no,no,no,yes,no,yes,no,lung
+30-59,female,adeno,?,no,no,no,yes,no,no,no,yes,no,no,yes,no,no,breast
+30-59,male,adeno,?,yes,no,yes,no,yes,no,no,no,no,no,no,no,yes,kidney

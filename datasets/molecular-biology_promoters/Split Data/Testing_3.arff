@@ -1,0 +1,75 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE instance {UVRBP3,93,ARABAD,RRNDEX_P2,668,1163,313,MALEFG,RRNAB_P1,MALK,1320}
+@ATTRIBUTE p50 {a,g,t,c}
+@ATTRIBUTE p49 {c,t,a,g}
+@ATTRIBUTE p48 {a,g,t}
+@ATTRIBUTE p47 {g,a,t}
+@ATTRIBUTE p46 {t,c,a,g}
+@ATTRIBUTE p45 {t,a,g,c}
+@ATTRIBUTE p44 {a,g,c}
+@ATTRIBUTE p43 {t,c,a,g}
+@ATTRIBUTE p42 {c,a,t,g}
+@ATTRIBUTE p41 {c,a,t,g}
+@ATTRIBUTE p40 {a,g,c,t}
+@ATTRIBUTE p39 {c,t,g,a}
+@ATTRIBUTE p38 {t,a,g}
+@ATTRIBUTE p37 {a,t,c,g}
+@ATTRIBUTE p36 {t,c,g}
+@ATTRIBUTE p35 {t,c,a,g}
+@ATTRIBUTE p34 {c,a,g,t}
+@ATTRIBUTE p33 {c,a,t,g}
+@ATTRIBUTE p32 {t,g,c,a}
+@ATTRIBUTE p31 {g,c,t,a}
+@ATTRIBUTE p30 {t,g,c,a}
+@ATTRIBUTE p29 {g,t,c,a}
+@ATTRIBUTE p28 {g,t,a,c}
+@ATTRIBUTE p27 {a,g,t,c}
+@ATTRIBUTE p26 {t,a,c,g}
+@ATTRIBUTE p25 {a,g,t}
+@ATTRIBUTE p24 {a,g,c,t}
+@ATTRIBUTE p23 {c,g,t,a}
+@ATTRIBUTE p22 {c,g,t,a}
+@ATTRIBUTE p21 {a,c,g,t}
+@ATTRIBUTE p20 {t,c,a,g}
+@ATTRIBUTE p19 {g,c,a,t}
+@ATTRIBUTE p18 {t,a,c,g}
+@ATTRIBUTE p17 {g,c,t,a}
+@ATTRIBUTE p16 {t,g,c,a}
+@ATTRIBUTE p15 {a,c,g,t}
+@ATTRIBUTE p14 {t,g,c}
+@ATTRIBUTE p13 {t,c,a,g}
+@ATTRIBUTE p12 {a,c,t}
+@ATTRIBUTE p11 {g,a,t}
+@ATTRIBUTE p10 {a,t,c,g}
+@ATTRIBUTE p9 {g,t,c}
+@ATTRIBUTE p8 {t,g,a,c}
+@ATTRIBUTE p7 {t,c,g,a}
+@ATTRIBUTE p6 {a,g,t}
+@ATTRIBUTE p5 {g,a,t,c}
+@ATTRIBUTE p4 {a,t,c}
+@ATTRIBUTE p3 {a,g,t,c}
+@ATTRIBUTE p2 {a,t,c,g}
+@ATTRIBUTE p1 {a,c,g,t}
+@ATTRIBUTE p1 {c,t,a,g}
+@ATTRIBUTE p2 {a,t,c,g}
+@ATTRIBUTE p3 {c,a,g,t}
+@ATTRIBUTE p4 {g,c,t,a}
+@ATTRIBUTE p5 {a,g,c}
+@ATTRIBUTE p6 {g,c,a,t}
+@ATTRIBUTE p7 {g,t,c,a}
+@ATTRIBUTE class {+,-}
+
+@DATA
+UVRBP3,a,c,a,g,t,t,a,t,c,c,a,c,t,a,t,t,c,c,t,g,t,g,g,a,t,a,a,c,c,a,t,g,t,g,t,a,t,t,a,g,a,g,t,t,a,g,a,a,a,a,c,a,c,g,a,g,g,+
+93,g,c,g,g,c,a,g,c,a,c,g,t,t,t,c,c,a,c,g,c,g,g,t,g,a,g,a,g,c,c,t,c,a,g,g,a,t,t,c,a,t,g,t,c,g,a,t,g,t,c,t,t,c,c,g,g,t,-
+ARABAD,t,t,a,g,c,g,g,a,t,c,c,t,a,c,c,t,g,a,c,g,c,t,t,t,t,t,a,t,c,g,c,a,a,c,t,c,t,c,t,a,c,t,g,t,t,t,c,t,c,c,a,t,a,c,c,c,g,+
+RRNDEX_P2,c,c,t,g,a,a,a,t,t,c,a,g,g,g,t,t,g,a,c,t,c,t,g,a,a,a,g,a,g,g,a,a,a,g,c,g,t,a,a,t,a,t,a,c,g,c,c,a,c,c,t,c,g,c,g,a,c,+
+668,c,a,t,g,t,c,a,g,c,c,t,c,g,a,c,a,a,c,t,t,g,c,a,t,a,a,a,t,g,c,t,t,t,c,t,t,g,t,a,g,a,c,g,t,g,c,c,c,t,a,c,g,c,g,c,t,t,-
+1163,t,a,t,g,a,c,c,g,a,a,c,g,a,g,t,c,a,a,t,c,a,g,a,c,c,g,c,t,t,t,g,a,c,t,c,t,g,g,t,a,t,t,a,c,t,g,t,g,a,a,c,a,t,t,a,t,t,-
+313,c,g,t,a,g,c,g,c,a,t,c,a,g,t,g,c,t,t,t,c,t,t,a,c,t,g,t,g,a,g,t,a,c,g,c,a,c,c,a,g,c,g,c,c,a,g,a,g,g,a,c,g,a,c,g,a,c,-
+MALEFG,a,g,g,g,g,c,a,a,g,g,a,g,g,a,t,g,g,a,a,a,g,a,g,g,t,t,g,c,c,g,t,a,t,a,a,a,g,a,a,a,c,t,a,g,a,g,t,c,c,g,t,t,t,a,g,g,t,+
+RRNAB_P1,t,t,t,t,a,a,a,t,t,t,c,c,t,c,t,t,g,t,c,a,g,g,c,c,g,g,a,a,t,a,a,c,t,c,c,c,t,a,t,a,a,t,g,c,g,c,c,a,c,c,a,c,t,g,a,c,a,+
+MALK,c,a,g,g,g,g,g,t,g,g,a,g,g,a,t,t,t,a,a,g,c,c,a,t,c,t,c,c,t,g,a,t,g,a,c,g,c,a,t,a,g,t,c,a,g,c,c,c,a,t,c,a,t,g,a,a,t,+
+1320,t,a,g,a,g,g,g,t,g,t,a,c,t,c,c,a,a,g,a,a,g,a,g,g,a,a,g,a,t,g,a,g,g,c,t,a,g,a,c,g,t,c,t,c,t,g,c,a,t,g,g,a,g,t,a,t,g,-

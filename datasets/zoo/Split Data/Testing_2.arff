@@ -1,0 +1,33 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE animal {hamster,bear,pony,porpoise,kiwi,chub,wasp,flamingo,tuna,piranha}
+@ATTRIBUTE hair {true,false}
+@ATTRIBUTE feathers {false,true}
+@ATTRIBUTE eggs {false,true}
+@ATTRIBUTE milk {true,false}
+@ATTRIBUTE airborne {false,true}
+@ATTRIBUTE aquatic {false,true}
+@ATTRIBUTE predator {false,true}
+@ATTRIBUTE toothed {true,false}
+@ATTRIBUTE backbone {true,false}
+@ATTRIBUTE breathes {true,false}
+@ATTRIBUTE venomous {false,true}
+@ATTRIBUTE fins {false,true}
+@ATTRIBUTE legs NUMERIC
+@ATTRIBUTE tail {true,false}
+@ATTRIBUTE domestic {true,false}
+@ATTRIBUTE catsize {false,true}
+@ATTRIBUTE class {mammal,bird,fish,insect}
+
+@DATA
+hamster,true,false,false,true,false,false,false,true,true,true,false,false,4,true,true,false,mammal
+bear,true,false,false,true,false,false,true,true,true,true,false,false,4,false,false,true,mammal
+pony,true,false,false,true,false,false,false,true,true,true,false,false,4,true,true,true,mammal
+porpoise,false,false,false,true,false,true,true,true,true,true,false,true,0,true,false,true,mammal
+kiwi,false,true,true,false,false,false,true,false,true,true,false,false,2,true,false,false,bird
+chub,false,false,true,false,false,true,true,true,true,false,false,true,0,true,false,false,fish
+wasp,true,false,true,false,true,false,false,false,false,true,true,false,6,false,false,false,insect
+flamingo,false,true,true,false,true,false,false,false,true,true,false,false,2,true,false,true,bird
+tuna,false,false,true,false,false,true,true,true,true,false,false,true,0,true,false,true,fish
+piranha,false,false,true,false,false,true,true,true,true,false,false,true,0,true,false,false,fish

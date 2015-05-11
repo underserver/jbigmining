@@ -1,0 +1,32 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE t3resininteger65 NUMERIC
+@ATTRIBUTE thyroxinreal05 NUMERIC
+@ATTRIBUTE triiodothyroninereal02 NUMERIC
+@ATTRIBUTE thyroidstimulatingreal01 NUMERIC
+@ATTRIBUTE tshvaluereal07 NUMERIC
+@ATTRIBUTE class { normal, hyper, hypo}
+
+@DATA
+98,10.4,1.6,2.3,-0.7, normal
+112,9.5,2,1.2,0.7, normal
+119,12.9,1.5,1.3,3.6, normal
+119,8,2,0.6,3.2, normal
+116,11.5,1.8,1.4,5.4, normal
+80,23,10,0.9,-0.1, hyper
+109,9.7,1.4,1.1,2.1, normal
+94,20.5,1.8,1.4,-0.5, hyper
+121,10.1,2.4,0.8,3, normal
+121,4.7,1.8,11.2,53, hypo
+102,7.6,1.8,2,2.5, normal
+88,24.1,5.5,0.8,0.1, hyper
+115,15.3,2.3,2,2, normal
+106,9.4,2.2,1.5,0, normal
+109,10.4,1.9,0.4,-0.1, normal
+134,1.9,0.6,18.4,8.2, hypo
+127,12.9,2.4,1.4,0.6, normal
+100,9.5,2.5,1.3,-0.2, normal
+112,2.6,0.7,41,19, hypo
+118,6.5,1.3,1.7,11.5, hypo
+111,7.8,2,1.8,4.1, normal

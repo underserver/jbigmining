@@ -29,10 +29,10 @@
 
 package org.underserver.jbigmining.parsers;
 
-import org.underserver.jbigmining.Attribute;
-import org.underserver.jbigmining.DataSet;
-import org.underserver.jbigmining.Parser;
-import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.core.Attribute;
+import org.underserver.jbigmining.core.DataSet;
+import org.underserver.jbigmining.core.Parser;
+import org.underserver.jbigmining.core.Pattern;
 
 import java.io.*;
 import java.util.Arrays;
@@ -46,120 +46,156 @@ import java.util.List;
  * @date 28/05/13 02:30 PM
  */
 public class ARFFParser implements Parser {
-	private File file;
+    private final File file;
 
-	public ARFFParser( String fileName ) {
-		this.file = new File( fileName );
-	}
+    public ARFFParser( String fileName ) {
+        this.file = new File( fileName );
+    }
 
-	public ARFFParser( File file ) {
-		this.file = file;
-	}
+    public ARFFParser( File file ) {
+        this.file = file;
+    }
 
-	public DataSet parse() {
-		DataSet dataSet = new DataSet();
-		int[] distribution = null;
+    public DataSet parse() {
+        DataSet dataSet = new DataSet();
 
-		try {
-			FileInputStream fis = new FileInputStream( file );
-			DataInputStream din = new DataInputStream( fis );
-			BufferedReader br = new BufferedReader( new InputStreamReader( din ) );
+        try {
+            readHeaders( dataSet );
+            readData( dataSet );
+        } catch( IOException e ) {
+            e.printStackTrace();
+            return null;
+        }
 
-			boolean dataFlag = false;
-			String line;
-			while( ( line = br.readLine() ) != null ) {
+        return dataSet;
+    }
 
-				if( line.toUpperCase().startsWith( "@RELATION" ) ) {
-					dataSet.setName( readRelation( line ) );
-				}
+    public void readData( DataSet dataSet ) throws IOException {
+        FileInputStream fis = new FileInputStream( file );
+        DataInputStream din = new DataInputStream( fis );
+        BufferedReader br = new BufferedReader( new InputStreamReader( din ) );
 
-				if( line.toUpperCase().startsWith( "@ATTRIBUTE" ) ) {
-					Attribute attribute = readAttribute( line );
-					dataSet.addAttribute( attribute );
-				}
+        dataSet.setDistribution( new int[dataSet.getClasses().getValues().size()] );
 
-				if( line.startsWith( "%" ) && dataFlag ) {
-					dataSet.setDistribution( distribution );
+        boolean dataFlag = false;
+        String line;
+        while( ( line = br.readLine() ) != null ) {
 
-					dataFlag = false;
-				}
+            if( line.toUpperCase().startsWith( "@DATA" ) ) {
+                dataFlag = true;
+                continue;
+            }
 
-				if( dataFlag ) {
-					Pattern instance = new Pattern();
-					instance.setDataSet( dataSet );
+            if( dataFlag && !line.trim().equals( "%" ) ) {
+                Pattern instance = new Pattern();
+                instance.setDataSet( dataSet );
 
-					String values[] = line.split( "," );
-					for( int i = 0; i < values.length - 1; i++ ) {
-						Attribute attribute = dataSet.getAttributes().get( i );
-						String rawValue = values[i].trim();
-						if( attribute.getType() == Attribute.Type.NUMERIC ||
-								attribute.getType() == Attribute.Type.REAL ) {
-							instance.add( Double.valueOf( rawValue ) );
-						} else {
-							attribute.putValue( rawValue );
-							instance.add( rawValue );
-						}
-					}
-					instance.setClassValue( values[values.length - 1].trim() );
+                String values[] = line.split( "," );
+                for( int i = 0; i < values.length - 1; i++ ) {
+                    Attribute attribute = dataSet.getAttributes().get( i );
+                    String rawValue = values[i].trim();
+                    if( rawValue.equals( "?" ) || rawValue.isEmpty() ) {
+                        instance.addMissing();
+                        continue;
+                    }
+                    if( attribute.getType() == Attribute.Type.NUMERIC ) {
+                        instance.add( Double.valueOf( rawValue ) );
+                    } else {
+                        attribute.putValue( rawValue );
+                        instance.add( rawValue );
+                    }
+                }
 
-					dataSet.add( instance );
+                dataSet.add( instance );
 
-					distribution[instance.getClassIndex()] += 1;
-				}
+                if( !values[values.length - 1].equals( "?" ) && !values[values.length - 1].isEmpty() ) {
+                    instance.setClassValue( values[values.length - 1].trim() );
+                    dataSet.getDistribution()[instance.getClassIndex()] += 1;
+                }
+            }
+        }
 
-				if( line.toUpperCase().startsWith( "@DATA" ) ) {
-					List<Attribute> attributes = dataSet.getAttributes();
-					Attribute classes = attributes.get( attributes.size() - 1 );
+        br.close();
+        din.close();
+        fis.close();
+    }
 
-					dataSet.setClasses( classes );
-					dataSet.removeAttribute( attributes.size() - 1 );  // remove class attribute from all others attributes
+    public void readHeaders( DataSet dataSet ) throws IOException {
+        FileInputStream fis = new FileInputStream( file );
+        DataInputStream din = new DataInputStream( fis );
+        BufferedReader br = new BufferedReader( new InputStreamReader( din ) );
 
-					distribution = new int[classes.getValues().size()];
+        String line;
+        while( ( line = br.readLine() ) != null ) {
+            if( line.toUpperCase().startsWith( "@RELATION" ) ) {
+                dataSet.setName( readRelation( line ) );
+            } else if( line.toUpperCase().startsWith( "@ATTRIBUTE" ) ) {
+                Attribute attribute = readAttribute( line );
+                dataSet.addAttribute( attribute );
+            } else if( line.toUpperCase().startsWith( "@DATA" ) ) {
+                break;
+            }
+        }
 
-					dataFlag = true;
-				}
-			}
+        List<Attribute> attributes = dataSet.getAttributes();
+        Attribute classes = attributes.get( attributes.size() - 1 );
 
-			br.close();
-			din.close();
-			fis.close();
-		} catch ( Exception e ) {
-			e.printStackTrace();
-			return null;
-		}
+        dataSet.setClasses( classes );
+        dataSet.removeAttribute( attributes.size() - 1 );  // remove class attribute from all others attributes
 
-		return dataSet;
-	}
+        br.close();
+        din.close();
+        fis.close();
+    }
 
-	public Attribute readAttribute( String line ) {
-		line = line.replaceAll( "\\t", " " );
-		line = line.substring( 10 ).trim();
-		String name;
-		if( line.startsWith( "\"" ) ) {
-			int begin = line.indexOf( '"' );
-			int last = line.lastIndexOf( '"' );
-			name = line.substring( begin + 1, last );
-		} else {
-			name = line.split( " " )[0];
-		}
+    private Attribute readAttribute( String line ) {
+        line = line.replaceAll( "\\t", " " );
+        line = line.substring( "@ATTRIBUTE".length() ).trim();
+        String name;
+        if( line.startsWith( "\"" ) ) {
+            int begin = line.indexOf( '"' );
+            int last = line.lastIndexOf( '"' );
+            name = line.substring( begin + 1, last );
+        } else {
+            name = line.split( " " )[0];
+        }
 
-		line = line.replaceFirst( name, "" ).trim();
+        line = line.replaceFirst( name, "" ).trim();
 
-		Attribute attribute = new Attribute( name );
-		if( line.startsWith( "{" ) ) {
-			line = line.replaceAll( "\"", "" );
-			String[] values = line.replaceAll( "\\{", "" ).replaceAll( "\\}", "" ).split( "," );
-			attribute.setType( Attribute.Type.NOMINAL );
-			attribute.setValues( Arrays.asList( values ) );
-		} else {
-			attribute.setType( Attribute.Type.valueOf( line.toUpperCase() ) );
-		}
+        Attribute attribute = new Attribute( name );
+        if( line.startsWith( "{" ) ) {
+            line = line.replaceAll( "\"", "" );
+            String[] values = line.replaceAll( "\\{", "" ).replaceAll( "\\}", "" ).split( "," );
+            attribute.setType( Attribute.Type.NOMINAL );
+            for( int i = 0; i < values.length; i++ ) {
+                values[i] = values[i].trim();
+            }
+            attribute.setValues( Arrays.asList( values ) );
+            if( isBoolean( attribute.getValues() ) )
+                attribute.setType( Attribute.Type.BOOLEAN );
+        } else {
+            if( line.toUpperCase().equals( "REAL" )
+                    || line.toUpperCase().equals( "NUMERIC" )
+                    || line.toUpperCase().equals( "INTEGER" ) )
+                attribute.setType( Attribute.Type.NUMERIC );
+        }
 
-		return attribute;
-	}
+        return attribute;
+    }
 
-	public String readRelation( String line ) {
-		line = line.replaceAll( "\\t", " " );
-		return line.substring( 9 ).trim();
-	}
+    private boolean isBoolean( List<String> values ) {
+        for( String value : values ) {
+            if( !( value.equals( "0" ) || value.equals( "1" )
+                    || value.toLowerCase().equals( "true" )
+                    || value.toLowerCase().equals( "false" ) ) ) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private String readRelation( String line ) {
+        line = line.replaceAll( "\\t", " " );
+        return line.substring( 9 ).trim();
+    }
 }

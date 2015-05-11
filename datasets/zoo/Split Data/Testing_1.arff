@@ -1,0 +1,33 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE animal {duck,seasnake,elephant,dogfish,wolf,ladybird,girl,housefly,catfish,raccoon}
+@ATTRIBUTE hair {false,true}
+@ATTRIBUTE feathers {true,false}
+@ATTRIBUTE eggs {true,false}
+@ATTRIBUTE milk {false,true}
+@ATTRIBUTE airborne {true,false}
+@ATTRIBUTE aquatic {true,false}
+@ATTRIBUTE predator {false,true}
+@ATTRIBUTE toothed {false,true}
+@ATTRIBUTE backbone {true,false}
+@ATTRIBUTE breathes {true,false}
+@ATTRIBUTE venomous {false,true}
+@ATTRIBUTE fins {false,true}
+@ATTRIBUTE legs NUMERIC
+@ATTRIBUTE tail {true,false}
+@ATTRIBUTE domestic {false,true}
+@ATTRIBUTE catsize {false,true}
+@ATTRIBUTE class {bird,reptile,mammal,fish,insect}
+
+@DATA
+duck,false,true,true,false,true,true,false,false,true,true,false,false,2,true,false,false,bird
+seasnake,false,false,false,false,false,true,true,true,true,false,true,false,0,true,false,false,reptile
+elephant,true,false,false,true,false,false,false,true,true,true,false,false,4,true,false,true,mammal
+dogfish,false,false,true,false,false,true,true,true,true,false,false,true,0,true,false,true,fish
+wolf,true,false,false,true,false,false,true,true,true,true,false,false,4,true,false,true,mammal
+ladybird,false,false,true,false,true,false,true,false,false,true,false,false,6,false,false,false,insect
+girl,true,false,false,true,false,false,true,true,true,true,false,false,2,false,true,true,mammal
+housefly,true,false,true,false,true,false,false,false,false,true,false,false,6,false,false,false,insect
+catfish,false,false,true,false,false,true,true,true,true,false,false,true,0,true,false,false,fish
+raccoon,true,false,false,true,false,false,true,true,true,true,false,false,4,true,false,true,mammal

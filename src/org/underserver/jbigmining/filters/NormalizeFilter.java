@@ -29,8 +29,8 @@
 
 package org.underserver.jbigmining.filters;
 
-import org.underserver.jbigmining.DataSet;
-import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.core.DataSet;
+import org.underserver.jbigmining.core.Pattern;
 import org.underserver.jbigmining.exceptions.FilterException;
 
 /**

@@ -29,11 +29,11 @@
 
 package org.underserver.jbigmining.validations;
 
-import org.underserver.jbigmining.Algorithm;
-import org.underserver.jbigmining.DataSet;
-import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.core.Algorithm;
+import org.underserver.jbigmining.core.DataSet;
+import org.underserver.jbigmining.core.Pattern;
 
-import java.util.Set;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -64,7 +64,7 @@ public class LeaveOneOutValidationThreaded extends ValidationMethod {
 		long start = System.currentTimeMillis();
 
 		for( Pattern instance : dataSet ) {
-			Set<Pattern> trainingSet = new DataSet( dataSet );
+			List<Pattern> trainingSet = new DataSet( dataSet );
 
 			trainingSet.addAll( getDataSet() );
 			trainingSet.remove( instance );

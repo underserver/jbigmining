@@ -1,0 +1,98 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE agegt60 {f,t}
+@ATTRIBUTE air {mild,normal,moderate}
+@ATTRIBUTE airbonegap {f,t}
+@ATTRIBUTE arc {elevated,normal,absent}
+@ATTRIBUTE aru {normal,elevated,absent,?}
+@ATTRIBUTE bone {unmeasured,normal,mild,?}
+@ATTRIBUTE boneabnormal {f,t}
+@ATTRIBUTE bser {?}
+@ATTRIBUTE historybuzzing {f}
+@ATTRIBUTE historydizziness {f,t}
+@ATTRIBUTE historyfluctuating {f,t}
+@ATTRIBUTE historyfullness {f}
+@ATTRIBUTE historyheredity {f}
+@ATTRIBUTE historynausea {f,t}
+@ATTRIBUTE historynoise {f,t}
+@ATTRIBUTE historyrecruitment {f,t}
+@ATTRIBUTE historyringing {f}
+@ATTRIBUTE historyroaring {f,t}
+@ATTRIBUTE historyvomiting {f}
+@ATTRIBUTE latewavepoor {f}
+@ATTRIBUTE mat2k {f}
+@ATTRIBUTE mcondlt1k {f}
+@ATTRIBUTE mgt1k {f}
+@ATTRIBUTE mmgt2k {f}
+@ATTRIBUTE mmsn {f}
+@ATTRIBUTE mmsngt1k {f,t}
+@ATTRIBUTE mmsngt2k {f,t}
+@ATTRIBUTE mmsngt500 {f,t}
+@ATTRIBUTE mpsngt2k {f,t}
+@ATTRIBUTE msgt500 {f,t}
+@ATTRIBUTE mssn {f}
+@ATTRIBUTE mssngt1k {f}
+@ATTRIBUTE mssngt2k {f}
+@ATTRIBUTE mssngt3k {f,t}
+@ATTRIBUTE mssngt4k {f}
+@ATTRIBUTE msn23k {f}
+@ATTRIBUTE msngt1k {f,t}
+@ATTRIBUTE msngt2k {f}
+@ATTRIBUTE msngt3k {f}
+@ATTRIBUTE msngt4k {f,t}
+@ATTRIBUTE msngt500 {f}
+@ATTRIBUTE msngt6k {f}
+@ATTRIBUTE msnlt1k {f}
+@ATTRIBUTE msnlt2k {f}
+@ATTRIBUTE msnlt3k {f}
+@ATTRIBUTE middlewavepoor {f}
+@ATTRIBUTE modgt4k {f}
+@ATTRIBUTE modmixed {f}
+@ATTRIBUTE modsmixed {f}
+@ATTRIBUTE modssngt500 {f}
+@ATTRIBUTE modsn {f,t}
+@ATTRIBUTE modsngt1k {f}
+@ATTRIBUTE modsngt2k {f,t}
+@ATTRIBUTE modsngt3k {f}
+@ATTRIBUTE modsngt4k {f}
+@ATTRIBUTE modsngt500 {f}
+@ATTRIBUTE notch4k {f,t}
+@ATTRIBUTE notchat4k {f,t}
+@ATTRIBUTE oarc {elevated,absent,normal}
+@ATTRIBUTE oaru {normal,elevated,absent}
+@ATTRIBUTE ssngt1k {f}
+@ATTRIBUTE ssngt2k {f}
+@ATTRIBUTE ssngt4k {f}
+@ATTRIBUTE speech {good,normal,very_poor,poor,very_good,unmeasured}
+@ATTRIBUTE staticnormal {t,f}
+@ATTRIBUTE tymp {a,as,ad,b}
+@ATTRIBUTE viithnervesigns {f}
+@ATTRIBUTE wavevdelayed {f}
+@ATTRIBUTE waveformitovprolonged {f,t}
+@ATTRIBUTE class {cochlear_unknown,cochlear_age,cochlear_age_and_noise,conductive_discontinuity,mixed_cochlear_unk_fixation,normal_ear,possible_menieres,possible_brainstem_disorder,cochlear_poss_noise,mixed_cochlear_age_s_om}
+
+@DATA
+f,mild,f,elevated,normal,unmeasured,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,elevated,normal,f,f,f,good,t,a,f,f,f,cochlear_unknown
+t,normal,f,normal,elevated,normal,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,elevated,normal,f,f,f,normal,t,a,f,f,f,cochlear_age
+t,normal,f,elevated,normal,unmeasured,f,?,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,elevated,elevated,f,f,f,very_poor,t,as,f,f,f,cochlear_age_and_noise
+f,moderate,t,absent,absent,normal,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,absent,elevated,f,f,f,good,t,ad,f,f,f,conductive_discontinuity
+t,mild,f,normal,normal,unmeasured,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,normal,normal,f,f,f,poor,t,a,f,f,f,cochlear_age
+f,mild,f,elevated,normal,mild,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,normal,normal,f,f,f,poor,t,a,f,f,f,cochlear_unknown
+f,moderate,f,absent,absent,mild,f,?,f,f,f,f,f,f,t,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,absent,absent,f,f,f,very_good,t,as,f,f,f,mixed_cochlear_unk_fixation
+t,mild,f,absent,?,?,f,?,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,absent,absent,f,f,f,good,t,a,f,f,f,cochlear_age_and_noise
+f,normal,f,normal,normal,normal,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,normal,normal,f,f,f,normal,t,a,f,f,f,normal_ear
+f,mild,f,normal,normal,?,f,?,f,t,t,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,normal,normal,f,f,f,normal,f,a,f,f,f,possible_menieres
+f,normal,f,normal,normal,?,f,?,f,t,f,f,f,t,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,normal,normal,f,f,f,normal,f,a,f,f,t,possible_brainstem_disorder
+t,mild,f,normal,normal,mild,t,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,normal,elevated,f,f,f,very_good,t,a,f,f,f,cochlear_age
+f,mild,f,absent,normal,?,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,elevated,absent,f,f,f,good,t,a,f,f,f,cochlear_unknown
+t,mild,f,normal,normal,?,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,normal,elevated,f,f,f,very_good,f,a,f,f,f,cochlear_age
+t,mild,f,normal,normal,?,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,normal,normal,f,f,f,good,t,a,f,f,f,cochlear_age
+f,normal,f,absent,elevated,normal,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,absent,absent,f,f,f,normal,t,a,f,f,f,normal_ear
+f,mild,f,normal,normal,unmeasured,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,normal,normal,f,f,f,poor,t,a,f,f,f,cochlear_unknown
+t,mild,f,normal,absent,mild,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,absent,normal,f,f,f,very_good,t,a,f,f,f,cochlear_age
+f,normal,f,elevated,normal,?,f,?,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,normal,elevated,f,f,f,normal,t,a,f,f,f,cochlear_poss_noise
+t,normal,f,absent,absent,normal,f,?,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,absent,absent,f,f,f,poor,t,b,f,f,f,mixed_cochlear_age_s_om
+t,mild,f,normal,normal,unmeasured,f,?,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,normal,normal,f,f,f,very_good,t,a,f,f,f,cochlear_age
+f,normal,f,normal,normal,?,f,?,f,t,t,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,normal,normal,f,f,f,normal,f,a,f,f,f,possible_menieres
+t,mild,f,normal,normal,unmeasured,f,?,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,t,f,normal,normal,f,f,f,unmeasured,t,a,f,f,f,cochlear_age_and_noise

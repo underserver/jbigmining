@@ -1,0 +1,48 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE age NUMERIC
+@ATTRIBUTE sex {male,female}
+@ATTRIBUTE chestpain {asympt,non_anginal,atyp_angina}
+@ATTRIBUTE trestbps NUMERIC
+@ATTRIBUTE chol NUMERIC
+@ATTRIBUTE fbs {f,?,t}
+@ATTRIBUTE restecg {normal,st_t_wave_abnormality,left_vent_hyper}
+@ATTRIBUTE thalach NUMERIC
+@ATTRIBUTE exang {no,yes}
+@ATTRIBUTE oldpeak NUMERIC
+@ATTRIBUTE slope {?,flat,up}
+@ATTRIBUTE ca NUMERIC
+@ATTRIBUTE thal {?,reversable_defect,fixed_defect}
+@ATTRIBUTE class {>50_1,<50}
+
+@DATA
+38,male,asympt,110,196,f,normal,166,no,0,?,?,?,>50_1
+36,male,non_anginal,150,160,f,normal,172,no,0,?,?,?,<50
+56,female,non_anginal,130,219,?,st_t_wave_abnormality,164,no,0,?,?,reversable_defect,<50
+35,male,atyp_angina,110,257,f,normal,140,no,0,?,?,?,>50_1
+59,male,asympt,140,264,t,left_vent_hyper,119,yes,0,?,?,?,>50_1
+48,female,asympt,120,254,f,st_t_wave_abnormality,110,no,0,?,?,?,<50
+48,male,atyp_angina,140,238,f,normal,118,no,0,?,?,?,<50
+49,female,non_anginal,130,207,f,st_t_wave_abnormality,135,no,0,?,?,?,<50
+33,male,non_anginal,120,298,f,normal,185,no,0,?,?,?,<50
+39,male,atyp_angina,190,241,f,normal,106,no,0,?,?,?,<50
+37,male,non_anginal,130,194,f,normal,150,no,0,?,?,?,<50
+59,female,asympt,130,338,t,st_t_wave_abnormality,130,yes,1.5,flat,?,?,>50_1
+34,male,atyp_angina,150,214,f,st_t_wave_abnormality,168,no,0,?,?,?,<50
+41,male,atyp_angina,125,269,f,normal,144,no,0,?,?,?,<50
+54,male,non_anginal,120,237,f,normal,150,yes,1.5,?,?,reversable_defect,>50_1
+32,male,atyp_angina,125,254,f,normal,155,no,0,?,?,?,<50
+49,male,asympt,140,?,f,normal,130,no,0,?,?,?,<50
+39,male,atyp_angina,120,?,f,st_t_wave_abnormality,146,no,2,up,?,?,<50
+54,male,atyp_angina,110,208,f,normal,142,no,0,?,?,?,<50
+52,male,asympt,170,?,f,normal,126,yes,1.5,flat,?,?,>50_1
+53,male,asympt,124,260,f,st_t_wave_abnormality,112,yes,3,flat,?,?,<50
+45,male,asympt,140,224,f,normal,144,no,0,?,?,?,<50
+49,male,asympt,150,222,f,normal,122,no,2,flat,?,?,>50_1
+52,male,asympt,130,298,f,normal,110,yes,1,flat,?,?,>50_1
+55,male,asympt,145,248,f,normal,96,yes,2,flat,?,?,>50_1
+48,male,asympt,120,260,f,normal,115,no,2,flat,?,?,>50_1
+58,male,non_anginal,130,213,f,st_t_wave_abnormality,140,no,0,?,?,fixed_defect,>50_1
+43,female,atyp_angina,150,186,f,normal,154,no,0,?,?,?,<50
+52,female,atyp_angina,120,210,f,normal,148,no,0,?,?,?,<50

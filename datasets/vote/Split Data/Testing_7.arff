@@ -1,0 +1,65 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE handicappedinfants {y,n,?}
+@ATTRIBUTE waterprojectcostsharing {?,y,n}
+@ATTRIBUTE adoptionofthebudgetresolution {y,?,n}
+@ATTRIBUTE physicianfeefreeze {n,y}
+@ATTRIBUTE elsalvadoraid {?,n,y}
+@ATTRIBUTE religiousgroupsinschools {?,n,y}
+@ATTRIBUTE antisatellitetestban {y,n,?}
+@ATTRIBUTE aidtonicaraguancontras {y,n,?}
+@ATTRIBUTE mxmissile {y,n,?}
+@ATTRIBUTE immigration {n,y}
+@ATTRIBUTE synfuelscorporationcutback {n,y,?}
+@ATTRIBUTE educationspending {n,y,?}
+@ATTRIBUTE superfundrighttosue {n,y,?}
+@ATTRIBUTE crime {n,y,?}
+@ATTRIBUTE dutyfreeexports {y,n,?}
+@ATTRIBUTE exportadministrationactsouthafrica {?,y,n}
+@ATTRIBUTE class {democrat,republican}
+
+@DATA
+y,?,y,n,?,?,y,y,y,n,n,n,n,n,y,?,democrat
+y,y,y,n,n,n,y,y,y,n,n,n,n,n,n,?,democrat
+n,n,?,n,n,y,y,y,y,n,n,n,n,n,y,y,democrat
+y,y,y,n,n,n,y,y,y,n,y,n,n,n,y,y,democrat
+y,n,y,n,n,n,y,y,y,n,y,n,n,n,y,?,democrat
+n,n,y,n,n,y,y,y,y,y,n,y,n,n,n,y,democrat
+n,?,n,y,y,y,n,n,n,y,n,y,y,y,n,n,republican
+y,n,n,n,y,y,?,n,?,n,n,n,n,y,?,n,democrat
+n,y,n,y,y,y,n,n,n,y,y,y,y,y,n,n,republican
+n,y,n,n,y,y,n,n,n,n,n,y,y,y,y,y,democrat
+n,y,y,n,n,n,n,y,y,n,y,n,n,y,y,y,democrat
+y,n,y,n,n,y,y,y,y,y,y,n,n,n,y,y,democrat
+n,n,y,n,n,n,y,y,y,y,n,n,n,y,n,y,democrat
+?,?,y,n,n,n,y,y,?,n,?,?,?,?,?,?,democrat
+n,y,y,n,n,y,y,y,?,y,n,n,n,n,n,y,democrat
+y,y,y,n,n,n,y,y,y,n,y,n,n,n,y,y,democrat
+n,n,y,n,n,n,y,y,y,y,y,?,n,n,y,y,democrat
+n,?,n,y,y,y,n,n,n,y,n,y,y,y,n,y,republican
+y,y,n,y,y,y,y,n,n,n,n,y,y,y,n,n,republican
+n,n,y,n,n,y,y,?,y,y,y,n,n,n,y,y,democrat
+y,n,y,y,y,y,y,y,n,y,y,y,n,y,y,y,republican
+y,n,y,n,n,n,y,y,y,y,y,n,n,n,y,y,democrat
+y,n,y,n,y,y,n,n,n,n,n,n,n,n,n,y,democrat
+n,n,y,n,n,y,y,y,y,n,y,n,n,n,y,y,democrat
+y,n,y,n,n,n,y,y,y,y,n,n,n,n,n,y,democrat
+y,y,y,n,n,n,y,y,y,n,n,n,n,n,?,?,democrat
+n,y,n,y,y,y,n,n,n,n,n,y,y,y,n,y,republican
+y,n,y,n,n,n,y,y,y,n,n,n,n,n,y,?,democrat
+?,y,n,n,n,n,y,y,y,y,y,n,n,y,y,y,democrat
+n,y,n,y,y,y,n,n,n,y,n,y,y,y,n,n,republican
+n,y,n,y,y,y,n,n,n,n,n,y,y,y,n,n,republican
+y,n,y,n,n,n,y,y,y,y,n,n,n,y,y,y,democrat
+n,n,n,n,n,y,y,y,y,n,y,n,n,y,y,y,democrat
+n,y,n,y,y,y,n,n,n,y,n,y,y,y,n,?,republican
+y,y,y,n,y,y,n,n,n,y,y,n,y,y,n,y,democrat
+y,?,y,n,n,n,y,y,y,n,n,n,y,n,y,y,democrat
+n,n,n,y,y,y,n,n,n,n,n,y,y,y,n,y,republican
+y,y,y,n,y,y,n,y,y,y,y,n,n,n,n,y,democrat
+n,y,y,n,y,y,y,n,n,n,y,y,y,y,n,y,democrat
+n,y,n,y,y,y,n,n,n,n,y,?,y,y,?,?,republican
+y,n,y,n,y,y,y,n,y,y,n,n,y,y,n,?,democrat
+n,n,y,n,n,n,y,y,y,n,n,n,n,n,y,?,democrat
+y,y,y,n,n,n,y,y,y,n,y,?,n,n,n,y,democrat

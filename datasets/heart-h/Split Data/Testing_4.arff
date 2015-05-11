@@ -1,0 +1,48 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE age NUMERIC
+@ATTRIBUTE sex {female,male}
+@ATTRIBUTE chestpain {non_anginal,asympt,typ_angina,atyp_angina}
+@ATTRIBUTE trestbps NUMERIC
+@ATTRIBUTE chol NUMERIC
+@ATTRIBUTE fbs {f,t}
+@ATTRIBUTE restecg {st_t_wave_abnormality,normal,?,left_vent_hyper}
+@ATTRIBUTE thalach NUMERIC
+@ATTRIBUTE exang {yes,no}
+@ATTRIBUTE oldpeak NUMERIC
+@ATTRIBUTE slope {flat,?,up}
+@ATTRIBUTE ca NUMERIC
+@ATTRIBUTE thal {?,reversable_defect,fixed_defect}
+@ATTRIBUTE class {>50_1,<50}
+
+@DATA
+54,female,non_anginal,130,294,f,st_t_wave_abnormality,100,yes,0,flat,?,?,>50_1
+44,male,asympt,135,491,f,normal,135,no,0,?,?,?,>50_1
+55,male,typ_angina,140,295,f,?,136,no,0,?,?,?,>50_1
+39,male,atyp_angina,120,204,f,normal,145,no,0,?,?,?,<50
+51,male,atyp_angina,130,224,f,normal,150,no,0,?,?,?,<50
+34,female,atyp_angina,130,161,f,normal,190,no,0,?,?,?,<50
+43,male,asympt,120,175,f,normal,120,yes,1,flat,?,reversable_defect,>50_1
+41,male,asympt,110,289,f,normal,170,no,0,?,?,fixed_defect,>50_1
+58,male,atyp_angina,130,251,f,normal,110,no,0,?,?,?,<50
+52,male,asympt,140,404,f,normal,124,yes,2,flat,?,?,>50_1
+30,female,typ_angina,170,237,f,st_t_wave_abnormality,170,no,0,?,?,fixed_defect,<50
+52,male,non_anginal,140,259,f,st_t_wave_abnormality,170,no,0,?,?,?,<50
+48,female,asympt,150,227,f,normal,130,yes,1,flat,?,?,<50
+37,male,asympt,140,207,f,normal,130,yes,1.5,flat,?,?,>50_1
+49,male,asympt,128,212,f,normal,96,yes,0,?,?,?,>50_1
+48,female,asympt,108,163,f,normal,175,no,2,up,?,?,<50
+48,male,asympt,106,263,t,normal,110,no,0,?,?,?,>50_1
+48,female,atyp_angina,120,?,t,st_t_wave_abnormality,148,no,0,?,?,?,<50
+41,male,asympt,130,172,f,st_t_wave_abnormality,130,no,2,flat,?,?,>50_1
+58,male,atyp_angina,130,230,f,normal,150,no,0,?,?,?,<50
+50,male,asympt,140,129,f,normal,135,no,0,?,?,?,<50
+54,male,asympt,130,242,f,normal,91,yes,1,flat,?,?,>50_1
+50,male,asympt,130,233,f,normal,121,yes,2,flat,?,reversable_defect,>50_1
+35,male,atyp_angina,150,264,f,normal,168,no,0,?,?,?,<50
+39,male,asympt,130,307,f,normal,140,no,0,?,?,?,<50
+50,female,asympt,120,328,f,normal,110,yes,1,flat,?,?,<50
+55,male,atyp_angina,160,292,t,normal,143,yes,2,flat,?,?,>50_1
+42,male,non_anginal,120,228,f,normal,152,yes,1.5,flat,?,?,<50
+28,male,atyp_angina,130,132,f,left_vent_hyper,185,no,0,?,?,?,<50

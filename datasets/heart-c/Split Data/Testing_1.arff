@@ -1,0 +1,50 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE age NUMERIC
+@ATTRIBUTE sex {male,female}
+@ATTRIBUTE cp {non_anginal,atyp_angina,asympt}
+@ATTRIBUTE trestbps NUMERIC
+@ATTRIBUTE chol NUMERIC
+@ATTRIBUTE fbs {f,t}
+@ATTRIBUTE restecg {left_vent_hyper,normal,st_t_wave_abnormality}
+@ATTRIBUTE thalach NUMERIC
+@ATTRIBUTE exang {no,yes}
+@ATTRIBUTE oldpeak NUMERIC
+@ATTRIBUTE slope {up,flat}
+@ATTRIBUTE ca NUMERIC
+@ATTRIBUTE thal {normal,reversable_defect,fixed_defect}
+@ATTRIBUTE class {<50,>50_1}
+
+@DATA
+39,male,non_anginal,140,321,f,left_vent_hyper,182,no,0,up,0,normal,<50
+59,male,atyp_angina,140,221,f,normal,164,yes,0,up,0,normal,<50
+58,male,asympt,146,218,f,normal,105,no,2,flat,1,reversable_defect,>50_1
+52,female,non_anginal,136,196,f,left_vent_hyper,169,no,0.1,flat,0,normal,<50
+70,male,atyp_angina,156,245,f,left_vent_hyper,143,no,0,up,0,normal,<50
+57,female,asympt,120,354,f,normal,163,yes,0.6,up,0,normal,<50
+47,male,non_anginal,108,243,f,normal,152,no,0,up,0,normal,>50_1
+63,male,asympt,130,330,t,left_vent_hyper,132,yes,1.8,up,3,reversable_defect,>50_1
+55,female,asympt,128,205,f,st_t_wave_abnormality,130,yes,2,flat,1,reversable_defect,>50_1
+60,male,asympt,140,293,f,left_vent_hyper,170,no,1.2,flat,2,reversable_defect,>50_1
+62,male,asympt,120,267,f,normal,99,yes,1.8,flat,2,reversable_defect,>50_1
+71,female,asympt,112,149,f,normal,125,no,1.6,flat,0,normal,<50
+49,female,asympt,130,269,f,normal,163,no,0,up,0,normal,<50
+67,female,non_anginal,152,277,f,normal,172,no,0,up,1,normal,<50
+50,female,asympt,110,254,f,left_vent_hyper,159,no,0,up,0,normal,<50
+57,female,asympt,128,303,f,left_vent_hyper,159,no,0,up,1,normal,<50
+66,female,non_anginal,146,278,f,left_vent_hyper,152,no,0,flat,1,normal,<50
+50,male,asympt,144,200,f,left_vent_hyper,126,yes,0.9,flat,0,reversable_defect,>50_1
+52,male,atyp_angina,128,205,t,normal,184,no,0,up,0,normal,<50
+51,male,asympt,140,261,f,left_vent_hyper,186,yes,0,up,0,normal,<50
+59,male,asympt,140,177,f,normal,162,yes,0,up,1,reversable_defect,>50_1
+67,female,non_anginal,115,564,f,left_vent_hyper,160,no,1.6,flat,0,reversable_defect,<50
+51,female,non_anginal,140,308,f,left_vent_hyper,142,no,1.5,up,1,normal,<50
+68,male,asympt,144,193,t,normal,141,no,3.4,flat,2,reversable_defect,>50_1
+38,male,non_anginal,138,175,f,normal,173,no,0,up,?,normal,<50
+54,female,non_anginal,108,267,f,left_vent_hyper,167,no,0,up,0,normal,<50
+56,male,non_anginal,130,256,t,left_vent_hyper,142,yes,0.6,flat,1,fixed_defect,>50_1
+42,female,asympt,102,265,f,left_vent_hyper,122,no,0.6,flat,0,normal,<50
+45,female,atyp_angina,112,160,f,normal,138,no,0,flat,0,normal,<50
+55,male,asympt,160,289,f,left_vent_hyper,145,yes,0.8,flat,1,reversable_defect,>50_1
+35,male,asympt,120,198,f,normal,130,yes,1.6,flat,0,reversable_defect,>50_1

@@ -1,0 +1,75 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE instance {TYRT,BIOB,260,LACP1,413,1024,RPOB,UVRB_P2,SUBB-E,PORI-R,GALP2}
+@ATTRIBUTE p50 {t,g,a,c}
+@ATTRIBUTE p49 {c,t,g,a}
+@ATTRIBUTE p48 {t,g,a,c}
+@ATTRIBUTE p47 {c,t,g,a}
+@ATTRIBUTE p46 {a,c,t,g}
+@ATTRIBUTE p45 {a,t,g,c}
+@ATTRIBUTE p44 {c,t,a,g}
+@ATTRIBUTE p43 {g,a,t,c}
+@ATTRIBUTE p42 {t,a,g,c}
+@ATTRIBUTE p41 {a,t,c,g}
+@ATTRIBUTE p40 {a,c,g,t}
+@ATTRIBUTE p39 {c,g,t,a}
+@ATTRIBUTE p38 {a,g,c,t}
+@ATTRIBUTE p37 {c,a,t,g}
+@ATTRIBUTE p36 {t,a,g}
+@ATTRIBUTE p35 {t,g,a,c}
+@ATTRIBUTE p34 {t,g,a}
+@ATTRIBUTE p33 {a,t,g}
+@ATTRIBUTE p32 {c,a,t}
+@ATTRIBUTE p31 {a,t,g}
+@ATTRIBUTE p30 {g,a,t,c}
+@ATTRIBUTE p29 {c,t,g,a}
+@ATTRIBUTE p28 {g,c,t,a}
+@ATTRIBUTE p27 {g,a,c,t}
+@ATTRIBUTE p26 {c,a,t,g}
+@ATTRIBUTE p25 {g,a,t}
+@ATTRIBUTE p24 {c,t,g,a}
+@ATTRIBUTE p23 {g,t,c}
+@ATTRIBUTE p22 {t,g,a,c}
+@ATTRIBUTE p21 {c,a,t,g}
+@ATTRIBUTE p20 {a,c,t}
+@ATTRIBUTE p19 {t,a,c,g}
+@ATTRIBUTE p18 {t,a,c,g}
+@ATTRIBUTE p17 {t,g,c}
+@ATTRIBUTE p16 {g,a,t,c}
+@ATTRIBUTE p15 {a,t,c,g}
+@ATTRIBUTE p14 {t,a,c,g}
+@ATTRIBUTE p13 {a,t,g,c}
+@ATTRIBUTE p12 {t,a,g,c}
+@ATTRIBUTE p11 {g,c,a,t}
+@ATTRIBUTE p10 {a,g,t,c}
+@ATTRIBUTE p9 {t,g,c,a}
+@ATTRIBUTE p8 {g,t,c,a}
+@ATTRIBUTE p7 {c,t,a,g}
+@ATTRIBUTE p6 {g,a,t,c}
+@ATTRIBUTE p5 {c,a,t,g}
+@ATTRIBUTE p4 {c,a,g,t}
+@ATTRIBUTE p3 {c,a,t,g}
+@ATTRIBUTE p2 {c,g,a,t}
+@ATTRIBUTE p1 {g,t,c,a}
+@ATTRIBUTE p1 {c,a,g}
+@ATTRIBUTE p2 {t,a,c}
+@ATTRIBUTE p3 {t,a,g}
+@ATTRIBUTE p4 {c,t,g,a}
+@ATTRIBUTE p5 {c,a,g,t}
+@ATTRIBUTE p6 {c,t,a,g}
+@ATTRIBUTE p7 {g,c,a,t}
+@ATTRIBUTE class {+,-}
+
+@DATA
+TYRT,t,c,t,c,a,a,c,g,t,a,a,c,a,c,t,t,t,a,c,a,g,c,g,g,c,g,c,g,t,c,a,t,t,t,g,a,t,a,t,g,a,t,g,c,g,c,c,c,c,g,c,t,t,c,c,c,g,+
+BIOB,t,t,g,t,c,a,t,a,a,t,c,g,a,c,t,t,g,t,a,a,a,c,c,a,a,a,t,t,g,a,a,a,a,g,a,t,t,t,a,g,g,t,t,t,a,c,a,a,g,t,c,t,a,c,a,c,c,+
+260,g,g,t,g,t,t,t,t,g,c,g,c,a,a,t,g,t,t,a,a,t,c,g,c,t,t,t,g,t,a,c,a,c,c,t,c,a,g,g,c,a,t,g,t,a,a,a,c,g,t,c,t,t,c,g,t,a,-
+LACP1,t,a,g,g,c,a,c,c,c,c,a,g,g,c,t,t,t,a,c,a,c,t,t,t,a,t,g,c,t,t,c,c,g,g,c,t,c,g,t,a,t,g,t,t,g,t,g,t,g,g,a,a,t,t,g,t,g,+
+413,a,g,g,a,g,g,a,a,c,t,a,c,g,c,a,a,g,g,t,t,g,g,a,a,c,a,t,c,g,g,a,g,a,g,a,t,g,c,c,a,g,c,c,a,g,c,g,c,a,c,c,t,g,c,a,c,g,-
+1024,t,g,g,a,t,g,g,a,c,g,t,t,c,a,a,c,a,t,t,g,a,g,g,a,a,g,g,c,a,t,a,a,c,g,c,t,a,c,t,a,c,c,t,g,a,t,g,t,t,t,a,c,t,c,c,a,a,-
+RPOB,c,g,a,c,t,t,a,a,t,a,t,a,c,t,g,c,g,a,c,a,g,g,a,c,g,t,c,c,g,t,t,c,t,g,t,g,t,a,a,a,t,c,g,c,a,a,t,g,a,a,a,t,g,g,t,t,t,+
+UVRB_P2,t,c,a,g,a,a,a,t,a,t,t,a,t,g,g,t,g,a,t,g,a,a,c,t,g,t,t,t,t,t,t,t,a,t,c,c,a,g,t,a,t,a,a,t,t,t,g,t,t,g,g,c,a,t,a,a,t,+
+SUBB-E,c,c,t,t,g,a,a,a,a,a,g,a,g,g,t,t,g,a,c,g,c,t,g,c,a,a,g,g,c,t,c,t,a,t,a,c,g,c,a,t,a,a,t,g,c,g,c,c,c,c,g,c,a,a,c,g,c,+
+PORI-R,g,a,t,c,g,c,a,c,g,a,t,c,t,g,t,a,t,a,c,t,t,a,t,t,t,g,a,g,t,a,a,a,t,t,a,a,c,c,c,a,c,g,a,t,c,c,c,a,g,c,c,a,t,t,c,t,t,+
+GALP2,c,a,c,t,a,a,t,t,t,a,t,t,c,c,a,t,g,t,c,a,c,a,c,t,t,t,t,c,g,c,a,t,c,t,t,t,g,t,t,a,t,g,c,t,a,t,g,g,t,t,a,t,t,t,c,a,t,+

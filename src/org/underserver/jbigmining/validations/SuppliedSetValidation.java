@@ -29,9 +29,9 @@
 
 package org.underserver.jbigmining.validations;
 
-import org.underserver.jbigmining.*;
+import org.underserver.jbigmining.core.*;
 
-import java.util.Set;
+import java.util.List;
 
 /**
  * -
@@ -52,8 +52,8 @@ public class SuppliedSetValidation extends ValidationMethod {
 	public void validate() {
 		Algorithm algorithm = getAlgorithm();
 
-		Set<Pattern> trainingSet = getDataSet();
-		Set<Pattern> testSet = suppliedSet;
+		List<Pattern> trainingSet = getDataSet();
+		List<Pattern> testSet = suppliedSet;
 
 		algorithm.setTrainSet( (DataSet) trainingSet );
 		algorithm.train();

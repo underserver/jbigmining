@@ -1,0 +1,39 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE numberofcars {4}
+@ATTRIBUTE numberofdifferentloads {3}
+@ATTRIBUTE numwheels2 {2}
+@ATTRIBUTE length2 {short}
+@ATTRIBUTE shape2 {dblopnrect}
+@ATTRIBUTE numloads2 {1}
+@ATTRIBUTE loadshape2 {trianglod}
+@ATTRIBUTE numwheels3 {3}
+@ATTRIBUTE length3 {long}
+@ATTRIBUTE shape3 {closedrect}
+@ATTRIBUTE numloads3 {1}
+@ATTRIBUTE loadshape3 {rectanglod}
+@ATTRIBUTE numwheels4 {2}
+@ATTRIBUTE length4 {short}
+@ATTRIBUTE shape4 {closedrect}
+@ATTRIBUTE numloads4 {1}
+@ATTRIBUTE loadshape4 {circlelod}
+@ATTRIBUTE numwheels5 {?}
+@ATTRIBUTE length5 {?}
+@ATTRIBUTE shape5 {?}
+@ATTRIBUTE numloads5 {?}
+@ATTRIBUTE loadshape5 {?}
+@ATTRIBUTE rectanglenexttorectangle {0}
+@ATTRIBUTE rectanglenexttotriangle {1}
+@ATTRIBUTE rectanglenexttohexagon {0}
+@ATTRIBUTE rectanglenexttocircle {1}
+@ATTRIBUTE trianglenexttotriangle {0}
+@ATTRIBUTE trianglenexttohexagon {0}
+@ATTRIBUTE trianglenexttocircle {0}
+@ATTRIBUTE hexagonnexttohexagon {0}
+@ATTRIBUTE hexagonnexttocircle {0}
+@ATTRIBUTE circlenexttocircle {0}
+@ATTRIBUTE class {east}
+
+@DATA
+4,3,2,short,dblopnrect,1,trianglod,3,long,closedrect,1,rectanglod,2,short,closedrect,1,circlelod,?,?,?,?,?,0,1,0,1,0,0,0,0,0,0,east

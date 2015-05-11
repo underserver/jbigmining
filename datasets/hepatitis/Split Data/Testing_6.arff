@@ -1,0 +1,40 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE age NUMERIC
+@ATTRIBUTE sex {female,male}
+@ATTRIBUTE steroid {yes,no}
+@ATTRIBUTE antivirals {no,yes}
+@ATTRIBUTE fatigue {no,yes}
+@ATTRIBUTE malaise {no,yes}
+@ATTRIBUTE anorexia {no,yes}
+@ATTRIBUTE liverbig {yes,no}
+@ATTRIBUTE liverfirm {no,yes}
+@ATTRIBUTE spleenpalpable {no,yes}
+@ATTRIBUTE spiders {no,yes}
+@ATTRIBUTE ascites {no}
+@ATTRIBUTE varices {no}
+@ATTRIBUTE bilirubin NUMERIC
+@ATTRIBUTE alkphosphate NUMERIC
+@ATTRIBUTE sgot NUMERIC
+@ATTRIBUTE albumin NUMERIC
+@ATTRIBUTE protime NUMERIC
+@ATTRIBUTE histology {no,yes}
+@ATTRIBUTE class {LIVE,DIE}
+
+@DATA
+24,female,yes,no,no,no,no,yes,no,no,no,no,no,8,82,39,43,?,no,LIVE
+28,female,no,no,yes,yes,yes,yes,yes,no,no,no,no,16,44,123,4,46,no,LIVE
+32,female,no,yes,yes,yes,no,yes,no,no,no,no,no,1,55,45,41,56,no,LIVE
+27,female,yes,no,yes,yes,yes,no,yes,yes,yes,no,no,12,133,98,41,39,no,LIVE
+33,female,yes,no,no,no,no,yes,no,no,no,no,no,1,46,90,44,60,no,LIVE
+51,female,no,no,yes,no,yes,yes,no,yes,yes,no,no,?,?,?,?,?,no,DIE
+38,female,no,yes,no,no,no,no,yes,no,no,no,no,7,70,28,42,62,no,LIVE
+22,female,yes,no,no,no,no,yes,no,no,no,no,no,7,?,24,?,?,yes,LIVE
+31,female,yes,no,no,no,no,yes,no,no,no,no,no,1,85,20,4,100,no,LIVE
+61,female,no,no,yes,no,no,no,yes,no,no,no,no,13,78,25,38,100,no,LIVE
+20,male,no,no,yes,yes,yes,no,yes,yes,yes,no,no,23,150,68,39,?,no,LIVE
+42,female,yes,no,no,no,no,yes,no,no,no,no,no,9,60,63,47,47,no,LIVE
+41,male,yes,yes,yes,yes,yes,yes,no,no,no,no,no,7,81,53,5,74,no,LIVE
+39,female,no,yes,yes,yes,no,yes,yes,no,no,no,no,23,280,98,38,40,no,DIE
+39,female,yes,no,yes,no,no,yes,yes,no,no,no,no,7,?,48,44,?,no,LIVE

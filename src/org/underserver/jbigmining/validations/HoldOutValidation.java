@@ -29,11 +29,9 @@
 
 package org.underserver.jbigmining.validations;
 
-import org.underserver.jbigmining.*;
+import org.underserver.jbigmining.core.*;
 
-import java.util.HashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 /**
  * -
@@ -44,8 +42,8 @@ import java.util.Set;
  */
 public class HoldOutValidation extends ValidationMethod {
 	private int percent = 70;
-	private Set<Pattern> trainingSet;
-	private Set<Pattern> testSet;
+	private List<Pattern> trainingSet;
+	private List<Pattern> testSet;
 
 	public HoldOutValidation( int percent ) {
 		super();
@@ -60,7 +58,7 @@ public class HoldOutValidation extends ValidationMethod {
 		DataSet dataSet = getDataSet();
 
 		trainingSet = new DataSet( dataSet );
-		testSet = new HashSet<Pattern>();
+		testSet = new ArrayList<Pattern>();
 
 		// Calculate fold size per class
 		int[] distribution = dataSet.getDistribution();

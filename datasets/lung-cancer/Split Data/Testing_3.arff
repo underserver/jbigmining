@@ -1,0 +1,65 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE attribute2 {0}
+@ATTRIBUTE attribute3 {2,1}
+@ATTRIBUTE attribute4 {3,2}
+@ATTRIBUTE attribute5 {1}
+@ATTRIBUTE attribute6 {1,0}
+@ATTRIBUTE attribute7 {2,1,3}
+@ATTRIBUTE attribute8 {2,3}
+@ATTRIBUTE attribute9 {1,3}
+@ATTRIBUTE attribute10 {1}
+@ATTRIBUTE attribute11 {1,2}
+@ATTRIBUTE attribute12 {1,2}
+@ATTRIBUTE attribute13 {1}
+@ATTRIBUTE attribute14 {1}
+@ATTRIBUTE attribute15 {2,1,3}
+@ATTRIBUTE attribute16 {2,3}
+@ATTRIBUTE attribute17 {1,2}
+@ATTRIBUTE attribute18 {2,1}
+@ATTRIBUTE attribute19 {2,1}
+@ATTRIBUTE attribute20 {2,1,0}
+@ATTRIBUTE attribute21 {2,0}
+@ATTRIBUTE attribute22 {1,2}
+@ATTRIBUTE attribute23 {2}
+@ATTRIBUTE attribute24 {1,2}
+@ATTRIBUTE attribute25 {1}
+@ATTRIBUTE attribute26 {1,2}
+@ATTRIBUTE attribute27 {1,2}
+@ATTRIBUTE attribute28 {2,3}
+@ATTRIBUTE attribute29 {2}
+@ATTRIBUTE attribute30 {3,2}
+@ATTRIBUTE attribute31 {1}
+@ATTRIBUTE attribute32 {3,1}
+@ATTRIBUTE attribute33 {3,1}
+@ATTRIBUTE attribute34 {3}
+@ATTRIBUTE attribute35 {1,2}
+@ATTRIBUTE attribute36 {1,2}
+@ATTRIBUTE attribute37 {1,2}
+@ATTRIBUTE attribute38 {3,2}
+@ATTRIBUTE attribute39 {1,3}
+@ATTRIBUTE attribute40 {3,1,2}
+@ATTRIBUTE attribute41 {3,1,2}
+@ATTRIBUTE attribute42 {3,2}
+@ATTRIBUTE attribute43 {3,2,1}
+@ATTRIBUTE attribute44 {3,2}
+@ATTRIBUTE attribute45 {3,2}
+@ATTRIBUTE attribute46 {3,2}
+@ATTRIBUTE attribute47 {3,2}
+@ATTRIBUTE attribute48 {3,2}
+@ATTRIBUTE attribute49 {3,2}
+@ATTRIBUTE attribute50 {3,2}
+@ATTRIBUTE attribute51 {3,2}
+@ATTRIBUTE attribute52 {1,2}
+@ATTRIBUTE attribute53 {3,2,1}
+@ATTRIBUTE attribute54 {3,2,1}
+@ATTRIBUTE attribute55 {2}
+@ATTRIBUTE attribute56 {2}
+@ATTRIBUTE attribute57 {1}
+@ATTRIBUTE class {3,2}
+
+@DATA
+0,2,3,1,1,2,2,1,1,1,1,1,1,2,2,1,2,2,2,2,1,2,1,1,1,1,2,2,3,1,3,3,3,1,1,1,3,1,3,3,3,3,3,3,3,3,3,3,3,3,1,3,3,2,2,1,3
+0,2,3,1,1,1,2,1,1,1,2,1,1,1,2,2,1,1,1,2,1,2,1,1,2,2,2,2,2,1,3,3,3,2,2,2,3,3,1,1,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,1,3
+0,1,2,1,0,3,3,3,1,2,2,1,1,3,3,1,2,2,0,0,2,2,2,1,2,1,3,2,3,1,1,1,3,1,1,2,2,1,2,2,2,1,2,2,2,2,2,2,2,2,2,1,1,2,2,1,2

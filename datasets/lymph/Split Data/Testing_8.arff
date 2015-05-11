@@ -1,0 +1,38 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE lymphatics {arched,displaced,deformed,normal}
+@ATTRIBUTE blockofaffere {no,yes}
+@ATTRIBUTE bloflymphc {no,yes}
+@ATTRIBUTE bloflymphs {no,yes}
+@ATTRIBUTE bypass {no,yes}
+@ATTRIBUTE extravasates {no,yes}
+@ATTRIBUTE regenerationof {no,yes}
+@ATTRIBUTE earlyuptakein {yes,no}
+@ATTRIBUTE lymnodesdimin NUMERIC
+@ATTRIBUTE lymnodesenlar NUMERIC
+@ATTRIBUTE changesinlym {round,oval}
+@ATTRIBUTE defectinnode {lacunar,lac_margin,lac_central,no}
+@ATTRIBUTE changesinnode {lac_margin,lac_central,lacunar,no}
+@ATTRIBUTE changesinstru {coarse,faint,diluted,grainy,drop_like}
+@ATTRIBUTE specialforms {vesicles,no,chalices}
+@ATTRIBUTE dislocationof {yes,no}
+@ATTRIBUTE exclusionofno {yes,no}
+@ATTRIBUTE noofnodesin NUMERIC
+@ATTRIBUTE class {malign_lymph,metastases,fibrosis,normal}
+
+@DATA
+arched,no,no,no,no,no,no,yes,1,3,round,lacunar,lac_margin,coarse,vesicles,yes,yes,2,malign_lymph
+arched,no,no,no,no,yes,no,yes,1,2,oval,lacunar,lac_central,faint,no,yes,yes,2,malign_lymph
+displaced,yes,no,no,no,no,no,no,1,4,round,lac_margin,lac_margin,coarse,chalices,yes,no,1,metastases
+displaced,yes,no,no,no,no,no,yes,1,2,oval,lacunar,lac_central,faint,no,no,yes,2,malign_lymph
+deformed,yes,yes,yes,yes,yes,yes,no,2,2,oval,lac_central,lacunar,coarse,vesicles,yes,yes,7,fibrosis
+arched,yes,no,no,no,yes,no,yes,1,4,round,lac_central,lac_central,faint,vesicles,yes,yes,7,malign_lymph
+arched,yes,yes,no,yes,yes,no,yes,1,3,oval,lac_central,lac_margin,diluted,no,yes,yes,3,metastases
+normal,no,no,no,no,yes,no,yes,1,2,oval,no,no,grainy,no,no,no,2,normal
+deformed,yes,yes,yes,yes,yes,yes,yes,1,4,round,lac_margin,lac_central,faint,vesicles,yes,yes,7,malign_lymph
+arched,no,no,no,no,yes,no,no,1,2,oval,lacunar,lacunar,drop_like,no,no,no,1,malign_lymph
+displaced,yes,no,no,no,no,no,yes,1,2,oval,lacunar,lac_margin,drop_like,chalices,yes,yes,1,metastases
+arched,yes,no,no,no,no,no,yes,1,4,round,lac_central,lacunar,faint,chalices,no,yes,4,metastases
+deformed,yes,yes,no,yes,yes,no,yes,1,3,oval,lacunar,lac_margin,coarse,no,yes,yes,1,metastases
+deformed,yes,no,no,yes,yes,no,yes,1,3,round,lacunar,lac_margin,coarse,chalices,yes,yes,2,metastases

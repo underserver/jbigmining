@@ -29,13 +29,14 @@
 
 package org.underserver.jbigmining.filters;
 
-import org.underserver.jbigmining.Algorithm;
-import org.underserver.jbigmining.DataSet;
-import org.underserver.jbigmining.Parser;
+import org.underserver.jbigmining.core.Algorithm;
+import org.underserver.jbigmining.core.DataSet;
+import org.underserver.jbigmining.core.Parser;
 import org.underserver.jbigmining.classifiers.mNNAB;
 import org.underserver.jbigmining.evaluation.BasicsMetric;
 import org.underserver.jbigmining.evaluation.EvaluationManager;
 import org.underserver.jbigmining.evaluation.EvaluationMetric;
+import org.underserver.jbigmining.exceptions.ParserException;
 import org.underserver.jbigmining.parsers.ARFFParser;
 import org.underserver.jbigmining.validations.KFoldCrossValidation;
 import org.underserver.jbigmining.validations.ValidationMethod;
@@ -57,7 +58,7 @@ public class fibonacciTest {
 
 	private DataSet dataSet = null;
 
-	public void init() {
+	public void init() throws ParserException {
 		Parser parser = new ARFFParser( FILE );
 		dataSet = parser.parse();
 		for( Filter filter : filters ) {
@@ -92,7 +93,7 @@ public class fibonacciTest {
 	}
 
 
-	public static void main( String[] args ) {
+	public static void main( String[] args ) throws ParserException {
 		fibonacciTest test = new fibonacciTest();
 		test.init();
 		test.test();

@@ -1,0 +1,28 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE duration NUMERIC
+@ATTRIBUTE wageincreasefirstyear NUMERIC
+@ATTRIBUTE wageincreasesecondyear NUMERIC
+@ATTRIBUTE wageincreasethirdyear NUMERIC
+@ATTRIBUTE costoflivingadjustment {?,none}
+@ATTRIBUTE workinghours NUMERIC
+@ATTRIBUTE pension {?,none,empl_contr}
+@ATTRIBUTE standbypay NUMERIC
+@ATTRIBUTE shiftdifferential NUMERIC
+@ATTRIBUTE educationallowance {?,yes,no}
+@ATTRIBUTE statutoryholidays NUMERIC
+@ATTRIBUTE vacation {average,generous,below_average}
+@ATTRIBUTE longtermdisabilityassistance {?,yes,no}
+@ATTRIBUTE contributiontodentalplan {half,?,none,full}
+@ATTRIBUTE bereavementassistance {yes,?}
+@ATTRIBUTE contributiontohealthplan {half,full,?,none}
+@ATTRIBUTE class {good,bad}
+
+@DATA
+3,4.5,4.5,5,?,40,?,?,?,?,12,average,?,half,yes,half,good
+3,2,2.5,?,?,35,none,?,?,?,10,average,?,?,yes,full,bad
+2,2,3,?,none,38,empl_contr,?,?,yes,12,generous,yes,none,yes,full,bad
+3,4,3.5,?,none,40,empl_contr,?,6,?,11,average,yes,full,?,full,good
+2,4.5,4,?,none,37,empl_contr,?,?,?,11,average,?,full,yes,?,good
+2,4,5,?,none,40,none,?,3,no,10,below_average,no,none,?,none,bad

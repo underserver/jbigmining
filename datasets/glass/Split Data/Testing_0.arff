@@ -1,0 +1,37 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE ri NUMERIC
+@ATTRIBUTE na NUMERIC
+@ATTRIBUTE mg NUMERIC
+@ATTRIBUTE al NUMERIC
+@ATTRIBUTE si NUMERIC
+@ATTRIBUTE k NUMERIC
+@ATTRIBUTE ca NUMERIC
+@ATTRIBUTE ba NUMERIC
+@ATTRIBUTE fe NUMERIC
+@ATTRIBUTE class {headlamps,build wind float,build wind non-float,vehic wind float,tableware,containers}
+
+@DATA
+1.51602,14.85,0,2.38,73.28,0,8.76,0.64,0.09,headlamps
+1.51735,13.02,3.54,1.69,72.73,0.54,8.44,0,0.07,build wind float
+1.51769,12.45,2.71,1.29,73.7,0.56,9.06,0,0.24,build wind float
+1.5164,12.55,3.48,1.87,73.23,0.63,8.08,0,0.09,build wind non-float
+1.51643,12.16,3.52,1.35,72.89,0.57,8.53,0,0,vehic wind float
+1.51299,14.4,1.74,1.54,74.55,0,7.59,0,0,tableware
+1.51569,13.24,3.49,1.47,73.25,0.38,8.03,0,0,build wind non-float
+1.5182,12.62,2.76,0.83,73.81,0.35,9.42,0,0.2,build wind non-float
+1.51662,12.85,3.51,1.44,73.01,0.68,8.23,0.06,0.25,build wind non-float
+1.51321,13,0,3.02,70.7,6.21,6.93,0,0,containers
+1.51763,12.8,3.66,1.27,73.01,0.6,8.56,0,0,build wind float
+1.51839,12.85,3.67,1.24,72.57,0.62,8.68,0,0.35,build wind non-float
+1.51545,14.14,0,2.68,73.39,0.08,9.07,0.61,0.05,headlamps
+1.51623,14.2,0,2.79,73.46,0.04,9.04,0.4,0.09,headlamps
+1.52127,14.32,3.9,0.83,71.5,0,9.49,0,0,vehic wind float
+1.51846,13.41,3.89,1.33,72.38,0.51,8.28,0,0,build wind non-float
+1.51709,13,3.47,1.79,72.72,0.66,8.18,0,0,build wind non-float
+1.51617,14.95,0,2.27,73.3,0,8.71,0.67,0,headlamps
+1.52043,13.38,0,1.4,72.25,0.33,12.5,0,0,containers
+1.52475,11.45,0,1.88,72.19,0.81,13.24,0,0.34,build wind non-float
+1.51613,13.88,1.78,1.79,73.1,0,8.67,0.76,0,headlamps
+1.51571,12.72,3.46,1.56,73.2,0.67,8.09,0,0.24,build wind float

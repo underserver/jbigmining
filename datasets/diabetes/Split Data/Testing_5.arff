@@ -1,0 +1,91 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE preg NUMERIC
+@ATTRIBUTE plas NUMERIC
+@ATTRIBUTE pres NUMERIC
+@ATTRIBUTE skin NUMERIC
+@ATTRIBUTE insu NUMERIC
+@ATTRIBUTE mass NUMERIC
+@ATTRIBUTE pedi NUMERIC
+@ATTRIBUTE age NUMERIC
+@ATTRIBUTE class {tested_positive,tested_negative}
+
+@DATA
+0,118,84,47,230,45.8,0.551,31,tested_positive
+0,86,68,32,0,35.8,0.238,25,tested_negative
+2,130,96,0,0,22.6,0.268,21,tested_negative
+2,141,58,34,128,25.4,0.699,24,tested_negative
+0,114,80,34,285,44.2,0.167,27,tested_negative
+0,105,90,0,0,29.6,0.197,46,tested_negative
+3,158,64,13,387,31.2,0.295,24,tested_negative
+0,74,52,10,36,27.8,0.269,22,tested_negative
+10,129,62,36,0,41.2,0.441,38,tested_positive
+2,95,54,14,88,26.1,0.748,22,tested_negative
+3,83,58,31,18,34.3,0.336,25,tested_negative
+0,107,60,25,0,26.4,0.133,23,tested_negative
+11,111,84,40,0,46.8,0.925,45,tested_positive
+4,90,88,47,54,37.7,0.362,29,tested_negative
+6,154,78,41,140,46.1,0.571,27,tested_negative
+10,179,70,0,0,35.1,0.2,37,tested_negative
+0,104,64,37,64,33.6,0.51,22,tested_positive
+3,88,58,11,54,24.8,0.267,22,tested_negative
+0,113,76,0,0,33.3,0.278,23,tested_positive
+1,153,82,42,485,40.6,0.687,23,tested_negative
+2,93,64,32,160,38,0.674,23,tested_positive
+0,151,90,46,0,42.1,0.371,21,tested_positive
+8,74,70,40,49,35.3,0.705,39,tested_negative
+10,90,85,32,0,34.9,0.825,56,tested_positive
+7,133,88,15,155,32.4,0.262,37,tested_negative
+5,143,78,0,0,45,0.19,47,tested_negative
+3,125,58,0,0,31.6,0.151,24,tested_negative
+1,120,80,48,200,38.9,1.162,41,tested_negative
+8,120,78,0,0,25,0.409,64,tested_negative
+2,197,70,45,543,30.5,0.158,53,tested_positive
+6,117,96,0,0,28.7,0.157,30,tested_negative
+2,118,80,0,0,42.9,0.693,21,tested_positive
+2,117,90,19,71,25.2,0.313,21,tested_negative
+5,114,74,0,0,24.9,0.744,57,tested_negative
+5,105,72,29,325,36.9,0.159,28,tested_negative
+7,147,76,0,0,39.4,0.257,43,tested_positive
+1,125,50,40,167,33.3,0.962,28,tested_positive
+0,137,70,38,0,33.2,0.17,22,tested_negative
+4,132,0,0,0,32.9,0.302,23,tested_positive
+3,130,64,0,0,23.1,0.314,22,tested_negative
+2,112,78,50,140,39.4,0.175,24,tested_negative
+3,129,92,49,155,36.4,0.968,32,tested_positive
+3,80,0,0,0,0,0.174,22,tested_negative
+0,109,88,30,0,32.5,0.855,38,tested_positive
+1,81,72,18,40,26.6,0.283,24,tested_negative
+1,111,94,0,0,32.8,0.265,45,tested_negative
+3,111,62,0,0,22.6,0.142,21,tested_negative
+2,105,80,45,191,33.7,0.711,29,tested_positive
+7,62,78,0,0,32.6,0.391,41,tested_negative
+5,73,60,0,0,26.8,0.268,27,tested_negative
+0,95,64,39,105,44.6,0.366,22,tested_negative
+2,120,76,37,105,39.7,0.215,29,tested_negative
+8,125,96,0,0,0,0.232,54,tested_positive
+2,92,76,20,0,24.2,1.698,28,tested_negative
+3,191,68,15,130,30.9,0.299,34,tested_negative
+0,102,75,23,0,0,0.572,21,tested_negative
+3,120,70,30,135,42.9,0.452,30,tested_negative
+3,171,72,33,135,33.3,0.199,24,tested_positive
+6,85,78,0,0,31.2,0.382,42,tested_negative
+11,120,80,37,150,42.3,0.785,48,tested_positive
+2,122,52,43,158,36.2,0.816,28,tested_negative
+0,179,90,27,0,44.1,0.686,23,tested_positive
+9,152,78,34,171,34.2,0.893,33,tested_positive
+4,94,65,22,0,24.7,0.148,21,tested_negative
+0,91,68,32,210,39.9,0.381,25,tested_negative
+8,126,88,36,108,38.5,0.349,49,tested_negative
+1,88,62,24,44,29.9,0.422,23,tested_negative
+13,129,0,30,0,39.9,0.569,44,tested_positive
+0,140,65,26,130,42.6,0.431,24,tested_positive
+3,106,54,21,158,30.9,0.292,24,tested_negative
+3,163,70,18,105,31.6,0.268,28,tested_positive
+6,80,66,30,0,26.2,0.313,41,tested_negative
+4,114,65,0,0,21.9,0.432,37,tested_negative
+7,106,92,18,0,22.7,0.235,48,tested_negative
+4,117,64,27,120,33.2,0.23,24,tested_negative
+9,156,86,0,0,24.8,0.23,53,tested_positive
+0,101,65,28,0,24.6,0.237,22,tested_negative

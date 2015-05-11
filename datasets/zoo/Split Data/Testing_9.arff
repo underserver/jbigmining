@@ -1,0 +1,33 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE animal {goat,slowworm,sole,honeybee,frog,tuatara,fruitbat,hawk,lynx,pussycat}
+@ATTRIBUTE hair {true,false}
+@ATTRIBUTE feathers {false,true}
+@ATTRIBUTE eggs {false,true}
+@ATTRIBUTE milk {true,false}
+@ATTRIBUTE airborne {false,true}
+@ATTRIBUTE aquatic {false,true}
+@ATTRIBUTE predator {false,true}
+@ATTRIBUTE toothed {true,false}
+@ATTRIBUTE backbone {true,false}
+@ATTRIBUTE breathes {true,false}
+@ATTRIBUTE venomous {false,true}
+@ATTRIBUTE fins {false,true}
+@ATTRIBUTE legs NUMERIC
+@ATTRIBUTE tail {true,false}
+@ATTRIBUTE domestic {true,false}
+@ATTRIBUTE catsize {true,false}
+@ATTRIBUTE class {mammal,reptile,fish,insect,amphibian,bird}
+
+@DATA
+goat,true,false,false,true,false,false,false,true,true,true,false,false,4,true,true,true,mammal
+slowworm,false,false,true,false,false,false,true,true,true,true,false,false,0,true,false,false,reptile
+sole,false,false,true,false,false,true,false,true,true,false,false,true,0,true,false,false,fish
+honeybee,true,false,true,false,true,false,false,false,false,true,true,false,6,false,true,false,insect
+frog,false,false,true,false,false,true,true,true,true,true,false,false,4,false,false,false,amphibian
+tuatara,false,false,true,false,false,false,true,true,true,true,false,false,4,true,false,false,reptile
+fruitbat,true,false,false,true,true,false,false,true,true,true,false,false,2,true,false,false,mammal
+hawk,false,true,true,false,true,false,true,false,true,true,false,false,2,true,false,false,bird
+lynx,true,false,false,true,false,false,true,true,true,true,false,false,4,true,false,true,mammal
+pussycat,true,false,false,true,false,false,true,true,true,true,false,false,4,true,true,true,mammal

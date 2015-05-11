@@ -1,0 +1,39 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE numberofcars {5}
+@ATTRIBUTE numberofdifferentloads {4}
+@ATTRIBUTE numwheels2 {2}
+@ATTRIBUTE length2 {long}
+@ATTRIBUTE shape2 {openrect}
+@ATTRIBUTE numloads2 {3}
+@ATTRIBUTE loadshape2 {rectanglod}
+@ATTRIBUTE numwheels3 {2}
+@ATTRIBUTE length3 {short}
+@ATTRIBUTE shape3 {slopetop}
+@ATTRIBUTE numloads3 {1}
+@ATTRIBUTE loadshape3 {trianglod}
+@ATTRIBUTE numwheels4 {3}
+@ATTRIBUTE length4 {long}
+@ATTRIBUTE shape4 {openrect}
+@ATTRIBUTE numloads4 {1}
+@ATTRIBUTE loadshape4 {hexagonlod}
+@ATTRIBUTE numwheels5 {2}
+@ATTRIBUTE length5 {short}
+@ATTRIBUTE shape5 {openrect}
+@ATTRIBUTE numloads5 {1}
+@ATTRIBUTE loadshape5 {circlelod}
+@ATTRIBUTE rectanglenexttorectangle {0}
+@ATTRIBUTE rectanglenexttotriangle {1}
+@ATTRIBUTE rectanglenexttohexagon {0}
+@ATTRIBUTE rectanglenexttocircle {0}
+@ATTRIBUTE trianglenexttotriangle {0}
+@ATTRIBUTE trianglenexttohexagon {1}
+@ATTRIBUTE trianglenexttocircle {0}
+@ATTRIBUTE hexagonnexttohexagon {0}
+@ATTRIBUTE hexagonnexttocircle {1}
+@ATTRIBUTE circlenexttocircle {0}
+@ATTRIBUTE class {east}
+
+@DATA
+5,4,2,long,openrect,3,rectanglod,2,short,slopetop,1,trianglod,3,long,openrect,1,hexagonlod,2,short,openrect,1,circlelod,0,1,0,0,0,1,0,0,1,0,east

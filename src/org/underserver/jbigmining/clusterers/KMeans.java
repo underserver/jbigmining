@@ -29,10 +29,10 @@
 
 package org.underserver.jbigmining.clusterers;
 
-import org.underserver.jbigmining.AlgorithmInformation;
-import org.underserver.jbigmining.Clusterer;
-import org.underserver.jbigmining.DataSet;
-import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.core.AlgorithmInformation;
+import org.underserver.jbigmining.core.Clusterer;
+import org.underserver.jbigmining.core.DataSet;
+import org.underserver.jbigmining.core.Pattern;
 import org.underserver.jbigmining.distances.Distance;
 import org.underserver.jbigmining.distances.EuclideanDistance;
 

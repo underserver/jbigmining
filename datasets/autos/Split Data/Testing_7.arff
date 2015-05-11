@@ -1,0 +1,51 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE normalizedlosses NUMERIC
+@ATTRIBUTE make {alfa-romero,mitsubishi,toyota,volkswagen,subaru,mercedes-benz,isuzu,bmw,saab,audi,dodge,mazda}
+@ATTRIBUTE fueltype {gas,diesel}
+@ATTRIBUTE aspiration {std,turbo}
+@ATTRIBUTE numofdoors {two,four}
+@ATTRIBUTE bodystyle {hatchback,hardtop,sedan,wagon,convertible}
+@ATTRIBUTE drivewheels {rwd,fwd,4wd}
+@ATTRIBUTE enginelocation {front}
+@ATTRIBUTE wheelbase NUMERIC
+@ATTRIBUTE length NUMERIC
+@ATTRIBUTE width NUMERIC
+@ATTRIBUTE height NUMERIC
+@ATTRIBUTE curbweight NUMERIC
+@ATTRIBUTE enginetype {ohcv,ohc,ohcf,rotor}
+@ATTRIBUTE numofcylinders {six,four,five,eight,two}
+@ATTRIBUTE enginesize NUMERIC
+@ATTRIBUTE fuelsystem {mpfi,spdi,2bbl,idi,4bbl}
+@ATTRIBUTE bore NUMERIC
+@ATTRIBUTE stroke NUMERIC
+@ATTRIBUTE compressionratio NUMERIC
+@ATTRIBUTE horsepower NUMERIC
+@ATTRIBUTE peakrpm NUMERIC
+@ATTRIBUTE citympg NUMERIC
+@ATTRIBUTE highwaympg NUMERIC
+@ATTRIBUTE price NUMERIC
+@ATTRIBUTE class {1,3,2,0}
+
+@DATA
+?,alfa-romero,gas,std,two,hatchback,rwd,front,94.5,171.2,65.5,52.4,2823,ohcv,six,152,mpfi,2.68,3.47,9,154,5000,19,26,16500,1
+?,mitsubishi,gas,turbo,two,hatchback,fwd,front,95.9,173.2,66.3,50.2,2926,ohc,four,156,spdi,3.59,3.86,7,145,5000,19,24,14489,3
+134,toyota,gas,std,two,hardtop,rwd,front,98.4,176.2,65.6,52,2679,ohc,four,146,mpfi,3.62,3.5,9.3,116,4800,24,30,11199,2
+?,volkswagen,gas,std,four,sedan,fwd,front,100.4,180.2,66.9,55.1,2661,ohc,five,136,mpfi,3.19,3.4,8.5,110,5500,19,24,13295,0
+85,subaru,gas,turbo,four,wagon,4wd,front,96.9,173.6,65.4,54.9,2650,ohcf,four,108,mpfi,3.62,2.64,7.7,111,4800,23,23,11694,0
+142,mercedes-benz,gas,std,two,convertible,rwd,front,96.6,180.3,70.5,50.8,3685,ohcv,eight,234,mpfi,3.46,3.1,8.3,155,4750,16,18,35056,3
+?,isuzu,gas,std,four,sedan,fwd,front,94.5,155.9,63.6,52,1909,ohc,four,90,2bbl,3.03,3.11,9.6,70,5400,38,43,?,0
+87,toyota,gas,std,two,hatchback,fwd,front,95.7,158.7,63.6,54.5,1985,ohc,four,92,2bbl,3.05,3.03,9,62,4800,35,39,5348,1
+192,bmw,gas,std,two,sedan,rwd,front,101.2,176.8,64.8,54.3,2395,ohc,four,108,mpfi,3.5,2.8,8.8,101,5800,23,29,16430,2
+?,mitsubishi,gas,turbo,two,hatchback,fwd,front,95.9,173.2,66.3,50.2,2921,ohc,four,156,spdi,3.59,3.86,7,145,5000,19,24,14869,3
+150,saab,gas,std,two,hatchback,fwd,front,99.1,186.6,66.5,56.1,2658,ohc,four,121,mpfi,3.54,3.07,9.31,110,5250,21,28,11850,3
+94,volkswagen,diesel,turbo,four,sedan,fwd,front,97.3,171.7,65.5,55.7,2319,ohc,four,97,idi,3.01,3.4,23,68,4500,37,42,9495,2
+?,audi,gas,turbo,two,hatchback,4wd,front,99.5,178.2,67.9,52,3053,ohc,five,131,mpfi,3.13,3.4,7,160,5500,16,22,?,0
+148,dodge,gas,std,four,sedan,fwd,front,93.7,157.3,63.8,50.6,1989,ohc,four,90,2bbl,2.97,3.23,9.4,68,5500,31,38,7609,1
+83,subaru,gas,std,two,hatchback,fwd,front,93.7,156.9,63.4,53.7,2050,ohcf,four,97,2bbl,3.62,2.36,9,69,4900,31,36,5118,2
+161,mitsubishi,gas,std,two,hatchback,fwd,front,93.7,157.3,64.4,50.8,2004,ohc,four,92,2bbl,2.97,3.23,9.4,68,5500,31,38,6669,2
+91,toyota,gas,std,four,hatchback,fwd,front,95.7,166.3,64.4,52.8,2122,ohc,four,98,2bbl,3.19,3.03,9,70,4800,28,34,8358,0
+?,audi,gas,std,two,sedan,fwd,front,99.8,177.3,66.3,53.1,2507,ohc,five,136,mpfi,3.19,3.4,8.5,110,5500,19,25,15250,2
+150,mazda,gas,std,two,hatchback,rwd,front,95.3,169,65.7,49.6,2385,rotor,two,70,4bbl,?,?,9.4,101,6000,17,23,13645,3
+?,bmw,gas,std,four,sedan,rwd,front,110,197,70.9,56.3,3505,ohc,six,209,mpfi,3.62,3.39,8,182,5400,15,20,36880,0

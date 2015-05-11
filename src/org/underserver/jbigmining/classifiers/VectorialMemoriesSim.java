@@ -29,9 +29,9 @@
 
 package org.underserver.jbigmining.classifiers;
 
-import org.underserver.jbigmining.AlgorithmInformation;
-import org.underserver.jbigmining.Classifier;
-import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.core.AlgorithmInformation;
+import org.underserver.jbigmining.core.Classifier;
+import org.underserver.jbigmining.core.Pattern;
 import org.underserver.jbigmining.distances.Distance;
 import org.underserver.jbigmining.distances.EuclideanDistance;
 import org.underserver.jbigmining.utils.GaussJordan;
@@ -39,8 +39,8 @@ import org.underserver.jbigmining.utils.Matrix;
 
 import java.util.*;
 
-import static org.underserver.jbigmining.AlgorithmInformation.Field.*;
-import static org.underserver.jbigmining.AlgorithmInformation.Type.CLASSIFIER;
+import static org.underserver.jbigmining.core.AlgorithmInformation.Field.*;
+import static org.underserver.jbigmining.core.AlgorithmInformation.Type.CLASSIFIER;
 
 /**
  * -

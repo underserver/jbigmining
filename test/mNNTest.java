@@ -27,17 +27,21 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-import org.underserver.jbigmining.Algorithm;
-import org.underserver.jbigmining.DataSet;
-import org.underserver.jbigmining.Parser;
-import org.underserver.jbigmining.classifiers.kNN;
+import org.underserver.jbigmining.core.Algorithm;
+import org.underserver.jbigmining.core.DataSet;
+import org.underserver.jbigmining.core.Parser;
+import org.underserver.jbigmining.classifiers.Gamma;
 import org.underserver.jbigmining.evaluation.BasicsMetric;
 import org.underserver.jbigmining.evaluation.EvaluationManager;
 import org.underserver.jbigmining.evaluation.EvaluationMetric;
+import org.underserver.jbigmining.exceptions.ParserException;
 import org.underserver.jbigmining.filters.Filter;
 import org.underserver.jbigmining.parsers.ARFFParser;
-import org.underserver.jbigmining.validations.LeaveOneOutValidation;
+import org.underserver.jbigmining.parsers.SmartParser;
+import org.underserver.jbigmining.validations.SuppliedSetValidation;
 import org.underserver.jbigmining.validations.ValidationMethod;
+
+import java.io.IOException;
 
 /**
  * -
@@ -48,22 +52,27 @@ import org.underserver.jbigmining.validations.ValidationMethod;
  */
 public class mNNTest {
 
-	private static final String FILE = "./banks/onto/train.arff";
+	private static final String TRAINSET = "./datasets/iris/Split Data/Training_0.arff";
+	private static final String TESTSET = "./datasets/iris/Split Data/Testing_0_nonclass.arff";
 
-	private static final ValidationMethod validationMethod = new LeaveOneOutValidation();
-	private static final Algorithm algorithm = new kNN();
+	private static ValidationMethod validationMethod/* = new LeaveOneOutValidation()*/;
+	private static final Algorithm algorithm = new Gamma();
 	private static final Filter[] filters = { /*new NormalizeFilter(), new BinaryFilter()*/ };
 
 	private DataSet dataSet = null;
 
-	public void init() {
-		Parser parser = new ARFFParser( FILE );
-		dataSet = parser.parse();
+	public void init() throws ParserException, IOException {
+		Parser trainParser = new SmartParser( TRAINSET );
+		dataSet = trainParser.parse();
 		for( Filter filter : filters ) {
 			filter.setDataSet( dataSet );
 			filter.processAll();
 			dataSet = filter.getNewDataSet();
 		}
+		ARFFParser testParser = new ARFFParser( TESTSET );
+		DataSet testSet = new DataSet( dataSet );
+		testParser.readData( testSet );
+		validationMethod = new SuppliedSetValidation( testSet );
 	}
 
 	public void test() {
@@ -75,23 +84,13 @@ public class mNNTest {
 
 		for( EvaluationMetric metric : evaluationManager.getMetrics() ) {
 			if( metric instanceof BasicsMetric ) {
-				/*System.out.println("\nTPR");
-				double[] tpr = ( (BasicsMetric) metric ).getTpr();
-				for( double s : tpr ) {
-					System.out.printf("%.3f\n", s);
-				}
-				System.out.println("\nFPR");
-				double[] fpr = ( (BasicsMetric) metric ).getFpr();
-				for( double s : fpr ) {
-					System.out.printf("%.3f\n", s);
-				}*/
 				System.out.println( ( (BasicsMetric) metric ).getPerformance() );
 			}
 		}
 	}
 
 
-	public static void main( String[] args ) {
+	public static void main( String[] args ) throws ParserException, IOException {
 		mNNTest test = new mNNTest();
 		test.init();
 		test.test();

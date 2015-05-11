@@ -1,0 +1,33 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE animal {aardvark,wallaby,swan,penguin,lion,moth,wren,lark,vulture,platypus}
+@ATTRIBUTE hair {true,false}
+@ATTRIBUTE feathers {false,true}
+@ATTRIBUTE eggs {false,true}
+@ATTRIBUTE milk {true,false}
+@ATTRIBUTE airborne {false,true}
+@ATTRIBUTE aquatic {false,true}
+@ATTRIBUTE predator {true,false}
+@ATTRIBUTE toothed {true,false}
+@ATTRIBUTE backbone {true,false}
+@ATTRIBUTE breathes {true}
+@ATTRIBUTE venomous {false}
+@ATTRIBUTE fins {false}
+@ATTRIBUTE legs NUMERIC
+@ATTRIBUTE tail {false,true}
+@ATTRIBUTE domestic {false}
+@ATTRIBUTE catsize {true,false}
+@ATTRIBUTE class {mammal,bird,insect}
+
+@DATA
+aardvark,true,false,false,true,false,false,true,true,true,true,false,false,4,false,false,true,mammal
+wallaby,true,false,false,true,false,false,false,true,true,true,false,false,2,true,false,true,mammal
+swan,false,true,true,false,true,true,false,false,true,true,false,false,2,true,false,true,bird
+penguin,false,true,true,false,false,true,true,false,true,true,false,false,2,true,false,true,bird
+lion,true,false,false,true,false,false,true,true,true,true,false,false,4,true,false,true,mammal
+moth,true,false,true,false,true,false,false,false,false,true,false,false,6,false,false,false,insect
+wren,false,true,true,false,true,false,false,false,true,true,false,false,2,true,false,false,bird
+lark,false,true,true,false,true,false,false,false,true,true,false,false,2,true,false,false,bird
+vulture,false,true,true,false,true,false,true,false,true,true,false,false,2,true,false,true,bird
+platypus,true,false,true,true,false,true,true,false,true,true,false,false,4,true,false,true,mammal

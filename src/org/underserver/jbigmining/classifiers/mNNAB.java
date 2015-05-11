@@ -29,9 +29,9 @@
 
 package org.underserver.jbigmining.classifiers;
 
-import org.underserver.jbigmining.AlgorithmInformation;
-import org.underserver.jbigmining.Classifier;
-import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.core.AlgorithmInformation;
+import org.underserver.jbigmining.core.Classifier;
+import org.underserver.jbigmining.core.Pattern;
 import org.underserver.jbigmining.recuperators.MAABmax;
 
 /**

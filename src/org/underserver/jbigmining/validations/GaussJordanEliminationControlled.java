@@ -35,9 +35,10 @@ package org.underserver.jbigmining.validations;/**
  * @date 26/06/14 06:27 PM
  */
 
-import org.underserver.jbigmining.DataSet;
-import org.underserver.jbigmining.Parser;
-import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.core.DataSet;
+import org.underserver.jbigmining.core.Parser;
+import org.underserver.jbigmining.core.Pattern;
+import org.underserver.jbigmining.exceptions.ParserException;
 import org.underserver.jbigmining.parsers.CSVParser;
 import org.underserver.jbigmining.utils.Matrix;
 
@@ -322,7 +323,7 @@ public class GaussJordanEliminationControlled {
 	}
 
 	// sample client
-	public static void main( String[] args ) {
+	public static void main( String[] args ) throws ParserException {
 
 		Parser parser = new CSVParser( "./banks/controlled.csv" );
 		DataSet dataSet = parser.parse();

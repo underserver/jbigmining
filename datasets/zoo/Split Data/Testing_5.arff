@@ -1,0 +1,33 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE animal {rhea,worm,crab,polecat,pheasant,hare,tortoise,haddock,scorpion,carp}
+@ATTRIBUTE hair {false,true}
+@ATTRIBUTE feathers {true,false}
+@ATTRIBUTE eggs {true,false}
+@ATTRIBUTE milk {false,true}
+@ATTRIBUTE airborne {false,true}
+@ATTRIBUTE aquatic {false,true}
+@ATTRIBUTE predator {true,false}
+@ATTRIBUTE toothed {false,true}
+@ATTRIBUTE backbone {true,false}
+@ATTRIBUTE breathes {true,false}
+@ATTRIBUTE venomous {false,true}
+@ATTRIBUTE fins {false,true}
+@ATTRIBUTE legs NUMERIC
+@ATTRIBUTE tail {true,false}
+@ATTRIBUTE domestic {false,true}
+@ATTRIBUTE catsize {true,false}
+@ATTRIBUTE class {bird,invertebrate,mammal,reptile,fish}
+
+@DATA
+rhea,false,true,true,false,false,false,true,false,true,true,false,false,2,true,false,true,bird
+worm,false,false,true,false,false,false,false,false,false,true,false,false,0,false,false,false,invertebrate
+crab,false,false,true,false,false,true,true,false,false,false,false,false,4,false,false,false,invertebrate
+polecat,true,false,false,true,false,false,true,true,true,true,false,false,4,true,false,true,mammal
+pheasant,false,true,true,false,true,false,false,false,true,true,false,false,2,true,false,false,bird
+hare,true,false,false,true,false,false,false,true,true,true,false,false,4,true,false,false,mammal
+tortoise,false,false,true,false,false,false,false,false,true,true,false,false,4,true,false,true,reptile
+haddock,false,false,true,false,false,true,false,true,true,false,false,true,0,true,false,false,fish
+scorpion,false,false,false,false,false,false,true,false,false,true,true,false,8,true,false,false,invertebrate
+carp,false,false,true,false,false,true,false,true,true,false,false,true,0,true,true,false,fish

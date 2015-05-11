@@ -1,0 +1,24 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE lcore {low,mid,high}
+@ATTRIBUTE lsurf {good,excellent}
+@ATTRIBUTE lo2 {mid,high}
+@ATTRIBUTE lbp {unstable,stable}
+@ATTRIBUTE surfstbl {stable}
+@ATTRIBUTE corestbl {stable,unstable,mod-stable}
+@ATTRIBUTE bpstbl {10,15}
+@ATTRIBUTE comfort {A,S}
+@ATTRIBUTE decision {?}
+@ATTRIBUTE class {low,mid,high}
+
+@DATA
+low,good,mid,unstable,stable,stable,10,A,?,low
+low,good,mid,unstable,stable,unstable,10,A,?,low
+mid,excellent,mid,stable,stable,unstable,10,A,?,mid
+mid,excellent,mid,stable,stable,mod-stable,10,S,?,mid
+high,excellent,high,unstable,stable,unstable,15,A,?,high
+mid,excellent,mid,stable,stable,unstable,15,A,?,mid
+mid,good,mid,unstable,stable,stable,10,A,?,low
+mid,excellent,mid,unstable,stable,stable,10,A,?,mid
+high,good,mid,stable,stable,mod-stable,10,A,?,mid

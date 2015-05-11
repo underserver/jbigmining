@@ -1,0 +1,75 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE instance {BIOA,RRNG_P1,799,915,557,1019,RRNX_P1,1218,1216,648,850}
+@ATTRIBUTE p50 {g,t,c,a}
+@ATTRIBUTE p49 {c,t,g,a}
+@ATTRIBUTE p48 {c,t,g,a}
+@ATTRIBUTE p47 {t,a,c,g}
+@ATTRIBUTE p46 {t,a,g,c}
+@ATTRIBUTE p45 {c,a,t,g}
+@ATTRIBUTE p44 {t,c,g,a}
+@ATTRIBUTE p43 {c,t,g}
+@ATTRIBUTE p42 {c,t,g,a}
+@ATTRIBUTE p41 {a,t,c,g}
+@ATTRIBUTE p40 {a,t,c,g}
+@ATTRIBUTE p39 {a,c,t,g}
+@ATTRIBUTE p38 {a,g,c,t}
+@ATTRIBUTE p37 {c,t,g}
+@ATTRIBUTE p36 {g,t,a}
+@ATTRIBUTE p35 {t,a,c,g}
+@ATTRIBUTE p34 {g,a,t,c}
+@ATTRIBUTE p33 {t,c,g,a}
+@ATTRIBUTE p32 {t,c,g,a}
+@ATTRIBUTE p31 {t,a,g}
+@ATTRIBUTE p30 {t,g,c,a}
+@ATTRIBUTE p29 {t,g,c,a}
+@ATTRIBUTE p28 {t,c,g,a}
+@ATTRIBUTE p27 {g,c,t,a}
+@ATTRIBUTE p26 {t,g,c}
+@ATTRIBUTE p25 {t,g,a,c}
+@ATTRIBUTE p24 {g,a,t,c}
+@ATTRIBUTE p23 {t,a,g,c}
+@ATTRIBUTE p22 {t,g,a,c}
+@ATTRIBUTE p21 {a,g,c}
+@ATTRIBUTE p20 {a,g,c,t}
+@ATTRIBUTE p19 {t,c,g,a}
+@ATTRIBUTE p18 {t,c,a,g}
+@ATTRIBUTE p17 {c,t,g,a}
+@ATTRIBUTE p16 {g,c,t}
+@ATTRIBUTE p15 {g,c,t,a}
+@ATTRIBUTE p14 {t,a,g,c}
+@ATTRIBUTE p13 {g,a,c,t}
+@ATTRIBUTE p12 {t,c,g}
+@ATTRIBUTE p11 {a,t,g,c}
+@ATTRIBUTE p10 {g,a,t,c}
+@ATTRIBUTE p9 {a,t,g,c}
+@ATTRIBUTE p8 {c,g,a,t}
+@ATTRIBUTE p7 {t,c,a}
+@ATTRIBUTE p6 {t,g,c,a}
+@ATTRIBUTE p5 {g,c,t,a}
+@ATTRIBUTE p4 {t,c,a,g}
+@ATTRIBUTE p3 {a,g,c,t}
+@ATTRIBUTE p2 {a,c,g,t}
+@ATTRIBUTE p1 {a,c,t,g}
+@ATTRIBUTE p1 {c,a,g,t}
+@ATTRIBUTE p2 {c,a,g,t}
+@ATTRIBUTE p3 {t,a,c,g}
+@ATTRIBUTE p4 {a,g,t,c}
+@ATTRIBUTE p5 {a,t,c,g}
+@ATTRIBUTE p6 {a,c,t,g}
+@ATTRIBUTE p7 {t,a,g,c}
+@ATTRIBUTE class {+,-}
+
+@DATA
+BIOA,g,c,c,t,t,c,t,c,c,a,a,a,a,c,g,t,g,t,t,t,t,t,t,g,t,t,g,t,t,a,a,t,t,c,g,g,t,g,t,a,g,a,c,t,t,g,t,a,a,a,c,c,t,a,a,a,t,+
+RRNG_P1,t,t,t,a,t,a,t,t,t,t,t,c,g,c,t,t,g,t,c,a,g,g,c,c,g,g,a,a,t,a,a,c,t,c,c,c,t,a,t,a,a,t,g,c,g,c,c,a,c,c,a,c,t,g,a,c,a,+
+799,c,c,t,c,a,a,t,g,g,c,c,t,c,t,a,a,a,c,g,g,g,t,c,t,t,g,a,g,g,g,g,t,t,t,t,t,t,g,c,t,g,a,a,a,g,g,a,g,g,a,a,c,t,a,t,a,t,-
+915,t,g,g,c,g,t,c,t,a,t,c,g,g,t,g,a,a,c,c,t,c,c,g,g,t,a,t,c,a,a,c,g,c,t,g,g,a,a,g,g,t,g,a,c,g,c,t,a,a,c,g,c,a,g,a,t,g,-
+557,a,a,c,c,a,t,t,c,c,g,g,t,t,g,a,c,t,c,a,a,t,g,a,g,c,a,t,c,t,c,g,a,t,g,c,a,g,c,g,t,a,c,t,c,c,t,a,c,a,t,g,a,a,t,a,g,a,-
+1019,t,c,t,c,g,t,g,g,a,t,g,g,a,c,g,t,t,c,a,a,c,a,t,t,g,a,g,g,a,a,g,g,c,a,t,a,a,c,g,c,t,a,c,t,a,c,c,t,g,a,t,g,t,t,t,a,c,-
+RRNX_P1,a,t,g,c,a,t,t,t,t,t,c,c,g,c,t,t,g,t,c,t,t,c,c,t,g,a,g,c,c,g,a,c,t,c,c,c,t,a,t,a,a,t,g,c,g,c,c,t,c,c,a,t,c,g,a,c,a,+
+1218,t,t,c,g,t,c,t,c,c,g,c,g,a,c,t,a,c,g,a,t,g,a,g,a,t,g,c,c,t,g,a,g,t,g,c,t,t,c,c,g,t,t,a,c,t,g,g,a,t,t,g,t,c,a,c,c,a,-
+1216,t,a,t,t,c,g,t,c,t,c,c,g,c,g,a,c,t,a,c,g,a,t,g,a,g,a,t,g,c,c,t,g,a,g,t,g,c,t,t,c,c,g,t,t,a,c,t,g,g,a,t,t,g,t,c,a,c,-
+648,c,c,g,a,g,t,a,g,a,c,c,c,t,t,a,g,a,g,a,g,c,a,t,g,t,c,a,g,c,c,t,c,g,a,c,a,a,c,t,t,g,c,a,t,a,a,a,t,g,c,t,t,t,c,t,t,g,-
+850,c,t,a,t,a,t,g,c,g,c,t,c,a,t,a,c,g,a,t,a,t,g,a,a,c,g,t,t,g,a,g,a,c,t,g,c,c,g,c,t,g,a,g,t,t,a,t,c,a,g,c,t,g,t,g,a,a,-

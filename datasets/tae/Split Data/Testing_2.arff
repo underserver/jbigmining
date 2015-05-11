@@ -1,0 +1,27 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE whetherofnotthetaisanativeenglishspeaker {20,7,9,15,23,16,5,18,22,13,21}
+@ATTRIBUTE courseinstructor NUMERIC
+@ATTRIBUTE course NUMERIC
+@ATTRIBUTE summerorregularsemester {18,13,39,17,20,38,36,33,48,27,19,54,37,42}
+@ATTRIBUTE classsize NUMERIC
+@ATTRIBUTE classattribute {?}
+@ATTRIBUTE class {2,1}
+
+@DATA
+20,15,2,18,2,?,2
+7,11,2,13,2,?,2
+9,2,2,39,3,?,2
+15,3,1,17,3,?,2
+23,3,1,20,3,?,2
+23,3,2,38,1,?,1
+16,8,2,36,1,?,2
+5,2,2,33,3,?,1
+18,7,2,48,1,?,1
+22,13,2,27,2,?,1
+18,21,2,19,3,?,2
+13,1,2,54,3,?,1
+15,13,2,37,2,?,2
+23,3,1,20,2,?,2
+21,2,2,42,1,?,2

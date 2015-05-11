@@ -29,10 +29,10 @@
 
 package org.underserver.jbigmining.recuperators;
 
-import org.underserver.jbigmining.AlgorithmInformation;
-import org.underserver.jbigmining.DataSet;
-import org.underserver.jbigmining.Pattern;
-import org.underserver.jbigmining.Recuperator;
+import org.underserver.jbigmining.core.AlgorithmInformation;
+import org.underserver.jbigmining.core.DataSet;
+import org.underserver.jbigmining.core.Pattern;
+import org.underserver.jbigmining.core.Recuperator;
 import org.underserver.jbigmining.utils.Matrix;
 
 /**

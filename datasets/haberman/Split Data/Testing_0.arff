@@ -1,0 +1,40 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE ageofpatientattimeofoperation NUMERIC
+@ATTRIBUTE patientsyearofoperation {63,58,61,62,66,64,65,59,69,68,67}
+@ATTRIBUTE numberofpositiveaxillarynodesdetected NUMERIC
+@ATTRIBUTE class {1,2}
+
+@DATA
+46,63,0,1
+39,58,0,1
+53,58,1,1
+60,61,1,1
+43,63,14,1
+47,62,0,2
+55,66,0,1
+39,66,0,2
+44,64,6,2
+54,65,5,2
+53,59,3,2
+77,65,3,1
+37,63,0,1
+46,62,5,2
+59,64,7,1
+63,61,9,1
+35,64,13,1
+61,64,0,1
+58,61,1,1
+65,58,0,1
+46,58,3,1
+64,58,0,1
+41,69,8,1
+52,62,0,1
+56,66,2,1
+52,61,0,1
+50,59,2,1
+45,68,0,1
+68,67,0,1
+72,63,0,2
+48,58,11,2

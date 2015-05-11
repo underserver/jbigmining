@@ -1,0 +1,27 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE duration NUMERIC
+@ATTRIBUTE wageincreasefirstyear NUMERIC
+@ATTRIBUTE wageincreasesecondyear NUMERIC
+@ATTRIBUTE wageincreasethirdyear NUMERIC
+@ATTRIBUTE costoflivingadjustment {tc,none,tcf,?}
+@ATTRIBUTE workinghours NUMERIC
+@ATTRIBUTE pension {none,empl_contr,ret_allw,?}
+@ATTRIBUTE standbypay NUMERIC
+@ATTRIBUTE shiftdifferential NUMERIC
+@ATTRIBUTE educationallowance {no,?}
+@ATTRIBUTE statutoryholidays NUMERIC
+@ATTRIBUTE vacation {below_average,average}
+@ATTRIBUTE longtermdisabilityassistance {no,yes,?}
+@ATTRIBUTE contributiontodentalplan {half,full,?}
+@ATTRIBUTE bereavementassistance {yes,?}
+@ATTRIBUTE contributiontohealthplan {full,none,?}
+@ATTRIBUTE class {bad,good}
+
+@DATA
+3,2,2.5,2.1,tc,40,none,2,1,no,10,below_average,no,half,yes,full,bad
+1,2.8,?,?,none,38,empl_contr,2,3,no,9,below_average,yes,half,?,none,bad
+2,5.7,4.5,?,none,40,ret_allw,?,?,?,11,average,yes,full,yes,full,good
+2,2.5,3,?,tcf,40,none,?,?,?,11,below_average,?,?,yes,?,bad
+1,2.8,?,?,?,35,?,?,2,?,12,below_average,?,?,?,?,good

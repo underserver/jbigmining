@@ -1,0 +1,39 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE numberofcars {3}
+@ATTRIBUTE numberofdifferentloads {1}
+@ATTRIBUTE numwheels2 {2}
+@ATTRIBUTE length2 {short}
+@ATTRIBUTE shape2 {ushaped}
+@ATTRIBUTE numloads2 {1}
+@ATTRIBUTE loadshape2 {rectanglod}
+@ATTRIBUTE numwheels3 {2}
+@ATTRIBUTE length3 {long}
+@ATTRIBUTE shape3 {openrect}
+@ATTRIBUTE numloads3 {2}
+@ATTRIBUTE loadshape3 {rectanglod}
+@ATTRIBUTE numwheels4 {?}
+@ATTRIBUTE length4 {?}
+@ATTRIBUTE shape4 {?}
+@ATTRIBUTE numloads4 {?}
+@ATTRIBUTE loadshape4 {?}
+@ATTRIBUTE numwheels5 {?}
+@ATTRIBUTE length5 {?}
+@ATTRIBUTE shape5 {?}
+@ATTRIBUTE numloads5 {?}
+@ATTRIBUTE loadshape5 {?}
+@ATTRIBUTE rectanglenexttorectangle {1}
+@ATTRIBUTE rectanglenexttotriangle {0}
+@ATTRIBUTE rectanglenexttohexagon {0}
+@ATTRIBUTE rectanglenexttocircle {0}
+@ATTRIBUTE trianglenexttotriangle {0}
+@ATTRIBUTE trianglenexttohexagon {0}
+@ATTRIBUTE trianglenexttocircle {0}
+@ATTRIBUTE hexagonnexttohexagon {0}
+@ATTRIBUTE hexagonnexttocircle {0}
+@ATTRIBUTE circlenexttocircle {0}
+@ATTRIBUTE class {west}
+
+@DATA
+3,1,2,short,ushaped,1,rectanglod,2,long,openrect,2,rectanglod,?,?,?,?,?,?,?,?,?,?,1,0,0,0,0,0,0,0,0,0,west

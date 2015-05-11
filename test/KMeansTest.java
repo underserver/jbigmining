@@ -30,10 +30,10 @@
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
-import org.underserver.jbigmining.Clusterer;
-import org.underserver.jbigmining.DataSet;
-import org.underserver.jbigmining.Parser;
-import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.core.Clusterer;
+import org.underserver.jbigmining.core.DataSet;
+import org.underserver.jbigmining.core.Parser;
+import org.underserver.jbigmining.core.Pattern;
 import org.underserver.jbigmining.clusterers.KMeans;
 import org.underserver.jbigmining.parsers.ARFFParser;
 

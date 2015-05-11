@@ -29,19 +29,16 @@
 
 package org.underserver.jbigmining.classifiers;
 
-import org.underserver.jbigmining.AlgorithmInformation;
-import org.underserver.jbigmining.Classifier;
-import org.underserver.jbigmining.Pattern;
+import org.underserver.jbigmining.core.AlgorithmInformation;
+import org.underserver.jbigmining.core.Classifier;
+import org.underserver.jbigmining.core.Pattern;
 import org.underserver.jbigmining.distances.Distance;
 import org.underserver.jbigmining.distances.EuclideanDistance;
 
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
-import static org.underserver.jbigmining.AlgorithmInformation.Field.*;
-import static org.underserver.jbigmining.AlgorithmInformation.Type.CLASSIFIER;
+import static org.underserver.jbigmining.core.AlgorithmInformation.Field.*;
+import static org.underserver.jbigmining.core.AlgorithmInformation.Type.CLASSIFIER;
 
 /**
  * -
@@ -117,7 +114,7 @@ public class kNN extends Classifier {
 		this.distance = distance;
 	}
 
-	public Pattern[] nearestNeighbors( Set<Pattern> instances, Pattern other, int kNearest ) {
+	public Pattern[] nearestNeighbors( List<Pattern> instances, Pattern other, int kNearest ) {
 		Map<Double, Pattern> neighbors = new TreeMap<Double, Pattern>();
 		for( Pattern pattern : instances ) {
 			double dist = getDistance().distance( pattern.toDoubleVector(), other.toDoubleVector() );

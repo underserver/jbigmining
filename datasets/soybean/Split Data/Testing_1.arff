@@ -1,0 +1,110 @@
+%ARFF automatically created from Dataset
+
+@RELATION test
+@ATTRIBUTE date {july,may,august,june,october,september,april}
+@ATTRIBUTE plantstand { normal, lt-normal, ?}
+@ATTRIBUTE precip { gt-norm, ?, lt-norm, norm}
+@ATTRIBUTE temp { norm, ?, gt-norm, lt-norm}
+@ATTRIBUTE hail { yes, ?, no}
+@ATTRIBUTE crophist { same-lst-two-yrs, diff-lst-year, same-lst-yr, same-lst-sev-yrs, ?}
+@ATTRIBUTE areadamaged { upper-areas, low-areas, whole-field, scattered}
+@ATTRIBUTE severity { pot-severe, ?, minor}
+@ATTRIBUTE seedtmt { none, ?, fungicide, other}
+@ATTRIBUTE germination { 80-89, ?, 90-100, lt-80}
+@ATTRIBUTE plantgrowth { norm, abnorm, ?}
+@ATTRIBUTE leaves { abnorm, norm}
+@ATTRIBUTE leafspotshalo { no-yellow-halos, ?, yellow-halos, absent}
+@ATTRIBUTE leafspotsmarg { w-s-marg, ?, no-w-s-marg, dna}
+@ATTRIBUTE leafspotsize { gt-1/8, ?, lt-1/8, dna}
+@ATTRIBUTE leafshread { absent, ?, present}
+@ATTRIBUTE leafmalf { absent, ?, present}
+@ATTRIBUTE leafmild { absent, ?, lower-surf, upper-surf}
+@ATTRIBUTE stem { abnorm, norm, ?}
+@ATTRIBUTE lodging { yes, ?, no}
+@ATTRIBUTE stemcankers { above-sec-nde, absent, ?, below-soil, above-soil}
+@ATTRIBUTE cankerlesion { brown, dk-brown-blk, ?, dna, tan}
+@ATTRIBUTE fruitingbodies { present, ?, absent}
+@ATTRIBUTE externaldecay { absent, watery, ?, firm-and-dry}
+@ATTRIBUTE mycelium { absent, ?}
+@ATTRIBUTE intdiscolor { none, ?, black, brown}
+@ATTRIBUTE sclerotia { absent, ?, present}
+@ATTRIBUTE fruitpods { norm, ?, few-present, diseased, dna}
+@ATTRIBUTE fruitspots { absent, ?, dna, brown-w/blk-specks, colored}
+@ATTRIBUTE seed { norm, ?, abnorm}
+@ATTRIBUTE moldgrowth { absent, ?, present}
+@ATTRIBUTE seeddiscolor { absent, ?, present}
+@ATTRIBUTE seedsize { norm, ?, lt-norm}
+@ATTRIBUTE shriveling { absent, ?, present}
+@ATTRIBUTE roots { norm, rotted, galls-cysts, ?}
+@ATTRIBUTE class { brown-spot, phytophthora-rot, cyst-nematode, bacterial-pustule, charcoal-rot, diaporthe-pod-&-stem-blight, alternarialeaf-spot, diaporthe-stem-canker, purple-seed-stain, frog-eye-leaf-spot, brown-stem-rot, anthracnose, downy-mildew, herbicide-injury, 2-4-d-injury, phyllosticta-leaf-spot, powdery-mildew, bacterial-blight}
+
+@DATA
+july, normal, gt-norm, norm, yes, same-lst-two-yrs, upper-areas, pot-severe, none, 80-89, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, abnorm, yes, above-sec-nde, brown, present, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-spot
+may, lt-normal, gt-norm, norm, ?, diff-lst-year, low-areas, ?, ?, ?, abnorm, abnorm, ?, ?, ?, ?, ?, ?, abnorm, ?, absent, dk-brown-blk, ?, watery, absent, none, absent, ?, ?, ?, ?, ?, ?, ?, rotted, phytophthora-rot
+august, normal, gt-norm, norm, yes, same-lst-yr, whole-field, pot-severe, none, 90-100, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, present, absent, absent, abnorm, yes, above-sec-nde, brown, present, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-spot
+july, ?, ?, ?, ?, same-lst-sev-yrs, upper-areas, ?, ?, ?, abnorm, abnorm, ?, ?, ?, ?, ?, ?, norm, ?, ?, ?, ?, ?, ?, ?, ?, few-present, ?, abnorm, absent, ?, lt-norm, ?, galls-cysts, cyst-nematode
+june, normal, gt-norm, norm, no, same-lst-sev-yrs, low-areas, pot-severe, fungicide, 80-89, norm, abnorm, yellow-halos, no-w-s-marg, lt-1/8, present, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, abnorm, present, present, norm, absent, norm, bacterial-pustule
+july, normal, lt-norm, gt-norm, yes, same-lst-two-yrs, upper-areas, pot-severe, none, lt-80, abnorm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, yes, absent, tan, absent, absent, absent, black, present, norm, dna, norm, absent, absent, norm, absent, norm, charcoal-rot
+october, ?, gt-norm, gt-norm, ?, same-lst-two-yrs, whole-field, ?, ?, ?, norm, norm, ?, ?, ?, ?, ?, ?, abnorm, ?, absent, dna, present, absent, absent, none, absent, diseased, brown-w/blk-specks, abnorm, present, present, lt-norm, present, ?, diaporthe-pod-&-stem-blight
+october, lt-normal, gt-norm, gt-norm, yes, same-lst-yr, low-areas, minor, fungicide, lt-80, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, alternarialeaf-spot
+august, normal, gt-norm, norm, yes, same-lst-sev-yrs, scattered, pot-severe, fungicide, lt-80, abnorm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, no, above-sec-nde, dna, present, firm-and-dry, absent, none, absent, norm, dna, norm, absent, absent, norm, absent, norm, diaporthe-stem-canker
+may, lt-normal, gt-norm, norm, ?, same-lst-two-yrs, low-areas, ?, ?, ?, abnorm, abnorm, ?, ?, ?, ?, ?, ?, abnorm, ?, below-soil, dk-brown-blk, ?, absent, absent, none, absent, ?, ?, ?, ?, ?, ?, ?, rotted, phytophthora-rot
+june, ?, ?, ?, ?, same-lst-two-yrs, low-areas, ?, ?, ?, abnorm, abnorm, ?, ?, ?, ?, ?, ?, norm, ?, ?, ?, ?, ?, ?, ?, ?, few-present, ?, abnorm, absent, ?, lt-norm, ?, galls-cysts, cyst-nematode
+june, lt-normal, gt-norm, norm, yes, same-lst-sev-yrs, whole-field, pot-severe, none, lt-80, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, present, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-spot
+october, normal, gt-norm, norm, yes, same-lst-two-yrs, upper-areas, minor, none, lt-80, norm, norm, absent, dna, dna, absent, absent, absent, abnorm, yes, absent, tan, absent, absent, absent, none, absent, diseased, colored, abnorm, absent, present, norm, absent, norm, purple-seed-stain
+august, ?, ?, ?, ?, same-lst-sev-yrs, upper-areas, ?, ?, ?, abnorm, abnorm, ?, ?, ?, ?, ?, ?, norm, ?, ?, ?, ?, ?, ?, ?, ?, few-present, ?, abnorm, absent, ?, lt-norm, ?, galls-cysts, cyst-nematode
+may, normal, gt-norm, norm, yes, same-lst-yr, whole-field, pot-severe, none, 90-100, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, abnorm, yes, above-sec-nde, brown, present, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-spot
+august, lt-normal, gt-norm, norm, yes, same-lst-sev-yrs, scattered, pot-severe, none, lt-80, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, abnorm, yes, above-sec-nde, dk-brown-blk, absent, firm-and-dry, absent, none, absent, diseased, colored, norm, absent, absent, norm, absent, norm, frog-eye-leaf-spot
+june, lt-normal, norm, gt-norm, ?, same-lst-two-yrs, low-areas, ?, ?, ?, abnorm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, ?, above-soil, dk-brown-blk, ?, absent, absent, none, absent, ?, ?, ?, ?, ?, ?, ?, rotted, phytophthora-rot
+august, normal, lt-norm, norm, yes, same-lst-sev-yrs, upper-areas, pot-severe, none, 80-89, norm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, yes, absent, dna, absent, absent, absent, brown, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-stem-rot
+may, lt-normal, gt-norm, gt-norm, ?, same-lst-yr, low-areas, ?, ?, ?, abnorm, abnorm, ?, ?, ?, ?, ?, ?, abnorm, ?, below-soil, dk-brown-blk, ?, absent, absent, none, absent, ?, ?, ?, ?, ?, ?, ?, rotted, phytophthora-rot
+august, normal, lt-norm, norm, yes, same-lst-yr, upper-areas, pot-severe, none, 90-100, norm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, yes, absent, dna, absent, absent, absent, brown, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-stem-rot
+september, normal, gt-norm, norm, no, same-lst-two-yrs, upper-areas, minor, other, 90-100, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, abnorm, no, above-sec-nde, brown, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, frog-eye-leaf-spot
+september, normal, gt-norm, norm, yes, same-lst-two-yrs, upper-areas, pot-severe, none, 80-89, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, abnorm, yes, above-sec-nde, brown, present, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-spot
+may, lt-normal, gt-norm, gt-norm, no, same-lst-sev-yrs, whole-field, pot-severe, fungicide, 80-89, abnorm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-spot
+september, lt-normal, gt-norm, gt-norm, no, same-lst-sev-yrs, whole-field, minor, fungicide, lt-80, abnorm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, no, above-sec-nde, dk-brown-blk, present, firm-and-dry, absent, none, absent, diseased, brown-w/blk-specks, norm, absent, absent, norm, absent, norm, anthracnose
+july, normal, gt-norm, norm, yes, same-lst-sev-yrs, low-areas, pot-severe, none, 90-100, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, present, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-spot
+october, normal, gt-norm, gt-norm, yes, same-lst-two-yrs, upper-areas, minor, fungicide, 80-89, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, alternarialeaf-spot
+july, lt-normal, gt-norm, gt-norm, no, same-lst-yr, low-areas, minor, fungicide, lt-80, abnorm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, no, above-sec-nde, dk-brown-blk, present, firm-and-dry, absent, none, absent, diseased, brown-w/blk-specks, norm, absent, absent, norm, absent, norm, anthracnose
+august, normal, lt-norm, norm, yes, same-lst-sev-yrs, upper-areas, pot-severe, none, 80-89, norm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, yes, absent, dna, absent, absent, absent, brown, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-stem-rot
+may, normal, gt-norm, norm, no, same-lst-sev-yrs, upper-areas, pot-severe, none, 80-89, norm, abnorm, yellow-halos, w-s-marg, gt-1/8, absent, absent, lower-surf, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, abnorm, present, absent, norm, absent, norm, downy-mildew
+september, normal, lt-norm, norm, yes, same-lst-yr, scattered, pot-severe, fungicide, 90-100, norm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, yes, absent, dna, absent, absent, absent, brown, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-stem-rot
+may, lt-normal, ?, lt-norm, ?, same-lst-yr, scattered, ?, ?, ?, abnorm, abnorm, no-yellow-halos, no-w-s-marg, gt-1/8, absent, present, ?, abnorm, ?, ?, ?, ?, ?, ?, ?, ?, dna, ?, ?, ?, ?, ?, ?, rotted, herbicide-injury
+september, normal, gt-norm, gt-norm, yes, same-lst-yr, low-areas, minor, fungicide, 90-100, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, alternarialeaf-spot
+july, lt-normal, norm, norm, yes, same-lst-sev-yrs, upper-areas, minor, none, lt-80, norm, abnorm, no-yellow-halos, w-s-marg, lt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, rotted, bacterial-pustule
+july, normal, lt-norm, norm, yes, same-lst-yr, upper-areas, pot-severe, none, 90-100, abnorm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, yes, absent, tan, absent, absent, absent, black, present, norm, dna, norm, absent, absent, norm, absent, norm, charcoal-rot
+july, normal, gt-norm, norm, yes, same-lst-yr, scattered, pot-severe, none, 90-100, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, abnorm, yes, above-sec-nde, dk-brown-blk, absent, firm-and-dry, absent, none, absent, diseased, colored, norm, absent, absent, norm, absent, norm, frog-eye-leaf-spot
+july, normal, gt-norm, norm, yes, same-lst-two-yrs, low-areas, pot-severe, fungicide, 80-89, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, alternarialeaf-spot
+october, normal, lt-norm, gt-norm, no, same-lst-sev-yrs, whole-field, pot-severe, fungicide, 80-89, abnorm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, yes, absent, tan, absent, absent, absent, black, present, norm, dna, norm, absent, absent, norm, absent, norm, charcoal-rot
+september, normal, lt-norm, gt-norm, no, same-lst-two-yrs, upper-areas, pot-severe, none, 90-100, abnorm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, yes, absent, tan, absent, absent, absent, black, present, norm, dna, norm, absent, absent, norm, absent, norm, charcoal-rot
+july, normal, gt-norm, lt-norm, yes, same-lst-sev-yrs, whole-field, minor, none, lt-80, norm, norm, absent, dna, dna, absent, absent, absent, norm, yes, absent, tan, absent, absent, absent, none, absent, norm, absent, abnorm, absent, present, norm, absent, norm, purple-seed-stain
+april, ?, ?, ?, ?, ?, whole-field, ?, ?, ?, ?, abnorm, absent, dna, dna, ?, present, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 2-4-d-injury
+july, lt-normal, norm, lt-norm, yes, same-lst-two-yrs, scattered, minor, none, lt-80, norm, abnorm, no-yellow-halos, no-w-s-marg, lt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, rotted, bacterial-pustule
+october, normal, gt-norm, gt-norm, yes, same-lst-sev-yrs, whole-field, pot-severe, fungicide, 90-100, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, alternarialeaf-spot
+august, normal, lt-norm, norm, yes, same-lst-yr, whole-field, pot-severe, fungicide, lt-80, norm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, yes, absent, dna, absent, absent, absent, brown, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-stem-rot
+may, normal, lt-norm, norm, no, diff-lst-year, scattered, pot-severe, none, 90-100, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, present, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, phyllosticta-leaf-spot
+september, normal, gt-norm, norm, yes, same-lst-yr, scattered, pot-severe, none, 80-89, abnorm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, yes, above-sec-nde, dna, present, firm-and-dry, absent, none, absent, norm, dna, norm, absent, absent, norm, absent, norm, diaporthe-stem-canker
+july, lt-normal, gt-norm, norm, ?, same-lst-two-yrs, low-areas, ?, ?, ?, abnorm, abnorm, ?, ?, ?, ?, ?, ?, abnorm, ?, above-sec-nde, dk-brown-blk, ?, absent, absent, none, absent, ?, ?, ?, ?, ?, ?, ?, rotted, phytophthora-rot
+september, normal, gt-norm, norm, yes, same-lst-sev-yrs, scattered, pot-severe, none, 80-89, abnorm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, yes, above-sec-nde, dna, present, firm-and-dry, absent, none, absent, norm, dna, norm, absent, absent, norm, absent, norm, diaporthe-stem-canker
+june, normal, gt-norm, norm, yes, same-lst-two-yrs, whole-field, pot-severe, fungicide, 80-89, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-spot
+october, normal, gt-norm, norm, yes, same-lst-yr, scattered, minor, none, 90-100, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, abnorm, yes, above-sec-nde, dk-brown-blk, absent, firm-and-dry, absent, none, absent, diseased, colored, norm, absent, absent, norm, absent, norm, frog-eye-leaf-spot
+september, normal, gt-norm, gt-norm, no, same-lst-yr, low-areas, minor, fungicide, lt-80, norm, abnorm, no-yellow-halos, w-s-marg, lt-1/8, absent, absent, absent, norm, yes, absent, tan, absent, absent, absent, none, absent, diseased, colored, abnorm, absent, present, norm, absent, norm, purple-seed-stain
+june, lt-normal, gt-norm, gt-norm, ?, same-lst-sev-yrs, low-areas, ?, ?, ?, abnorm, abnorm, ?, ?, ?, ?, ?, ?, abnorm, ?, above-soil, dk-brown-blk, ?, absent, absent, none, absent, ?, ?, ?, ?, ?, ?, ?, rotted, phytophthora-rot
+june, normal, gt-norm, norm, no, same-lst-yr, whole-field, pot-severe, none, 80-89, norm, abnorm, yellow-halos, no-w-s-marg, lt-1/8, present, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, abnorm, present, present, norm, absent, norm, bacterial-pustule
+june, normal, gt-norm, norm, yes, same-lst-sev-yrs, whole-field, pot-severe, none, 90-100, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, present, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-spot
+may, normal, gt-norm, norm, yes, same-lst-sev-yrs, whole-field, pot-severe, none, 90-100, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-spot
+july, lt-normal, norm, norm, ?, same-lst-sev-yrs, low-areas, ?, ?, ?, abnorm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, ?, above-soil, dk-brown-blk, ?, absent, absent, none, absent, ?, ?, ?, ?, ?, ?, ?, rotted, phytophthora-rot
+september, lt-normal, gt-norm, gt-norm, yes, same-lst-sev-yrs, scattered, minor, none, lt-80, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, alternarialeaf-spot
+june, normal, gt-norm, lt-norm, no, diff-lst-year, whole-field, pot-severe, fungicide, lt-80, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, lower-surf, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, abnorm, present, absent, norm, absent, norm, downy-mildew
+august, normal, norm, lt-norm, no, same-lst-two-yrs, upper-areas, minor, fungicide, 90-100, norm, abnorm, absent, dna, dna, absent, absent, upper-surf, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, powdery-mildew
+may, lt-normal, norm, norm, yes, same-lst-yr, scattered, minor, fungicide, lt-80, norm, abnorm, yellow-halos, no-w-s-marg, lt-1/8, present, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, lt-norm, absent, rotted, bacterial-pustule
+september, normal, gt-norm, norm, yes, same-lst-sev-yrs, scattered, minor, fungicide, 80-89, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, present, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, alternarialeaf-spot
+september, normal, gt-norm, gt-norm, yes, same-lst-two-yrs, upper-areas, minor, none, 80-89, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, abnorm, yes, above-sec-nde, dk-brown-blk, absent, firm-and-dry, absent, none, absent, diseased, colored, norm, absent, absent, norm, absent, norm, frog-eye-leaf-spot
+august, lt-normal, gt-norm, gt-norm, no, same-lst-two-yrs, low-areas, pot-severe, fungicide, lt-80, norm, abnorm, no-yellow-halos, w-s-marg, lt-1/8, present, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, bacterial-blight
+may, lt-normal, norm, norm, yes, same-lst-two-yrs, whole-field, pot-severe, none, lt-80, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, phyllosticta-leaf-spot
+june, normal, gt-norm, norm, yes, same-lst-sev-yrs, upper-areas, pot-severe, none, 90-100, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, present, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, brown-spot
+august, lt-normal, gt-norm, gt-norm, no, same-lst-sev-yrs, scattered, pot-severe, other, lt-80, abnorm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, norm, no, above-sec-nde, brown, absent, firm-and-dry, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, frog-eye-leaf-spot
+august, normal, lt-norm, norm, yes, same-lst-two-yrs, upper-areas, pot-severe, none, 80-89, abnorm, abnorm, absent, dna, dna, absent, absent, absent, abnorm, yes, absent, tan, absent, absent, absent, black, present, norm, dna, norm, absent, absent, norm, absent, norm, charcoal-rot
+july, lt-normal, lt-norm, norm, yes, same-lst-sev-yrs, whole-field, pot-severe, fungicide, lt-80, norm, abnorm, absent, dna, dna, absent, absent, upper-surf, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, powdery-mildew
+october, normal, gt-norm, norm, yes, same-lst-sev-yrs, whole-field, pot-severe, none, 90-100, norm, norm, absent, dna, dna, absent, absent, absent, abnorm, yes, above-sec-nde, dk-brown-blk, present, absent, absent, none, absent, diseased, brown-w/blk-specks, abnorm, present, absent, lt-norm, present, norm, anthracnose
+august, normal, gt-norm, norm, yes, same-lst-two-yrs, upper-areas, pot-severe, none, 80-89, norm, abnorm, no-yellow-halos, w-s-marg, gt-1/8, absent, absent, absent, norm, yes, absent, dna, absent, absent, absent, none, absent, norm, absent, norm, absent, absent, norm, absent, norm, alternarialeaf-spot
