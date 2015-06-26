@@ -29,13 +29,13 @@
 
 package org.underserver.jbigmining.classifiers;
 
-import com.sun.xml.internal.bind.v2.runtime.reflect.Lister;
 import org.underserver.jbigmining.core.AlgorithmInformation;
 import org.underserver.jbigmining.core.Classifier;
 import org.underserver.jbigmining.core.MyHeap;
 import org.underserver.jbigmining.core.Pattern;
 import org.underserver.jbigmining.distances.Distance;
 import org.underserver.jbigmining.distances.EuclideanDistance;
+import org.underserver.jbigmining.utils.Matrix;
 
 import java.util.*;
 
@@ -49,17 +49,18 @@ import static org.underserver.jbigmining.core.AlgorithmInformation.Type.CLASSIFI
  * @version rev: %I%
  * @date 15/09/13 01:22 PM
  */
-public class kNN extends Classifier {
+public class kNNMod extends Classifier {
 
 	private Distance distance;
 	private int k = 3;
+	private double[] gains;
 
-	public kNN() {
+	public kNNMod() {
 		super( "kNN" );
 		setDistance( new EuclideanDistance() );
 	}
 
-	public kNN( int k ) {
+	public kNNMod( int k ) {
 		this();
 		this.k = k;
 	}
@@ -83,29 +84,44 @@ public class kNN extends Classifier {
 
 	@Override
 	public void train() {
+		int attributes = getTrainSet().getAttributes().size();
+		gains = new double[attributes];
+		Set<Pattern> partition = new HashSet<Pattern>( getTrainSet() );
+		for( int i = 0; i < attributes; i++ ) {
+			gains[i] = gain( partition, i ); //Math.pow(gain( partition, i ), 4)/10000;
+			System.out.println( "Gain f="+i+", g=" + gain( partition, i ) );
+		}
+		for( int i = 0; i < attributes; i++ ) {
+			System.out.println( "Gain2 f="+i+", g=" + gain2( partition, i ) );
+		}
 	}
 
 	@Override
 	public int classify( Pattern instance ) {
-		Pattern[] nearest2 = nearestNeighbors( getTrainSet(), instance, getK() );
-		Pattern[] nearest = null;
+		Neighbor[] nearest = nearestNeighbors( getTrainSet(), instance, getK() );
+		Pattern[] nearest2 = new Pattern[0];
 		try {
-			nearest = nearest( getTrainSet(), instance, getK() );
+			nearest2 = nearest( getTrainSet(), instance, getK() );
 		} catch( Exception e ) {
 			e.printStackTrace();
 		}
 
-		int[] votes = new int[getTrainSet().getDistribution().length];
+		double[] votes = new double[getTrainSet().getDistribution().length];
 		Arrays.fill( votes, 0 );
 
-		for( Pattern near : nearest ) {
-			votes[near.getClassIndex()] += 1;
+		/*for( Pattern near : nearest2 ) {
+			if( near != null )
+				votes[near.getClassIndex()] += 1;///near.getDistance();
+		}*/
+		for( Neighbor near : nearest ) {
+			if( near != null )
+				votes[near.getPattern().getClassIndex()] += 1;///near.getDistance();
 		}
 
-		int maxVotes = 0;
+		double maxVotes = 0;
 		int classCalculated = -1;
 		for( int clazz = 0; clazz < votes.length; clazz++ ) {
-			int vote = votes[clazz];
+			double vote = votes[clazz];
 			if( vote > maxVotes ) {
 				maxVotes = vote;
 				classCalculated = clazz;
@@ -122,22 +138,38 @@ public class kNN extends Classifier {
 		this.distance = distance;
 	}
 
-	public Pattern[] nearestNeighbors( List<Pattern> instances, Pattern other, int kNearest ) {
+	public Neighbor[] nearestNeighbors( List<Pattern> instances, Pattern other, int kNearest ) {
 		List<Neighbor> neighbors = new ArrayList<Neighbor>();
 		for( Pattern pattern : instances ) {
-			double dist = distance( pattern.toDoubleVector(), other.toDoubleVector(), Double.POSITIVE_INFINITY );
-			neighbors.add( new Neighbor( dist, pattern ) );
+			//double dist = getDistance().distance( pattern.toDoubleVector(), other.toDoubleVector() );
+			double distance = 0d;
+			double distances[] = new double[pattern.size()];
+			for( int i = 0; i < other.size(); i++ ) {
+				double dist = Double.MAX_VALUE;
+				if( pattern.get( i ) == null || other.get( i ) == null ) {
+					if( pattern.get( i ) == null && other.get( i ) == null ) {
+						dist = 0;
+					}
+				} else {
+					dist = dist( pattern.getDouble( i ), other.getDouble( i ) ) / (gains[i]);
+				}
+				distance += dist;
+				distances[i] = dist;
+			}
+			neighbors.add( new Neighbor( distance, pattern ) );
 		}
 
 		Collections.sort( neighbors );
+
 		int index = 0;
-		Pattern[] nearest = new Pattern[kNearest];
+		Neighbor[] nearest = new Neighbor[kNearest];
 		for( Neighbor neighbor : neighbors ) {
 			if( index >= kNearest ) break;
-			nearest[index++] = neighbor.getPattern();
+			nearest[index++] = neighbor;
 		}
 		return nearest;
 	}
+
 
 	private Pattern[] nearest( List<Pattern> instances, Pattern other, int kNearest ) throws Exception {
 		MyHeap heap = new MyHeap(kNearest);
@@ -146,7 +178,7 @@ public class kNN extends Classifier {
 			if( other.equals( instances.get( i ) ) ) //for hold-one-out cross-validation
 				continue;
 			if(firstkNN<kNearest) {
-				distance = distance( other.toDoubleVector(), instances.get( i ).toDoubleVector(), Double.POSITIVE_INFINITY );
+				distance = distance( other, instances.get( i ) );
 				if(distance == 0.0 )
 					if(i<instances.size()-1)
 						continue;
@@ -157,7 +189,7 @@ public class kNN extends Classifier {
 			}
 			else {
 				MyHeap.MyHeapElement temp = heap.peek();
-				distance = distance( other.toDoubleVector(), instances.get( i ).toDoubleVector(), temp.distance );
+				distance = distance( other, instances.get( i ) );
 				if(distance == 0.0 )
 					continue;
 				if(distance < temp.distance) {
@@ -197,24 +229,119 @@ public class kNN extends Classifier {
 
 	}
 
-	public int getK() {
-		return k;
+	private double distance(Pattern pattern, Pattern other){
+		double distance = 0d;
+		for( int i = 0; i < other.size(); i++ ) {
+			double dist = Double.MAX_VALUE;
+			if( pattern.get( i ) == null || other.get( i ) == null ) {
+				if( pattern.get( i ) == null && other.get( i ) == null ) {
+					dist = 0;
+				}
+			} else {
+				dist = dist( pattern.getDouble( i ), other.getDouble( i ) ) / (1+Math.pow(gains[i], 1));
+			}
+			distance += dist;
+		}
+		return distance;
 	}
 
-	public void setK( int k ) {
-		this.k = k;
+	private double dist(double a, double b){
+		return Math.abs( a - b );
 	}
 
-	public double distance( Double[] a, Double[] b, double cutOffValue ) {
-		double sum = 0.0;
-		for( int i = 0; i < a.length; i++ ) {
-			sum = sum + Math.pow( ( a[i] - b[i] ), 2.0 );
+	private double gain(Set<Pattern> partition, int feature){
+		double s = entropy( partition );
+
+		Map<Double, Set<Pattern>> subpartitions = new HashMap<Double, Set<Pattern>>();
+		for( Pattern pattern : partition ) {
+			double key = -1;
+			if( pattern.get( feature ) != null )
+				key = pattern.getDouble( feature );
+			if( subpartitions.containsKey( key ) )
+				subpartitions.get( key ).add( pattern );
+			else {
+				Set<Pattern> subpartition = new HashSet<Pattern>();
+				subpartition.add( pattern );
+				subpartitions.put( key, subpartition);
+			}
 		}
-		double distance = Math.sqrt( sum );
-		if (distance > cutOffValue) {
-			return Double.POSITIVE_INFINITY;
+
+		for( Set<Pattern> subpartition : subpartitions.values() ) {
+			s += -((subpartition.size() / (double)partition.size()) * entropy( subpartition ));
 		}
-		return Math.sqrt( sum );
+
+		return s;//(1/Math.pow( s, 2 ))*100;
+	}
+
+	private double gain2(Set<Pattern> partition, int feature){
+		double s = entropy2( partition, feature );
+
+		Map<Double, Set<Pattern>> subpartitions = new HashMap<Double, Set<Pattern>>();
+		for( Pattern pattern : partition ) {
+			double key = pattern.getClassIndex();
+			if( subpartitions.containsKey( key ) )
+				subpartitions.get( key ).add( pattern );
+			else {
+				Set<Pattern> subpartition = new HashSet<Pattern>();
+				subpartition.add( pattern );
+				subpartitions.put( key, subpartition);
+			}
+		}
+
+		for( Set<Pattern> subpartition : subpartitions.values() ) {
+			s += -((subpartition.size() / (double)partition.size()) * entropy2( subpartition, feature ));
+		}
+
+		return s;//(1/Math.pow( s, 2 ))*100;
+	}
+
+	private double entropy( Set<Pattern> partition ){
+		Map<Integer, Integer> distribution = new HashMap<Integer, Integer>();
+		for( Pattern pattern : partition ){
+			if( distribution.containsKey( pattern.getClassIndex() ) )
+				distribution.put( pattern.getClassIndex(), distribution.get( pattern.getClassIndex() ) + 1 );
+			else
+				distribution.put( pattern.getClassIndex(), 1 );
+		}
+		double total = partition.size();
+		return entropy( distribution, total );
+	}
+
+	private double entropy2( Set<Pattern> partition, int feature ){
+		Map<Double, Integer> distribution = new HashMap<Double, Integer>();
+		for( Pattern pattern : partition ){
+			if( pattern.get( feature ) != null ) {
+				double key = pattern.getDouble( feature );
+				if( distribution.containsKey( key ) )
+					distribution.put( key, distribution.get( key ) + 1 );
+				else
+					distribution.put( key, 1 );
+			}
+		}
+		double total = partition.size();
+		return entropy2( distribution, total );
+	}
+
+	private double entropy(Map<Integer, Integer> distribution, double total){
+		double s = 0d;
+		for( Integer classIndex : distribution.keySet() ) {
+			double div = (distribution.get( classIndex ) / total);
+			s += -( div * log2( div ));
+		}
+		return s;
+	}
+
+	private double entropy2(Map<Double, Integer> distribution, double total){
+		double s = 0d;
+		for( Integer value : distribution.values() ) {
+			double div = (value / total);
+			s += -( div * log2( div ));
+		}
+		return s;
+	}
+
+	private double log2(double x){
+		return Math.log( x ) / Math.log( 2 );
 	}
 
 	class Neighbor implements Comparable<Neighbor> {
@@ -241,4 +368,11 @@ public class kNN extends Classifier {
 		}
 	}
 
+	public int getK() {
+		return k;
+	}
+
+	public void setK( int k ) {
+		this.k = k;
+	}
 }

@@ -116,9 +116,9 @@ public class VectorialMemoriesSim extends Classifier {
 			memories[clazz] = new Memory( clazz, Matrix.trans( M ) );
 		}
 
-		for( Memory memory : memories ) {
+		/*for( Memory memory : memories ) {
 			Matrix.print( memory.getM() );
-		}
+		}*/
 
 	}
 
@@ -127,11 +127,13 @@ public class VectorialMemoriesSim extends Classifier {
 		Map<Double, Integer> variances = new TreeMap<Double, Integer>(); // varianza, clase
 
 		for( Memory memory : memories ) {
+			System.out.println("========= Varianza con clase " + memory.getClazz() + " ============");
 			double variance = variance( memory.getM(), instance.toDoubleVector() );
 			variances.put( variance, memory.getClazz() );
 		}
 
-		return variances.values().iterator().next();   // ordenados de menor a mayor, el primero es la menor varianza
+		int classResult = variances.values().iterator().next();  // ordenados de menor a mayor, el primero es la menor varianza
+		return classResult;
 	}
 
 	private double variance( Double[][] A, Double[] b ) {
@@ -143,13 +145,35 @@ public class VectorialMemoriesSim extends Classifier {
 				System.out.printf( "%9.2f\t", x[i] );
 				suma += Math.abs( x[i] );
 			}
-			System.out.printf( "\t(%.2f)\t(%.2f)\n", suma, Matrix.varianza( x ) );
-			return Matrix.varianza( x );
+			System.out.printf( "\t(%.2f)\t(%.2f)\t(%.2f)\n", suma, Matrix.varianza( x ), mad( x ) );
+			return mad( x );
 		} else {
 			System.out.println( "no hay solucion" );
 			System.out.println();
 		}
 		return Double.MAX_VALUE;
+	}
+
+	private double mad(double[] ratios) {
+		double[] deviations = new double[ratios.length];
+		double med = median(ratios);
+		for (int i = 0; i < ratios.length; i++) {
+			deviations[i] = Math.abs(ratios[i] - med);
+		}
+		return median(deviations);
+	}
+
+	private double median(double[] ratios) {
+		Arrays.sort(ratios);
+		int length = ratios.length;
+		if (ratios.length == 1) {
+			return ratios[0];
+		}
+		if (length % 2 == 1) {
+			return ratios[(length - 1) / 2];
+		} else {
+			return (ratios[length / 2] + ratios[(length) / 2 - 1]) / 2;
+		}
 	}
 
 	public int similitud( Double[] a, Double b[] ) {
@@ -174,9 +198,6 @@ public class VectorialMemoriesSim extends Classifier {
 	class Memory {
 		private int clazz;
 		private Double[][] M;
-
-		Memory() {
-		}
 
 		Memory( int clazz, Double[][] m ) {
 			this.clazz = clazz;

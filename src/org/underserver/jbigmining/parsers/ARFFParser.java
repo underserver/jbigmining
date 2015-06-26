@@ -35,6 +35,7 @@ import org.underserver.jbigmining.core.Parser;
 import org.underserver.jbigmining.core.Pattern;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -110,6 +111,19 @@ public class ARFFParser implements Parser {
 
                 if( !values[values.length - 1].equals( "?" ) && !values[values.length - 1].isEmpty() ) {
                     instance.setClassValue( values[values.length - 1].trim() );
+
+                    if( instance.getClassIndex() >= dataSet.getDistribution().length ){
+                        int newLength = instance.getClassIndex() + 1;
+                        int[] newDistribution = new int[newLength];
+                        for( int dis = 0; dis < newLength; dis++ ) {
+                            if( dis < dataSet.getDistribution().length )
+                                newDistribution[dis] = dataSet.getDistribution()[dis];
+                            else
+                                newDistribution[dis] = 0;
+                        }
+                        dataSet.setDistribution( newDistribution );
+                    }
+
                     dataSet.getDistribution()[instance.getClassIndex()] += 1;
                 }
             }
@@ -170,7 +184,9 @@ public class ARFFParser implements Parser {
             for( int i = 0; i < values.length; i++ ) {
                 values[i] = values[i].trim();
             }
-            attribute.setValues( Arrays.asList( values ) );
+            List<String> listValues = new ArrayList<String>();
+            listValues.addAll( Arrays.asList( values ) );
+            attribute.setValues( listValues );
             if( isBoolean( attribute.getValues() ) )
                 attribute.setType( Attribute.Type.BOOLEAN );
         } else {

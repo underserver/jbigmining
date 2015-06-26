@@ -27,21 +27,20 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
+package org.underserver.jbigmining.classifiers;
 import org.underserver.jbigmining.core.Algorithm;
 import org.underserver.jbigmining.core.DataSet;
 import org.underserver.jbigmining.core.Parser;
-import org.underserver.jbigmining.classifiers.Gamma;
-import org.underserver.jbigmining.evaluation.BasicsMetric;
 import org.underserver.jbigmining.evaluation.EvaluationManager;
-import org.underserver.jbigmining.evaluation.EvaluationMetric;
 import org.underserver.jbigmining.exceptions.ParserException;
-import org.underserver.jbigmining.filters.Filter;
-import org.underserver.jbigmining.parsers.ARFFParser;
 import org.underserver.jbigmining.parsers.SmartParser;
-import org.underserver.jbigmining.validations.SuppliedSetValidation;
+import org.underserver.jbigmining.validations.LeaveOneOutValidation;
 import org.underserver.jbigmining.validations.ValidationMethod;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * -
@@ -50,48 +49,45 @@ import java.io.IOException;
  * @version rev: %I%
  * @date 2/10/13 09:43 PM
  */
-public class mNNTest {
+public class VMTest {
 
-	private static final String TRAINSET = "./datasets/car/Split Data/Training_0.arff";
-	private static final String TESTSET = "./datasets/car/Split Data/Testing_0.arff";
+	private static final String DATASET = "./datasets/%s/%s.arff";
 
-	private static ValidationMethod validationMethod/* = new LeaveOneOutValidation()*/;
-	private static final Algorithm algorithm = new Gamma();
-	private static final Filter[] filters = { /*new NormalizeFilter(), new BinaryFilter()*/ };
+	private static ValidationMethod validationMethod = new LeaveOneOutValidation();
+	private static final Algorithm[] algorithms = {
+			new VectorialMemories()/*, new LDCwC(7),
+			new LDCLimits(1, new PolynomialInv()), new LDCLimits(7, new PolynomialInv()),
+			new LDCLimits(1, new PolynomialInv2()), new LDCLimits(7, new PolynomialInv2()),
+			new LDCLimits(1, new Trigonometric()), new LDCLimits(1, new TrigonometricInv()),
+			new LDCLimits(7, new Trigonometric()), new LDCLimits(7, new TrigonometricInv()),
+			new LDCLimits(1, new Exponential()), new LDCLimits(7, new Exponential()),
+			new LDCLimits(1, new Schwefel()), new LDCLimits(1, new SchwefelGains()),
+			new LDCLimits(7, new Schwefel()), new LDCLimits(7, new SchwefelGains()),
+			new LDCLimits(1, new Eggholder()), new LDCLimits(7, new Eggholder())*/
+	};
+	private static final String[] datasets = { "iris"/*, "tae", "tic-tac-toe", "wine", "ecoli", "breast-cancer", "lymph", "glass", "diabetes", "anneal", "audiology", "autos", "breast-w", "dermatology", "ecoli", "heart-c", "heart-h", "heart-statlog", "wine", "vote", "credit-a", "credit-g", "cylinder-bands", "haberman", "hayes-roth", "hepatitis", "ionosphere", "labor", "liver-disorders", "lung-cancer", "postoperative-patient-data", "car", "nursery", "kr-vs-kp" */};
+	//private static final String[] datasets = { "credit-a", "credit-g", "cylinder-bands", "haberman", "hayes-roth", "hepatitis", "ionosphere", "kr-vs-kp", "labor", "liver-disorders", "lung-cancer", "nursery", "postoperative-patient-data" };
 
-	private DataSet dataSet = null;
+	private List<DataSet> ds = new ArrayList<DataSet>();
 
 	public void init() throws ParserException, IOException {
-		Parser trainParser = new SmartParser( TRAINSET );
-		dataSet = trainParser.parse();
-		for( Filter filter : filters ) {
-			filter.setDataSet( dataSet );
-			filter.processAll();
-			dataSet = filter.getNewDataSet();
+		for( String dataset : datasets ) {
+			Parser trainParser = new SmartParser( String.format( DATASET, dataset, dataset ) );
+			ds.add( trainParser.parse() );
 		}
-		ARFFParser testParser = new ARFFParser( TESTSET );
-		DataSet testSet = new DataSet( dataSet );
-		testParser.readData( testSet );
-		validationMethod = new SuppliedSetValidation( testSet );
 	}
 
 	public void test() {
 		EvaluationManager evaluationManager = new EvaluationManager();
-		//evaluationManager.setDataset( dataSet );
-		//evaluationManager.setAlgorithm( algorithm );
+		evaluationManager.setDatasets( ds );
+		evaluationManager.setAlgorithms( Arrays.asList(algorithms) );
 		evaluationManager.setValidationMethod( validationMethod );
 		evaluationManager.evaluate();
-
-		for( EvaluationMetric metric : evaluationManager.getMetrics() ) {
-			if( metric instanceof BasicsMetric ) {
-				System.out.println( ( (BasicsMetric) metric ).getPerformance() );
-			}
-		}
 	}
 
 
 	public static void main( String[] args ) throws ParserException, IOException {
-		mNNTest test = new mNNTest();
+		VMTest test = new VMTest();
 		test.init();
 		test.test();
 	}

@@ -95,6 +95,7 @@ public class Pattern implements Serializable {
         Attribute attribute = getDataSet().getAttributes().get( index );
         if( attribute.getType() != Attribute.Type.NUMERIC ) {
             List<String> values = attribute.getValues();
+            if( features.get( index ) == null ) return null;
             return values.get( features.get( index ).intValue() );
         }
         return features.get( index );
@@ -139,6 +140,10 @@ public class Pattern implements Serializable {
 
     public void setClassValue( String value ) {
         this.classIndex = dataSet.getClasses().getValues().indexOf( value );
+        if( classIndex == -1 ){
+            dataSet.getClasses().putValue( value );
+            this.classIndex = dataSet.getClasses().getValues().indexOf( value );
+        }
     }
 
     public String getClassValue() {

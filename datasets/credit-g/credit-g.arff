@@ -1299,3 +1299,4 @@
 'no checking',12,'existing paid',radio/tv,804,'<100','>=7',4,'male single',none,4,car,38,none,own,1,skilled,1,none,yes,good
 '<0',45,'existing paid',radio/tv,1845,'<100','1<=X<4',4,'male single',none,4,'no known property',23,none,'for free',1,skilled,1,yes,yes,bad
 '0<=X<200',45,'critical/other existing credit','used car',4576,'100<=X<500',unemployed,3,'male single',none,4,car,27,none,own,1,skilled,1,none,yes,good
+%

@@ -1,0 +1,24 @@
+@relation trees
+
+@attribute cielo {Soleado,Nublado,Lluvioso}
+@attribute temperatura {Caliente,Frio,Templado}
+@attribute humedad {Alta,Normal}
+@attribute viento {Debil,Fuerte}
+@attribute class {Si,No}
+
+@data
+Soleado,Caliente,Alta,Debil,No
+Soleado,Caliente,Alta,Fuerte,No
+Nublado,Caliente,Alta,Debil,Si
+Lluvioso,Templado,Alta,Debil,Si
+Lluvioso,Frio,Normal,Debil,Si
+Lluvioso,Frio,Normal,Fuerte,No
+Nublado,Frio,Normal,Fuerte,Si
+Soleado,Templado,Alta,Debil,No
+Soleado,Frio,Normal,Debil,Si
+Lluvioso,Templado,Normal,Debil,Si
+Soleado,Templado,Normal,Fuerte,Si
+Nublado,Templado,Alta,Fuerte,Si
+Nublado,Caliente,Normal,Debil,Si
+Lluvioso,Templado,Alta,Fuerte,No
+%

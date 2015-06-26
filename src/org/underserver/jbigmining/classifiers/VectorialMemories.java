@@ -105,7 +105,7 @@ public class VectorialMemories extends Classifier {
 			}
 			)
 		};*/
-		memories = new Memory[]{
+		/*memories = new Memory[]{
 				new Memory( 0, new Double[][]{
 						{ 5.10, 0.00, 0.00, 0.00 }, // Clase 0
 						{ 0.00, 3.40, 0.00, 0.00 },
@@ -127,8 +127,8 @@ public class VectorialMemories extends Classifier {
 						{ 0.00, 0.00, 0.00, 2.10 }
 				}
 				)
-		};
-		/*memories = new Memory[]{
+		};*/
+		memories = new Memory[]{
 				new Memory( 0, new Double[][]{
 													{ 5.10, 4.80, 5.20, 5.10 }, // Clase 0
 													{ 3.80, 3.40, 3.50, 3.70 },
@@ -137,8 +137,8 @@ public class VectorialMemories extends Classifier {
 											}
 				),
 				new Memory( 1, new Double[][]{
-													{ 5.70, 6.60, 6.10, 5.20 }, // Clase 1
-													{ 3.00, 3.00, 2.90, 2.70 },
+													{ 5.70, 6.60, 5.9, 5.20 }, // Clase 1
+													{ 3.00, 3.00, 3.2, 2.70 },
 													{ 4.20, 4.40, 4.70, 3.90 },
 													{ 1.20, 1.40, 1.40, 1.40 }
 											}
@@ -150,7 +150,7 @@ public class VectorialMemories extends Classifier {
 													{ 2.00, 2.10, 1.80, 2.10 }
 											}
 				)
-		};*/
+		};
 		/*memories = new Memory[getTrainSet().getDistribution().length];
 
 		Map<Integer, Set<Pattern>> classes = new HashMap<Integer, Set<Pattern>>();
@@ -186,13 +186,13 @@ public class VectorialMemories extends Classifier {
 	@Override
 	public int classify( Pattern instance ) {
 		Map<Double, Integer> variances = new TreeMap<Double, Integer>(); // varianza, clase
-
+		System.out.println("=========================================================");
 		for( Memory memory : memories ) {
 			double variance = calculateVariance( memory.getM(), instance.toDoubleVector() );
 			variances.put( variance, memory.getClazz() );
 		}
-
-		return variances.values().iterator().next();   // ordenados de menor a mayor, el primero es la menor varianza
+		int calculated = variances.values().iterator().next();
+		return calculated;   // ordenados de menor a mayor, el primero es la menor varianza
 	}
 
 	private double calculateVariance( Double[][] A, Double[] b ) {
@@ -223,6 +223,28 @@ public class VectorialMemories extends Classifier {
 			}
 		}
 		return mean;
+	}
+
+	private double mad(double[] ratios) {
+		double[] deviations = new double[ratios.length];
+		double med = median(ratios);
+		for (int i = 0; i < ratios.length; i++) {
+			deviations[i] = Math.abs(ratios[i] - med);
+		}
+		return median(deviations);
+	}
+
+	private double median(double[] ratios) {
+		Arrays.sort(ratios);
+		int length = ratios.length;
+		if (ratios.length == 1) {
+			return ratios[0];
+		}
+		if (length % 2 == 1) {
+			return ratios[(length - 1) / 2];
+		} else {
+			return (ratios[length / 2] + ratios[(length) / 2 - 1]) / 2;
+		}
 	}
 
 	public Distance getDistance() {

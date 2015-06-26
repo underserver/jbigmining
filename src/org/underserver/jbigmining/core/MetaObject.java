@@ -27,58 +27,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.underserver.jbigmining.validations;
-
-import org.underserver.jbigmining.core.*;
+package org.underserver.jbigmining.core;
 
 /**
- * -
- *
- * @author Sergio Ceron F.
- * @version rev: %I%
- * @date 18/03/14 11:46 AM
+ * Created by sergio on 15/05/15.
  */
-public class ValidationThread implements Runnable {
-	private DataSet trainSet;
-	private Algorithm algorithm;
-	private ValidationMethod validationMethod;
-	private Pattern instance;
-
-	public ValidationThread( ValidationMethod validationMethod ) {
-		this.validationMethod = validationMethod;
-	}
-
-	public void setAlgorithm( Algorithm algorithm ) {
-		this.algorithm = algorithm;
-	}
-
-	public void setInstance( Pattern instance ) {
-		this.instance = instance;
-	}
-
-	public void setTrainSet( DataSet trainSet ) {
-		this.trainSet = trainSet;
-	}
-
-	@Override
-	public void run() {
-		long start = System.currentTimeMillis();
-
-		synchronized( algorithm ) {
-			algorithm.setTrainSet( trainSet );
-			algorithm.train();
-			if( algorithm instanceof Classifier ) {
-				int calculated = ( (Classifier) algorithm ).classify( instance );
-				int correct = instance.getClassIndex();
-				validationMethod.evaluate( calculated, correct );
-			} else if( algorithm instanceof Recuperator ) {
-				Pattern recuperated = ( (Recuperator) algorithm ).recover( instance );
-				validationMethod.evaluate( recuperated, instance );
-			}
-		}
-		long end = System.currentTimeMillis();
-
-		//System.out.println( "Partial Time: " + ( end - start ) );
-
-	}
+public class MetaObject {
 }

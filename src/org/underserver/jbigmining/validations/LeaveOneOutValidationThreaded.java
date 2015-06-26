@@ -48,7 +48,7 @@ import java.util.concurrent.TimeUnit;
 public class LeaveOneOutValidationThreaded extends ValidationMethod {
 
 	public LeaveOneOutValidationThreaded() {
-		super();
+		super("Leave One-Out Validation Threaded");
 	}
 
 	@Override
@@ -85,7 +85,7 @@ public class LeaveOneOutValidationThreaded extends ValidationMethod {
 		}
 		long end = System.currentTimeMillis();
 
-		System.out.println( "Time: " + ( end - start ) );
+		//System.out.println( "Time: " + ( end - start ) );
 
 	}
 

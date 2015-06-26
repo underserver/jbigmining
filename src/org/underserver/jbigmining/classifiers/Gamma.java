@@ -57,7 +57,7 @@ public class Gamma extends Classifier {
     private int u = 0;
 
     public Gamma() {
-        super( "GammaMod" );
+        super( "GammaH" );
     }
 
     @Override
@@ -153,17 +153,18 @@ public class Gamma extends Classifier {
         double differentBits;
 
         Attribute attribute = x.getDataSet().getAttributes().get( featureIndex );
-        if( attribute.getType() == Attribute.Type.NUMERIC ) {
+        //if( attribute.getType() == Attribute.Type.NUMERIC ) {
             if( !x.isMissing( featureIndex ) && !y.isMissing( featureIndex ) )
                 differentBits = Math.abs( x.getInt( featureIndex ) - y.getInt( featureIndex ) );
             else
                 differentBits = theta + 1.0;
-        } else {
+        //}
+        /* else {
             if( !x.isMissing( featureIndex ) && !y.isMissing( featureIndex ) )
-                differentBits = x.get( featureIndex ).equals( y.get( featureIndex ) ) ? 0 : theta + 1.0;
+                differentBits = x.toString().equals( y.toString() ) ? 0 : theta + 1.0;
             else
                 differentBits = theta + 1.0;
-        }
+        }*/
         if( differentBits <= theta )
             return 1d;
         else
@@ -190,7 +191,7 @@ public class Gamma extends Classifier {
             newPattern.setDataSet( ds );
             newPattern.setClassIndex( pattern.getClassIndex() );
             ds.add( newPattern );
-            for( int i = 0; i < pattern.size(); i++ ) {
+            /*for( int i = 0; i < pattern.size(); i++ ) {
                 if( pattern.isMissing( i ) )
                     System.out.print( "?," );
                 else
@@ -203,9 +204,9 @@ public class Gamma extends Classifier {
                 else
                     System.out.print( "?," );
             }
-            System.out.println();
+            System.out.println();*/
         }
-        System.out.println( "" );
+        //System.out.println( "" );
         return ds;
     }
 
@@ -220,15 +221,17 @@ public class Gamma extends Classifier {
 
                 for( Pattern pattern : training ) {
                     Double[] vector = pattern.toDoubleVector();
-                    double value = vector[i];
-                    if( value < min )
-                        min = value;
-                    if( value > max )
-                        max = value;
+                    if( vector[i] != null ) {
+                        double value = vector[i];
+                        if( value < min )
+                            min = value;
+                        if( value > max )
+                            max = value;
 
-                    int decimals = decimals( value );
-                    if( decimals > max_dec )
-                        max_dec = decimals;
+                        int decimals = decimals( value );
+                        if( decimals > max_dec )
+                            max_dec = decimals;
+                    }
                 }
                 MobiusData mdata = new MobiusData( max_dec, min, max );
                 dic.put( i, mdata );
@@ -267,7 +270,7 @@ public class Gamma extends Classifier {
         for( int j = 0; j < pattern.size(); j++ ) {
             Attribute attribute = pattern.getDataSet().getAttributes().get( j );
             Double new_value = pattern.isMissing( j ) ? null : (double) pattern.getInt( j );
-            if( attribute.getType() == Attribute.Type.NUMERIC ) {
+            if( attribute.getType() == Attribute.Type.NUMERIC && new_value != null ) {
                 if( new_value < dic.get( j ).min ) // TODO: Error fixed
                     new_value = (double) Conversions.doubleToInt( dic.get( j ).min, BigDecimal.ROUND_HALF_EVEN );
                 if( new_value > dic.get( j ).max )

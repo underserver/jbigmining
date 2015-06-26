@@ -70,8 +70,8 @@ public class fibonacciTest {
 
 	public void test() {
 		EvaluationManager evaluationManager = new EvaluationManager();
-		evaluationManager.setDataSet( dataSet );
-		evaluationManager.setAlgorithm( algorithm );
+		//evaluationManager.setDataset( dataSet );
+		//evaluationManager.setAlgorithms( algorithm );
 		evaluationManager.setValidationMethod( validationMethod );
 		evaluationManager.evaluate();
 

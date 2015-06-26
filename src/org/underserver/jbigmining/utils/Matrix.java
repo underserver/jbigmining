@@ -78,6 +78,14 @@ public class Matrix {
 		return result;
 	}
 
+	public static Double[] mult( Double a[], double b[] ) {
+		Double[] res = new Double[a.length];
+		for( int i = 0; i < a.length; i++ ) {
+			res[i] = a[i] * b[i];
+		}
+		return res;
+	}
+
 	public static Integer[][] mult( Integer a[][], Integer b[][] ) {
 		int m1rows = a.length;
 		int m1cols = a[0].length;

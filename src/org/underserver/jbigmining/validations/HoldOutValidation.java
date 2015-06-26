@@ -46,7 +46,7 @@ public class HoldOutValidation extends ValidationMethod {
 	private List<Pattern> testSet;
 
 	public HoldOutValidation( int percent ) {
-		super();
+		super("Hold-Out Validation");
 		this.percent = percent;
 	}
 

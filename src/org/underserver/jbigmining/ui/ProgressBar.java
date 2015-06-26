@@ -27,58 +27,42 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.underserver.jbigmining.validations;
-
-import org.underserver.jbigmining.core.*;
+package org.underserver.jbigmining.ui;
 
 /**
- * -
- *
- * @author Sergio Ceron F.
- * @version rev: %I%
- * @date 18/03/14 11:46 AM
+ * Created by sergio on 11/06/15.
  */
-public class ValidationThread implements Runnable {
-	private DataSet trainSet;
-	private Algorithm algorithm;
-	private ValidationMethod validationMethod;
-	private Pattern instance;
+public class ProgressBar {
+    private int max;
 
-	public ValidationThread( ValidationMethod validationMethod ) {
-		this.validationMethod = validationMethod;
-	}
+    public ProgressBar() {
+    }
 
-	public void setAlgorithm( Algorithm algorithm ) {
-		this.algorithm = algorithm;
-	}
+    public void draw(){
+        System.out.print("[          ]");
+        System.out.flush(); // the flush method prints it to the screen
 
-	public void setInstance( Pattern instance ) {
-		this.instance = instance;
-	}
+        // 11 '\b' chars: 1 for the ']', the rest are for the spaces
+        System.out.print("\b\b\b\b\b\b\b\b\b\b\b");
+        System.out.flush();
+        try {
+            Thread.sleep(500); // just to make it easy to see the changes
+        } catch( InterruptedException e ) {
+            e.printStackTrace();
+        }
 
-	public void setTrainSet( DataSet trainSet ) {
-		this.trainSet = trainSet;
-	}
+        for(int i = 0; i < 10; i++)
+        {
+            System.out.print("█"); //overwrites a space
+            System.out.flush();
+            try {
+                Thread.sleep( 100 );
+            } catch( InterruptedException e ) {
+                e.printStackTrace();
+            }
+        }
 
-	@Override
-	public void run() {
-		long start = System.currentTimeMillis();
-
-		synchronized( algorithm ) {
-			algorithm.setTrainSet( trainSet );
-			algorithm.train();
-			if( algorithm instanceof Classifier ) {
-				int calculated = ( (Classifier) algorithm ).classify( instance );
-				int correct = instance.getClassIndex();
-				validationMethod.evaluate( calculated, correct );
-			} else if( algorithm instanceof Recuperator ) {
-				Pattern recuperated = ( (Recuperator) algorithm ).recover( instance );
-				validationMethod.evaluate( recuperated, instance );
-			}
-		}
-		long end = System.currentTimeMillis();
-
-		//System.out.println( "Partial Time: " + ( end - start ) );
-
-	}
+        System.out.print("] Done\n"); //overwrites the ']' + adds chars
+        System.out.flush();
+    }
 }

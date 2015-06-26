@@ -44,7 +44,7 @@ import java.util.List;
 public class LeaveOneOutValidation extends ValidationMethod {
 
 	public LeaveOneOutValidation() {
-		super();
+		super("Leave One-Out");
 	}
 
 	@Override
@@ -77,7 +77,7 @@ public class LeaveOneOutValidation extends ValidationMethod {
 		}
 		long end = System.currentTimeMillis();
 
-		System.out.println( "Time: " + ( end - start ) );
+		//System.out.println( "Time: " + ( end - start ) );
 	}
 
 }

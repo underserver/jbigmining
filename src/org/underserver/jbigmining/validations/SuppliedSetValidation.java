@@ -44,7 +44,7 @@ public class SuppliedSetValidation extends ValidationMethod {
 	private DataSet suppliedSet;
 
 	public SuppliedSetValidation( DataSet suppliedSet ) {
-		super();
+		super("Supplied-Set Validation ("+suppliedSet.getName()+")");
 		this.suppliedSet = suppliedSet;
 	}
 

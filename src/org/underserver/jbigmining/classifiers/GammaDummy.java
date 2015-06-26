@@ -104,7 +104,7 @@ public class GammaDummy extends Classifier {
             Double[] vectorX = x.toDoubleVector();
             Double[] vectorY = y.toDoubleVector();
             std = deviationStandard.get( i );
-            if( ( x != null ) && ( y != null ) )
+            if( ( x.get( i ) != null ) && ( y.get( i ) != null ) )
                 if( Math.abs( vectorX[i] - vectorY[i] ) < std )
                     result = 1;
         }
@@ -112,7 +112,7 @@ public class GammaDummy extends Classifier {
         if( attributes.get( i ).getType() == Attribute.Type.NOMINAL ) {
             Object[] vectorX = x.toObjectVector();
             Object[] vectorY = y.toObjectVector();
-            if( ( vectorX[i].equals( vectorY[i] ) ) && ( x != null ) && ( y != null ) ) // para que si son null no se parezcan
+            if( ( vectorX[i].toString().equals( vectorY[i].toString() ) ) && ( x != null ) && ( y != null ) ) // para que si son null no se parezcan
                 result = 1;
         }
 

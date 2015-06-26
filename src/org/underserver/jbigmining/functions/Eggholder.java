@@ -27,57 +27,39 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-import junit.framework.TestCase;
-import org.junit.Before;
-import org.junit.Test;
-import org.underserver.jbigmining.core.Clusterer;
-import org.underserver.jbigmining.core.DataSet;
-import org.underserver.jbigmining.core.Parser;
-import org.underserver.jbigmining.core.Pattern;
-import org.underserver.jbigmining.clusterers.KMeans;
-import org.underserver.jbigmining.parsers.ARFFParser;
-
-import java.util.Set;
+package org.underserver.jbigmining.functions;
 
 /**
- * -
- *
- * @author Sergio Ceron F.
- * @version rev: %I%
- * @date 8/12/13 11:47 PM
+ * Created by sergio on 10/06/15.
  */
-public class KMeansTest extends TestCase {
-	private static final String FILE = "./banks/iris.arff";
+public class Eggholder extends ScalarFunction {
 
-	private DataSet dataSet = null;
+    public Eggholder() {
+        super( "EggH" );
+    }
 
-	@Before
-	public void setUp() throws Exception {
-		Parser parser = new ARFFParser( FILE );
-		dataSet = parser.parse();
-	}
-
-	@Test
-	public void testClusterer() throws Exception {
-		Clusterer kMeans = new KMeans( 3 );
-		kMeans.setTrainSet(dataSet);
-
-		long time1 = System.currentTimeMillis();
-		kMeans.train();
-		long time2 = System.currentTimeMillis();
-
-		Set[] clusters = kMeans.getClusters();
-
-		System.out.println("Tiempo:" + (time2-time1)/1000d);
-		System.out.println("Iteraciones:" + ((KMeans)(kMeans)).getIterations());
-
-		for( int c = 0; c < clusters.length; c++ ) {
-			Set<Pattern> cluster = clusters[c];
-			for( Pattern instance : cluster ) {
-				System.out.printf("%s | %d\n", instance, c);
-			}
-		}
-
-	}
-
+    @Override
+    public double f( Double[] x, double[] args ) {
+        double sum1 = 0d;
+        for( int i = 0; i < x.length-1; i++ ) {
+            if( x[i] == null ) {
+                x[i] = 0d;
+            }
+            if( x[i + 1] == null ){
+                x[i + 1] = 0d;
+            }
+            sum1 += -x[i] * Math.sin( Math.sqrt( Math.abs( x[i] - (x[i+1] + 47) ) ) );
+        }
+        double sum2 = 0d;
+        for( int i = 0; i < x.length-1; i++ ) {
+            if( x[i] == null ) {
+                x[i] = 0d;
+            }
+            if( x[i + 1] == null ){
+                x[i + 1] = 0d;
+            }
+            sum2 += (x[i+1] + 47) * Math.sin( Math.sqrt( Math.abs( x[i+1] + 47 + (x[i]/2d) ) ) );
+        }
+        return sum1 - sum2;
+    }
 }

@@ -29,56 +29,65 @@
 
 package org.underserver.jbigmining.validations;
 
-import org.underserver.jbigmining.core.*;
+import org.underserver.jbigmining.core.Algorithm;
+import org.underserver.jbigmining.core.DataSet;
+import org.underserver.jbigmining.core.Pattern;
+
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * -
  *
  * @author Sergio Ceron F.
  * @version rev: %I%
- * @date 18/03/14 11:46 AM
+ * @date 28/05/13 02:30 PM
  */
-public class ValidationThread implements Runnable {
-	private DataSet trainSet;
-	private Algorithm algorithm;
-	private ValidationMethod validationMethod;
-	private Pattern instance;
+public class LeaveOneOutValidationThreadedRecursive extends ValidationMethod {
 
-	public ValidationThread( ValidationMethod validationMethod ) {
-		this.validationMethod = validationMethod;
-	}
-
-	public void setAlgorithm( Algorithm algorithm ) {
-		this.algorithm = algorithm;
-	}
-
-	public void setInstance( Pattern instance ) {
-		this.instance = instance;
-	}
-
-	public void setTrainSet( DataSet trainSet ) {
-		this.trainSet = trainSet;
+	public LeaveOneOutValidationThreadedRecursive() {
+		super("Leave One-Out Validation Threaded Recursive");
 	}
 
 	@Override
-	public void run() {
+	public void validate() {
+		Algorithm algorithm = getAlgorithm();
+
+		DataSet dataSet = getDataSet();
+
+		int nrOfProcessors = Runtime.getRuntime().availableProcessors();
+		ExecutorService es = Executors.newFixedThreadPool( nrOfProcessors );
+		//ExecutorService es = Executors.newFixedThreadPool( dataSet.size() );
+
 		long start = System.currentTimeMillis();
 
-		synchronized( algorithm ) {
-			algorithm.setTrainSet( trainSet );
-			algorithm.train();
-			if( algorithm instanceof Classifier ) {
-				int calculated = ( (Classifier) algorithm ).classify( instance );
-				int correct = instance.getClassIndex();
-				validationMethod.evaluate( calculated, correct );
-			} else if( algorithm instanceof Recuperator ) {
-				Pattern recuperated = ( (Recuperator) algorithm ).recover( instance );
-				validationMethod.evaluate( recuperated, instance );
-			}
+		int index = 0;
+		for( Pattern instance : dataSet ) {
+			List<Pattern> trainingSet = new DataSet( dataSet );
+
+			trainingSet.addAll( getDataSet() );
+			trainingSet.remove( instance );
+
+			ValidationThreadRecursive task = new ValidationThreadRecursive( this, index++ );
+			task.setAlgorithm( algorithm );
+			task.setInstance( instance );
+			task.setTrainSet( (DataSet) trainingSet );
+			es.submit( task );
+
+		}
+
+		es.shutdown();
+		try {
+			es.awaitTermination( Long.MAX_VALUE, TimeUnit.NANOSECONDS );
+		} catch ( InterruptedException e ) {
+			e.printStackTrace();
 		}
 		long end = System.currentTimeMillis();
 
-		//System.out.println( "Partial Time: " + ( end - start ) );
+		//System.out.println( "Time: " + ( end - start ) );
 
 	}
+
 }

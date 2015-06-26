@@ -180,6 +180,7 @@
 @attribute PROTIME integer
 @attribute HISTOLOGY { no, yes}
 @attribute Class { DIE, LIVE}
+
 @data
 30,male,no,no,no,no,no,no,no,no,no,no,no,1,85,18,4,?,no,LIVE
 50,female,no,no,yes,no,no,no,no,no,no,no,no,0.9,135,42,3.5,?,no,LIVE

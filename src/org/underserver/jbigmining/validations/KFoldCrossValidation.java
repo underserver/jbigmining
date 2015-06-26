@@ -49,7 +49,7 @@ public class KFoldCrossValidation extends ValidationMethod {
 	}
 
 	public KFoldCrossValidation( int k ) {
-		super();
+		super(k+"-Fold Cross-Validation");
 		this.k = k;
 		this.folds = new Set[k];
 	}

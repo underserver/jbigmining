@@ -107,4 +107,26 @@ public class DataSet extends ArrayList<Pattern> {
 		}
 		return cloned;
 	}
+
+	@Override
+	public boolean equals( Object o ) {
+		if( this == o ) return true;
+		if( !( o instanceof DataSet ) ) return false;
+
+		DataSet patterns = (DataSet) o;
+
+		for( int i = 0; i < patterns.size(); i++ ) {
+			if( !patterns.get( i ).equals( this.get( i ) ) ){
+				return false;
+			}
+		}
+		return true;
+	}
+
+	@Override
+	public int hashCode() {
+		int result = super.hashCode();
+		result = 31 * result + ( name != null ? name.hashCode() : 0 );
+		return result;
+	}
 }

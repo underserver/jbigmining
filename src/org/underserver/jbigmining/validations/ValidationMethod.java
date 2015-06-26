@@ -39,11 +39,13 @@ import org.underserver.jbigmining.core.*;
  * @date 28/05/13 02:29 PM
  */
 public abstract class ValidationMethod {
+	private String name;
 	private DataSet dataSet;
 	private Algorithm algorithm;
 	private ConfusionMatrix confusionMatrix;
 
-	protected ValidationMethod() {
+	protected ValidationMethod(String name) {
+		this.name = name;
 	}
 
 	public void build() {
@@ -96,4 +98,16 @@ public abstract class ValidationMethod {
 		}
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName( String name ) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return name;
+	}
 }
